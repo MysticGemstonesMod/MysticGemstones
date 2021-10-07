@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "firstmod",
+  "id": "aquamarinmod",
   "version": "${version}",
-  "name": "Firstmod",
+  "name": "Aquamatin Mod",
   "description": "",
   "authors": [],
   "contact": {},
@@ -11,14 +11,14 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "firstmod.firstmod.client.FirstmodClient"
+      "aquamarinmod.aquamarinmod.client.aquamarinmodClient"
     ],
     "main": [
-      "firstmod.firstmod.Firstmod"
+      "aquamarinmod.aquamarinmod.aquamarinmod"
     ]
   },
   "mixins": [
-    "firstmod.mixins.json"
+    "aquamarinmod.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.12.0",
