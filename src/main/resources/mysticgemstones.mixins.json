@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "aquamarinmod.aquamarinmod.mixin",
+  "package": "mysticgemstones.mysticgemstones.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
   ],

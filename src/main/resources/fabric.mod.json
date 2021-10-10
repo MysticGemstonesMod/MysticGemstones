@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "aquamarinmod",
+  "id": "mysticgemstones",
   "version": "${version}",
   "name": "Aquamatin Mod",
   "description": "",
@@ -11,14 +11,14 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "aquamarinmod.aquamarinmod.client.aquamarinmodClient"
+      "mysticgemstones.mysticgemstones.client.mysticgemstonesClient"
     ],
     "main": [
-      "aquamarinmod.aquamarinmod.aquamarinmod"
+      "mysticgemstones.mysticgemstones.mysticgemstones"
     ]
   },
   "mixins": [
-    "aquamarinmod.mixins.json"
+    "mysticgemstones.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.12.0",
