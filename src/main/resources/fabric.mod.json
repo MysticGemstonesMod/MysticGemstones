@@ -14,7 +14,7 @@
       "mysticgemstones.mysticgemstones.client.mysticgemstonesClient"
     ],
     "main": [
-      "mysticgemstones.mysticgemstones.mysticgemstones"
+      "mysticgemstones.mysticgemstones.MysticGemstones"
     ]
   },
   "mixins": [
