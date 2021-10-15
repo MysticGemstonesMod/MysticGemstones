@@ -14,5 +14,4 @@ public class MysticGemstones implements ModInitializer {
         MysticGemstonesItem.AddAndRegisterItem();
 
     }
-
 }
