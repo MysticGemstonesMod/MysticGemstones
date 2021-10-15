@@ -11,20 +11,22 @@ import net.minecraft.util.registry.Registry;
 
 public class MysticGemstonesBlock {
 
-
+    // Add block
+    public static final Block AQUAMARIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F));
+    public static final Block JASPER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F));
+    public static final Block ALEXANDRITE_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F));
 
     public static void AddAndRegisterBlocks() {
 
-        // Add block
-        final Block AQUAMARIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F));
-
         // Register block
         Registry.register(Registry.BLOCK, new Identifier("mysticgemstones", "aquamarin_ore"), AQUAMARIN_ORE);
+        Registry.register(Registry.BLOCK, new Identifier("mysticgemstones", "jasper_ore"), JASPER_ORE);
+        Registry.register(Registry.BLOCK, new Identifier("mysticgemstones", "alexandrite_ore"), ALEXANDRITE_ORE);
 
         // Register block item
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "aquamarin_ore"), new BlockItem(AQUAMARIN_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
-
+        Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "jasper_ore"), new BlockItem(JASPER_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+        Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
 
     }
-
 }
