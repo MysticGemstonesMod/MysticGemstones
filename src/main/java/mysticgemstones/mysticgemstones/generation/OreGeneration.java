@@ -17,8 +17,10 @@ import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 
 public class OreGeneration {
 
-    /* Very Very bad code this is.... I know.... to much duplicate stuff. Now I am to stupid to do it better way
-       since I am still learning java but hopefully in future I will fix this */
+    /* Very Very bad code this is.... I know....  Now I am to stupid to do it better way
+       since I am still learning java but hopefully in future I will fix this.
+       By fix I mean add some fancy magic so there is no duplicate code for
+       every ore. */
 
 
     // AQUAMARIN
