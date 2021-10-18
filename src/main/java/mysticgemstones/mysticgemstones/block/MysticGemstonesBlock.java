@@ -15,6 +15,7 @@ public class MysticGemstonesBlock {
     public static final Block AQUAMARIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F));
     public static final Block JASPER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F));
     public static final Block ALEXANDRITE_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F));
+    public static final RockTumbler ROCK_TUMBLER = new RockTumbler(FabricBlockSettings.of(Material.STONE));
 
     public static void AddAndRegisterBlocks() {
 
@@ -22,11 +23,13 @@ public class MysticGemstonesBlock {
         Registry.register(Registry.BLOCK, new Identifier("mysticgemstones", "aquamarin_ore"), AQUAMARIN_ORE);
         Registry.register(Registry.BLOCK, new Identifier("mysticgemstones", "jasper_ore"), JASPER_ORE);
         Registry.register(Registry.BLOCK, new Identifier("mysticgemstones", "alexandrite_ore"), ALEXANDRITE_ORE);
+        Registry.register(Registry.BLOCK, new Identifier("mysticgemstones", "rock_tumbler"), ROCK_TUMBLER);
 
         // Register block item
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "aquamarin_ore"), new BlockItem(AQUAMARIN_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "jasper_ore"), new BlockItem(JASPER_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+        Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "rock_tumbler"), new BlockItem(ROCK_TUMBLER, new FabricItemSettings().group(ItemGroup.MATERIALS)));
 
     }
 }
