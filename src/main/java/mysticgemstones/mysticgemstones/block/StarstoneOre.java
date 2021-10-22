@@ -1,17 +1,20 @@
 package mysticgemstones.mysticgemstones.block;
 
+import mysticgemstones.mysticgemstones.MysticGemstones;
+import mysticgemstones.mysticgemstones.block.entity.StarstoneOreEntity;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.block.BlockWithEntity;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityTicker;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class StarstoneOre extends Block {
+public class StarstoneOre extends BlockWithEntity {
 
     public static final BooleanProperty SHINING = BooleanProperty.of("shining");
 
@@ -21,20 +24,21 @@ public class StarstoneOre extends Block {
     }
 
     @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new StarstoneOreEntity(pos, state);
+    }
+
+    @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> stateManager) {
         stateManager.add(SHINING);
     }
 
-
-    // Should replace onUse with something that auto updates it
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if ((boolean)state.get(SHINING) && (world.getTimeOfDay() > 22300 || world.getTimeOfDay() < 22100)) {
-            world.setBlockState(pos, state.with(SHINING, false));
-        }
-        else if (world.getTimeOfDay() > 22100 && world.getTimeOfDay() < 22300) {
-            world.setBlockState(pos, state.with(SHINING, true));
-        }
-        return ActionResult.SUCCESS;
+    public BlockRenderType getRenderType(BlockState state) {
+        return BlockRenderType.MODEL;
+    }
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return checkType(type, MysticGemstones.STARSTONE_ORE_ENTITY, (world1, pos, state1, be) -> StarstoneOreEntity.tick(world1, pos, state1, be));
     }
 }
