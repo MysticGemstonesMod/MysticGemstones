@@ -1,0 +1,18 @@
+{
+  "parent": "item/generated",
+
+  "overrides": [
+    {
+      "predicate": {
+        "shining": 0
+      },
+      "model": "mysticgemstones:item/raw_starstone_noshining"
+    },
+    {
+      "predicate": {
+        "shining": 1
+      },
+      "model": "mysticgemstones:item/raw_starstone_shining"
+    }
+  ]
+}

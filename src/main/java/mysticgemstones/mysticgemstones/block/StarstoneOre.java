@@ -1,6 +1,5 @@
 package mysticgemstones.mysticgemstones.block;
 
-import mysticgemstones.mysticgemstones.MysticGemstones;
 import mysticgemstones.mysticgemstones.block.entity.StarstoneOreEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
@@ -39,6 +38,6 @@ public class StarstoneOre extends BlockWithEntity {
     }
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, MysticGemstones.STARSTONE_ORE_ENTITY, (world1, pos, state1, be) -> StarstoneOreEntity.tick(world1, pos, state1, be));
+        return checkType(type, StarstoneOreEntity.STARSTONE_ORE_ENTITY, (world1, pos, state1, be) -> StarstoneOreEntity.tick(world1, pos, state1, be));
     }
 }

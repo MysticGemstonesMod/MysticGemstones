@@ -15,6 +15,9 @@ public class MysticGemstonesItem {
     public static final Item RAW_JASPER = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
     public static final Item ALEXANDRITE_ITEM = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
     public static final Item RAW_ALEXANDRITE = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+    public static final Item RAW_STARSTONE = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+    public static final Item STARSTONE_ITEM = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+    public static final Item SHINING_STARSTONE = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
 
 
     public static void AddAndRegisterItem() {
@@ -26,6 +29,9 @@ public class MysticGemstonesItem {
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "raw_jasper"), RAW_JASPER);
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "alexandrite"), ALEXANDRITE_ITEM);
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "raw_alexandrite"), RAW_ALEXANDRITE);
+        Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "raw_starstone"), RAW_STARSTONE);
+        Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "starstone_item"), STARSTONE_ITEM);
+        Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "shining_starstone"), SHINING_STARSTONE);
 
     }
 }

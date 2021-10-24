@@ -5,22 +5,31 @@ import mysticgemstones.mysticgemstones.block.entity.StarstoneOreEntity;
 import mysticgemstones.mysticgemstones.generation.OreGeneration;
 import mysticgemstones.mysticgemstones.item.MysticGemstonesItem;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.util.registry.Registry;
+import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
+import net.minecraft.util.Identifier;
 
 
 public class MysticGemstones implements ModInitializer {
 
-    public static BlockEntityType<StarstoneOreEntity> STARSTONE_ORE_ENTITY;
 
     @Override
     public void onInitialize() {
 
-        STARSTONE_ORE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "mysticgemstones:starstone_ore_entity", FabricBlockEntityTypeBuilder.create(StarstoneOreEntity::new, MysticGemstonesBlock.STARSTONE_ORE).build(null));
-
         MysticGemstonesBlock.AddAndRegisterBlocks();
         MysticGemstonesItem.AddAndRegisterItem();
         OreGeneration.RegisterOreGeneration();
+        StarstoneOreEntity.RegisterEntity();
+
+
+        // Move this to MysticGemstonesItem class
+        FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.RAW_STARSTONE, new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> {
+            if (/*If day time is between 21980 and 22350 return true else return false also delete this random clientWorld != clientWorld*/clientWorld != clientWorld) {
+                // Use shiny texture
+                return 1.0F;
+            }
+            // Use not shiny texture
+            return 0.0F;
+        });
+
     }
 }
