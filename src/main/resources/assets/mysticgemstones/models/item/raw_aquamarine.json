@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mysticgemstones:item/raw_aquamarin"
+    "layer0": "mysticgemstones:item/raw_aquamarine"
   }
 }
