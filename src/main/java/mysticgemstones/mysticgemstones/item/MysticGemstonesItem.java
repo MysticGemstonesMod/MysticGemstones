@@ -34,4 +34,5 @@ public class MysticGemstonesItem {
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "shining_starstone"), SHINING_STARSTONE);
 
     }
+
 }
