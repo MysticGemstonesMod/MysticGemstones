@@ -1,7 +1,6 @@
 package mysticgemstones.mysticgemstones;
 
 import mysticgemstones.mysticgemstones.block.MysticGemstonesBlock;
-import mysticgemstones.mysticgemstones.block.StarstoneOre;
 import mysticgemstones.mysticgemstones.block.entity.StarstoneOreEntity;
 import mysticgemstones.mysticgemstones.generation.OreGeneration;
 import mysticgemstones.mysticgemstones.item.MysticGemstonesItem;
@@ -18,7 +17,7 @@ public class MysticGemstones implements ModInitializer {
         MysticGemstonesItem.AddAndRegisterItem();
         OreGeneration.RegisterOreGeneration();
         StarstoneOreEntity.RegisterEntity();
-        StarstoneOre.setShiningNotShining();
+        MysticGemstonesItem.setShiningNotShining();
 
     }
 }

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "shining=false": {"model": "mysticgemstones:block/starstone_ore"},
+    "shining=true": {"model": "mysticgemstones:block/starstone_ore_shiny"}
+  }
+}

@@ -14,7 +14,7 @@ import java.util.function.ToIntFunction;
 
 public class MysticGemstonesBlock {
 
-    private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {
+    private static ToIntFunction<BlockState> lightLevel(int litLevel) {
         return (state) -> {
             return (Boolean)state.get(StarstoneOre.SHINING) ? litLevel : 0;
         };
@@ -24,7 +24,7 @@ public class MysticGemstonesBlock {
     public static final Block AQUAMARIN_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F));
     public static final Block JASPER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F));
     public static final Block ALEXANDRITE_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F));
-    public static final StarstoneOre STARSTONE_ORE = new StarstoneOre(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).luminance(createLightLevelFromLitBlockState(15)));
+    public static final StarstoneOre STARSTONE_ORE = new StarstoneOre(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).luminance(lightLevel(10)));
 
 
     public static void AddAndRegisterBlocks() {

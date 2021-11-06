@@ -6,13 +6,13 @@
       "predicate": {
         "shining": 0
       },
-      "model": "mysticgemstones:item/raw_starstone_noshining"
+      "model": "mysticgemstones:item/raw_starstone_no_shiny"
     },
     {
       "predicate": {
         "shining": 1
       },
-      "model": "mysticgemstones:item/raw_starstone_shining"
+      "model": "mysticgemstones:item/raw_starstone_shiny"
     }
   ]
 }
