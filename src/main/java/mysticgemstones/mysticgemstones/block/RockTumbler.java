@@ -3,10 +3,10 @@ package mysticgemstones.mysticgemstones.block;
 import mysticgemstones.mysticgemstones.item.MysticGemstonesItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -22,12 +22,23 @@ public class RockTumbler extends Block {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack itemStack = player.getStackInHand(hand);
+        // Should probably use method overloading or variables or something like that for these if statments so there is no duplicate code....
+        // Once in future hopefully...
         if (!world.isClient && itemStack.isOf(MysticGemstonesItem.RAW_AQUAMARIN)) {
-            player.sendMessage(new LiteralText("Should drop Aquamarin and remove Raw Aquamarin from player inventory now.... Not yet implemented though :("), false);
-            player.damage(DamageSource.FALL, 1);
+            player.getStackInHand(hand).setCount(player.getStackInHand(hand).getCount() - 1);
+            Block.dropStack(world, pos, new ItemStack(MysticGemstonesItem.AQUAMARIN_ITEM));
+            world.playSound(null, pos, SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS, 1f, 1f);
         }
-
+        if (!world.isClient && itemStack.isOf(MysticGemstonesItem.RAW_ALEXANDRITE)) {
+            player.getStackInHand(hand).setCount(player.getStackInHand(hand).getCount() - 1);
+            Block.dropStack(world, pos, new ItemStack(MysticGemstonesItem.ALEXANDRITE_ITEM));
+            world.playSound(null, pos, SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS, 1f, 1f);
+        }
+        if (!world.isClient && itemStack.isOf(MysticGemstonesItem.RAW_JASPER)) {
+            player.getStackInHand(hand).setCount(player.getStackInHand(hand).getCount() - 1);
+            Block.dropStack(world, pos, new ItemStack(MysticGemstonesItem.JASPER_ITEM));
+            world.playSound(null, pos, SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS, 1f, 1f);
+        }
         return ActionResult.SUCCESS;
     }
-
 }
