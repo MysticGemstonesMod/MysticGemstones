@@ -1,18 +1,3 @@
 {
-  "parent": "block/generated",
-
-  "overrides": [
-    {
-      "predicate": {
-        "shining": 0
-      },
-      "model": "mysticgemstones:block/starstone_ore"
-    },
-    {
-      "predicate": {
-        "shining": 1
-      },
-      "model": "mysticgemstones:block/starstone_ore_shiny"
-    }
-  ]
+  "parent": "mysticgemstones:block/starstone_ore_shiny"
 }
