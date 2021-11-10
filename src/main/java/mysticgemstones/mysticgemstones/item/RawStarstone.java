@@ -16,10 +16,14 @@ public class RawStarstone extends Item {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
 
         if (world.getTimeOfDay() > 22350 || world.getTimeOfDay() < 21980) {
-            FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.RAW_STARSTONE, new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 0.0F);
+            FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.RAW_STARSTONE,
+                    new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 0.0F);
         }
         else if (world.getTimeOfDay() > 21980 && world.getTimeOfDay() < 22350) {
-            FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.RAW_STARSTONE, new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 1.0F);
+            FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.RAW_STARSTONE,
+                    new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 1.0F);
         }
     }
+
+
 }
