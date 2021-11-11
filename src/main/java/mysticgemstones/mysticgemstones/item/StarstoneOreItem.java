@@ -48,12 +48,10 @@ public class StarstoneOreItem extends Item {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
 
         if (world.getTimeOfDay() > 22350 || world.getTimeOfDay() < 21980) {
-            System.out.println("0");
             FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.STARSTONE_ORE_ITEM,
                     new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmm) -> 0.0F);
         }
         else {
-            System.out.println("1");
             FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.STARSTONE_ORE_ITEM,
                     new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmm) -> 1.0F);
         }
