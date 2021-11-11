@@ -6,12 +6,14 @@ import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
-import net.minecraft.block.ShulkerBoxBlock;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUsageContext;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -23,7 +25,6 @@ import net.minecraft.state.property.Property;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
@@ -31,7 +32,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 
 public class StarstoneOreItem extends Item {
@@ -213,13 +213,6 @@ public class StarstoneOreItem extends Item {
         return this.getBlock().getTranslationKey();
     }
 
-    public void appendStacks(ItemGroup group, DefaultedList<ItemStack> stacks) {
-        if (this.isIn(group)) {
-            this.getBlock().appendStacks(group, stacks);
-        }
-
-    }
-
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
         this.getBlock().appendTooltip(stack, world, tooltip, context);
@@ -227,13 +220,5 @@ public class StarstoneOreItem extends Item {
 
     public Block getBlock() {
         return this.block;
-    }
-
-    public void appendBlocks(Map<Block, Item> map, Item item) {
-        map.put(this.getBlock(), item);
-    }
-
-    public boolean canBeNested() {
-        return !(this.block instanceof ShulkerBoxBlock);
     }
 }
