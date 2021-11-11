@@ -1,5 +1,5 @@
 {
-  "parent": "block/generated",
+  "parent": "mysticgemstones:item/starstone_ore_no_shiny",
 
   "overrides": [
     {
