@@ -13,7 +13,7 @@ import net.minecraft.util.registry.Registry;
 public class MysticGemstonesBlock {
 
     // Add block
-    public static final RockTumbler ROCK_TUMBLER = new RockTumbler(FabricBlockSettings.of(Material.STONE));
+    public static final RockTumbler ROCK_TUMBLER = new RockTumbler(FabricBlockSettings.of(Material.STONE).strength(3F, 6.0F).breakByTool(FabricToolTags.PICKAXES).requiresTool());
     public static final Block AQUAMARINE_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool());
     public static final Block JASPER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool());
     public static final Block ALEXANDRITE_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool());
