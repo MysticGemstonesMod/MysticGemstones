@@ -9,6 +9,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import mysticgemstones.mysticgemstones.Constant;
 
 public class MysticGemstonesBlock {
 
@@ -21,16 +22,16 @@ public class MysticGemstonesBlock {
     public static void AddAndRegisterBlocks() {
 
         // Register block
-        Registry.register(Registry.BLOCK, new Identifier("mysticgemstones", "aquamarine_ore"), AQUAMARINE_ORE);
-        Registry.register(Registry.BLOCK, new Identifier("mysticgemstones", "jasper_ore"), JASPER_ORE);
-        Registry.register(Registry.BLOCK, new Identifier("mysticgemstones", "alexandrite_ore"), ALEXANDRITE_ORE);
-        Registry.register(Registry.BLOCK, new Identifier("mysticgemstones", "rock_tumbler"), ROCK_TUMBLER);
+        Registry.register(Registry.BLOCK, new Identifier(Constant.MOD_ID, "aquamarine_ore"), AQUAMARINE_ORE);
+        Registry.register(Registry.BLOCK, new Identifier(Constant.MOD_ID, "jasper_ore"), JASPER_ORE);
+        Registry.register(Registry.BLOCK, new Identifier(Constant.MOD_ID, "alexandrite_ore"), ALEXANDRITE_ORE);
+        Registry.register(Registry.BLOCK, new Identifier(Constant.MOD_ID, "rock_tumbler"), ROCK_TUMBLER);
 
         // Register block item
-        Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "aquamarine_ore"), new BlockItem(AQUAMARINE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
-        Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "jasper_ore"), new BlockItem(JASPER_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
-        Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
-        Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "rock_tumbler"), new BlockItem(ROCK_TUMBLER, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "aquamarine_ore"), new BlockItem(AQUAMARINE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "jasper_ore"), new BlockItem(JASPER_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "rock_tumbler"), new BlockItem(ROCK_TUMBLER, new FabricItemSettings().group(ItemGroup.MATERIALS)));
 
     }
 }
