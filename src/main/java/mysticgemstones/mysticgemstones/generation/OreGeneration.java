@@ -23,11 +23,11 @@ public class OreGeneration {
        every ore. */
 
 
-    // AQUAMARIN
-    private static ConfiguredFeature<?, ?> ORE_AQUAMARIN_OVERWORLD = Feature.ORE
+    // AQUAMARINE
+    private static ConfiguredFeature<?, ?> ORE_AQUAMARINE_OVERWORLD = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-                    MysticGemstonesBlock.AQUAMARIN_ORE.getDefaultState(),
+                    MysticGemstonesBlock.AQUAMARINE_ORE.getDefaultState(),
                     3)) // Vein size
             .range(new RangeDecoratorConfig(
                     UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(35)))) // Inclusive min and max height
@@ -64,10 +64,10 @@ public class OreGeneration {
 
     public static void RegisterOreGeneration() {
 
-        // AQUAMARIN
+        // AQUAMARINE
         RegistryKey<ConfiguredFeature<?, ?>> oreAquamarinOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
-                new Identifier("mysticgemstones", "ore_aquamarin_overworld"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAquamarinOverworld.getValue(), ORE_AQUAMARIN_OVERWORLD);
+                new Identifier("mysticgemstones", "ore_aquamarine_overworld"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAquamarinOverworld.getValue(), ORE_AQUAMARINE_OVERWORLD);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAquamarinOverworld);
 
         // JASPER

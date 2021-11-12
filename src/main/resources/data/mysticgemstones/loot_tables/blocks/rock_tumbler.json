@@ -6,10 +6,9 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "mysticgemstones:raw_aquamarin"
+          "name": "mysticgemstones:rock_tumbler"
         }
       ]
     }
   ]
 }
-

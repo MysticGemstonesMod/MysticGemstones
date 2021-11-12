@@ -3,13 +3,13 @@
   "pools": [
     {
       "rolls": {
-        "min": 1,
-        "max": 4
+        "min": 2,
+        "max": 3
       },
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "mysticgemstones:raw_alexandrite"
+          "name": "mysticgemstones:raw_aquamarine"
         }
       ]
     }
