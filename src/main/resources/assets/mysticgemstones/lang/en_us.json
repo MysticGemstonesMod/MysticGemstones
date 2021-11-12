@@ -10,4 +10,10 @@
   "block.mysticgemstones.alexandrite_ore": "Alexandrite Ore",
   "block.mysticgemstones.rock_tumbler": "Rock Tumbler",
   "item.mysticgemstones.jasper_powder": "Jasper Powder"
+  "block.mysticgemstones.starstone_ore": "Starstone Ore",
+  "item.mysticgemstones.starstone_ore_item": "Starstone Ore",
+  "item.mysticgemstones.starstone_dust": "Starstone Dust",
+  "item.mysticgemstones.condensed_starstone_dust": "Condensed Starstone Dust",
+  "item.mysticgemstones.starstone_item": "Starstone",
+  "item.mysticgemstones.raw_starstone": "Raw Starstone"
 }

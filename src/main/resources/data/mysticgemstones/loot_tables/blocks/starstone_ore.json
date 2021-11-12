@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 5,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "mysticgemstones:raw_starstone"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "mysticgemstones:starstone_ore",
+          "properties": {
+            "shining": "true"
+          }
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 0,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "mysticgemstones:starstone_dust"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "mysticgemstones:starstone_ore",
+          "properties": {
+            "shining": "false"
+          }
+        }
+      ]
+    }
+  ]
+}
