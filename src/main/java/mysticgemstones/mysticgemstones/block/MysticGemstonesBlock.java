@@ -39,7 +39,6 @@ public class MysticGemstonesBlock {
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "aquamarin_ore"), new BlockItem(AQUAMARIN_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "jasper_ore"), new BlockItem(JASPER_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
-        Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "starstone_ore"), new BlockItem(STARSTONE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
 
     }
 }

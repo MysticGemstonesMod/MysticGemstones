@@ -1,0 +1,18 @@
+{
+  "parent": "mysticgemstones:item/starstone_ore_no_shiny",
+
+  "overrides": [
+    {
+      "predicate": {
+        "shining": 0
+      },
+      "model": "mysticgemstones:item/starstone_ore_no_shiny"
+    },
+    {
+      "predicate": {
+        "shining": 1
+      },
+      "model": "mysticgemstones:item/starstone_ore_shiny"
+    }
+  ]
+}

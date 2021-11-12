@@ -1,18 +1,6 @@
 {
   "parent": "item/generated",
-
-  "overrides": [
-    {
-      "predicate": {
-        "shining": 0
-      },
-      "model": "mysticgemstones:item/raw_starstone_no_shiny"
-    },
-    {
-      "predicate": {
-        "shining": 1
-      },
-      "model": "mysticgemstones:item/raw_starstone_shiny"
-    }
-  ]
+  "textures": {
+    "layer0": "mysticgemstones:item/raw_starstone_shiny"
+  }
 }
