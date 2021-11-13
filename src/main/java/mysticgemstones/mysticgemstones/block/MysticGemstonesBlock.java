@@ -24,6 +24,7 @@ public class MysticGemstonesBlock {
 
     // Add block
     public static final StarstoneOre STARSTONE_ORE = new StarstoneOre(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).luminance(lightLevel(10)));
+    public static final GemGrindstone GEM_GRINDSTONE = new GemGrindstone(FabricBlockSettings.of(Material.STONE).strength(3F, 6.0F).breakByTool(FabricToolTags.PICKAXES).requiresTool());
     public static final RockTumbler ROCK_TUMBLER = new RockTumbler(FabricBlockSettings.of(Material.STONE).strength(3F, 6.0F).breakByTool(FabricToolTags.PICKAXES).requiresTool());
     public static final Block AQUAMARINE_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool());
     public static final Block JASPER_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool());
@@ -38,12 +39,14 @@ public class MysticGemstonesBlock {
         Registry.register(Registry.BLOCK, new Identifier(Constant.MOD_ID, "alexandrite_ore"), ALEXANDRITE_ORE);
         Registry.register(Registry.BLOCK, new Identifier(Constant.MOD_ID, "starstone_ore"), STARSTONE_ORE);
         Registry.register(Registry.BLOCK, new Identifier(Constant.MOD_ID, "rock_tumbler"), ROCK_TUMBLER);
+        Registry.register(Registry.BLOCK, new Identifier(Constant.MOD_ID, "gem_grindstone"), GEM_GRINDSTONE);
 
         // Register block item
         Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "aquamarine_ore"), new BlockItem(AQUAMARINE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
         Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "jasper_ore"), new BlockItem(JASPER_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
         Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
         Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "rock_tumbler"), new BlockItem(ROCK_TUMBLER, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "gem_grindstone"), new BlockItem(GEM_GRINDSTONE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
 
     }
 }

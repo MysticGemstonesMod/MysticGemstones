@@ -15,5 +15,6 @@
   "item.mysticgemstones.starstone_dust": "Starstone Dust",
   "item.mysticgemstones.condensed_starstone_dust": "Condensed Starstone Dust",
   "item.mysticgemstones.starstone_item": "Starstone",
-  "item.mysticgemstones.raw_starstone": "Raw Starstone"
+  "item.mysticgemstones.raw_starstone": "Raw Starstone",
+  "block.mysticgemstones.gem_grindstone": "Gem Grindstone"
 }
