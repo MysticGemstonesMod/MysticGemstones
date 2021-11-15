@@ -1,5 +1,6 @@
 package mysticgemstones.mysticgemstones.block;
 
+import mysticgemstones.mysticgemstones.item.StarstoneOreBlockItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
@@ -45,8 +46,8 @@ public class MysticGemstonesBlock {
         Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "aquamarine_ore"), new BlockItem(AQUAMARINE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
         Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "jasper_ore"), new BlockItem(JASPER_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
         Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "starstone_ore"), new StarstoneOreBlockItem(STARSTONE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
         Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "rock_tumbler"), new BlockItem(ROCK_TUMBLER, new FabricItemSettings().group(ItemGroup.MATERIALS)));
         Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "gem_grindstone"), new BlockItem(GEM_GRINDSTONE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
-
     }
 }

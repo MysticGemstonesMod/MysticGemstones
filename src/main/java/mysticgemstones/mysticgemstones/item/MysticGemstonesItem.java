@@ -18,7 +18,6 @@ public class MysticGemstonesItem {
     public static final Item STARSTONE_ITEM = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
     public static final RawStarstone RAW_STARSTONE = new RawStarstone(new FabricItemSettings().group(ItemGroup.MATERIALS));
     public static final Item JASPER_POWDER = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
-    public static final StarstoneOreItem STARSTONE_ORE_ITEM = new StarstoneOreItem(new FabricItemSettings().group(ItemGroup.MATERIALS));
     public static final StarstoneDust STARSTONE_DUST = new StarstoneDust(new FabricItemSettings().group(ItemGroup.MATERIALS));
     public static final CondensedStarstoneDust CONDENSED_STARSTONE_DUST = new CondensedStarstoneDust(new FabricItemSettings().group(ItemGroup.MATERIALS));
 
@@ -35,7 +34,6 @@ public class MysticGemstonesItem {
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "raw_alexandrite"), RAW_ALEXANDRITE);
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "starstone_item"), STARSTONE_ITEM);
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "raw_starstone"), RAW_STARSTONE);
-        Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "starstone_ore_item"), STARSTONE_ORE_ITEM);
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "starstone_dust"), STARSTONE_DUST);
         Registry.register(Registry.ITEM, new Identifier("mysticgemstones", "condensed_starstone_dust"), CONDENSED_STARSTONE_DUST);
     }
