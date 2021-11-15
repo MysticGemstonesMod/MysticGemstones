@@ -22,7 +22,6 @@ public class OreGeneration {
        By fix I mean add some fancy magic so there is no duplicate code for
        every ore. */
 
-
     // AQUAMARINE
     private static ConfiguredFeature<?, ?> ORE_AQUAMARINE_OVERWORLD = Feature.ORE
             .configure(new OreFeatureConfig(
@@ -65,10 +64,10 @@ public class OreGeneration {
     public static void RegisterOreGeneration() {
 
         // AQUAMARINE
-        RegistryKey<ConfiguredFeature<?, ?>> oreAquamarinOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+        RegistryKey<ConfiguredFeature<?, ?>> oreAquamarineOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier("mysticgemstones", "ore_aquamarine_overworld"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAquamarinOverworld.getValue(), ORE_AQUAMARINE_OVERWORLD);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAquamarinOverworld);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAquamarineOverworld.getValue(), ORE_AQUAMARINE_OVERWORLD);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAquamarineOverworld);
 
         // JASPER
         RegistryKey<ConfiguredFeature<?, ?>> oreJasperOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
@@ -81,6 +80,5 @@ public class OreGeneration {
                 new Identifier("mysticgemstones", "ore_alexandrite_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAlexandriteOverworld.getValue(), ORE_ALEXANDRITE_OVERWORLD);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAlexandriteOverworld);
-
     }
 }
