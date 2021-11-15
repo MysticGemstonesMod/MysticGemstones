@@ -1,5 +1,7 @@
 package mysticgemstones.mysticgemstones.block;
 
+import mysticgemstones.mysticgemstones.Constant;
+import mysticgemstones.mysticgemstones.item.MysticGemstonesItem;
 import mysticgemstones.mysticgemstones.item.StarstoneOreBlockItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -8,10 +10,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import mysticgemstones.mysticgemstones.Constant;
 
 import java.util.function.ToIntFunction;
 
@@ -43,11 +43,11 @@ public class MysticGemstonesBlock {
         Registry.register(Registry.BLOCK, new Identifier(Constant.MOD_ID, "gem_grindstone"), GEM_GRINDSTONE);
 
         // Register block item
-        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "aquamarine_ore"), new BlockItem(AQUAMARINE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
-        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "jasper_ore"), new BlockItem(JASPER_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
-        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
-        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "starstone_ore"), new StarstoneOreBlockItem(STARSTONE_ORE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
-        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "rock_tumbler"), new BlockItem(ROCK_TUMBLER, new FabricItemSettings().group(ItemGroup.MATERIALS)));
-        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "gem_grindstone"), new BlockItem(GEM_GRINDSTONE, new FabricItemSettings().group(ItemGroup.MATERIALS)));
+        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "aquamarine_ore"), new BlockItem(AQUAMARINE_ORE, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "jasper_ore"), new BlockItem(JASPER_ORE, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "alexandrite_ore"), new BlockItem(ALEXANDRITE_ORE, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "starstone_ore"), new StarstoneOreBlockItem(STARSTONE_ORE, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "rock_tumbler"), new BlockItem(ROCK_TUMBLER, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(Constant.MOD_ID, "gem_grindstone"), new BlockItem(GEM_GRINDSTONE, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     }
 }

@@ -6,7 +6,7 @@ public interface Constant {
     // Mod Id
     String MOD_ID = "mysticgemstones";
 
-    // Items
+    // Gemstone Items
     String AQUAMARINE_ITEM = "aquamarine";
     String RAW_AQUAMARINE = "raw_aquamarine";
     String JASPER_ITEM = "jasper";
@@ -18,4 +18,9 @@ public interface Constant {
     String JASPER_POWDER = "jasper_powder";
     String STARSTONE_DUST = "starstone_dust";
     String CONDENSED_STARSTONE_DUST = "condensed_starstone_dust";
+
+    // Items
+    String AQUAMARINE_CHARM = "aquamarine_charm";
+    String JASPER_CHARM = "jasper_charm";
+    String ALEXANDRITE_CHARM = "alexandrite_charm";
 }

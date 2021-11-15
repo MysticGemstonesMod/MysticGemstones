@@ -16,5 +16,9 @@
   "item.mysticgemstones.condensed_starstone_dust": "Condensed Starstone Dust",
   "item.mysticgemstones.starstone_item": "Starstone",
   "item.mysticgemstones.raw_starstone": "Raw Starstone",
-  "block.mysticgemstones.gem_grindstone": "Gem Grindstone"
+  "block.mysticgemstones.gem_grindstone": "Gem Grindstone",
+  "item.mysticgemstones.aquamarine_charm": "Aquamarine Charm",
+  "item.mysticgemstones.jasper_charm": "Jasper Charm",
+  "item.mysticgemstones.alexandrite_charm": "Alexandrite Charm",
+  "itemGroup.mysticgemstones.items": "Items"
 }
