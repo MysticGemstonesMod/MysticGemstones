@@ -13,7 +13,7 @@ public class MysticGemstones implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        MysticGemstonesBlock.AddAndRegisterBlocks();
+        MysticGemstonesBlock.register();
         MysticGemstonesItem.register();
         OreGeneration.RegisterOreGeneration();
         StarstoneOreEntity.RegisterEntity();

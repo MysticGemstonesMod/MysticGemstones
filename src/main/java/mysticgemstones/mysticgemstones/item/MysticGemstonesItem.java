@@ -22,7 +22,7 @@ public class MysticGemstonesItem {
 
     // Item group
     public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(
-            new Identifier("mysticgemstones", "items"),
+            new Identifier(Constant.MOD_ID, "items"),
             () -> new ItemStack(MysticGemstonesBlock.AQUAMARINE_ORE));
 
     // Adds info about Items

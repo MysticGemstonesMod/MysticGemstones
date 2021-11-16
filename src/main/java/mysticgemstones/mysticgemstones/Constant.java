@@ -23,4 +23,14 @@ public interface Constant {
     String AQUAMARINE_CHARM = "aquamarine_charm";
     String JASPER_CHARM = "jasper_charm";
     String ALEXANDRITE_CHARM = "alexandrite_charm";
+
+    // Ores
+    String AQUAMARINE_ORE = "aquamarine_ore";
+    String JASPER_ORE = "jasper_ore";
+    String ALEXANDRITE_ORE = "alexandrite_ore";
+    String STARSTONE_ORE = "starstone_ore";
+
+    // Blocks
+    String ROCK_TUMBLER = "rock_tumbler";
+    String GEM_GRINDSTONE = "gem_grindstone";
 }
