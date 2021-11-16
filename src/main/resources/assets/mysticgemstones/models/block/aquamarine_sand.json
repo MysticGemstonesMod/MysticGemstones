@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "mysticgemstones:block/gem_grindstone"
+    "all": "mysticgemstones:block/aquamarine_sand"
   }
 }

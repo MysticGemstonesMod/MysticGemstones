@@ -15,9 +15,11 @@ public interface Constant {
     String RAW_ALEXANDRITE = "raw_alexandrite";
     String STARSTONE_ITEM = "starstone";
     String RAW_STARSTONE = "raw_starstone";
+    String AQUAMARINE_POWDER = "aquamarine_powder";
+    String ALEXANDRITE_POWDER = "alexandrite_powder";
     String JASPER_POWDER = "jasper_powder";
-    String STARSTONE_DUST = "starstone_dust";
-    String CONDENSED_STARSTONE_DUST = "condensed_starstone_dust";
+    String STARSTONE_POWDER = "starstone_powder";
+    String CONDENSED_STARSTONE_POWDER = "condensed_starstone_powder";
 
     // Items
     String AQUAMARINE_CHARM = "aquamarine_charm";
@@ -33,4 +35,7 @@ public interface Constant {
     // Blocks
     String ROCK_TUMBLER = "rock_tumbler";
     String GEM_GRINDSTONE = "gem_grindstone";
+    String AQUAMARINE_SAND = "aquamarine_sand";
+    String ALEXANDRITE_SAND = "alexandrite_sand";
+    String JASPER_SAND = "jasper_sand";
 }

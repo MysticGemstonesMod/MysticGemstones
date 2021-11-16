@@ -18,7 +18,7 @@ public class RawStarstone extends Item {
         if (world.getTimeOfDay() > 22350 || world.getTimeOfDay() < 21980) {
             stack.setCount(stack.getCount() - 1);
             BlockPos pos = entity.getBlockPos();
-            Block.dropStack(world, pos, new ItemStack(MysticGemstonesItem.STARSTONE_DUST));
+            Block.dropStack(world, pos, new ItemStack(MysticGemstonesItem.STARSTONE_POWDER));
         }
     }
 }

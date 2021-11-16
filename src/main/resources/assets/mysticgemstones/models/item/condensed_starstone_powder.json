@@ -1,0 +1,21 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mysticgemstones:item/condensed_starstone_powder"
+  },
+
+  "overrides": [
+    {
+      "predicate": {
+        "shining": 0
+      },
+      "model": "mysticgemstones:item/condensed_starstone_powder_no_shiny"
+    },
+    {
+      "predicate": {
+        "shining": 1
+      },
+      "model": "mysticgemstones:item/condensed_starstone_powder_shiny"
+    }
+  ]
+}
