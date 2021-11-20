@@ -60,6 +60,18 @@ public class OreGeneration {
             .spreadHorizontally()
             .repeat(12); // Number of veins per chunk
 
+    // TOPAZ
+    private static ConfiguredFeature<?, ?> ORE_TOPAZ_OVERWORLD = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    MysticGemstonesBlock.TOPAZ_ORE.getDefaultState(),
+                    3)) // Vein size
+            .range(new RangeDecoratorConfig(
+                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(35)))) // Inclusive min and max height
+
+            .spreadHorizontally()
+            .repeat(12); // Number of veins per chunk
+
 
     public static void RegisterOreGeneration() {
 
@@ -74,6 +86,12 @@ public class OreGeneration {
                 new Identifier("mysticgemstones", "ore_jasper_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreJasperOverworld.getValue(), ORE_JASPER_OVERWORLD);
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreJasperOverworld);
+
+        // TOPAZ
+        RegistryKey<ConfiguredFeature<?, ?>> oreTopazOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier("mysticgemstones", "ore_topaz_overworld"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTopazOverworld.getValue(), ORE_TOPAZ_OVERWORLD);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTopazOverworld);
 
         // ALEXANDRITE
         RegistryKey<ConfiguredFeature<?, ?>> oreAlexandriteOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,

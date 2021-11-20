@@ -5,6 +5,7 @@ import mysticgemstones.mysticgemstones.block.MysticGemstonesBlock;
 import mysticgemstones.mysticgemstones.item.charms.AlexandriteCharm;
 import mysticgemstones.mysticgemstones.item.charms.AquamarineCharm;
 import mysticgemstones.mysticgemstones.item.charms.JasperCharm;
+import mysticgemstones.mysticgemstones.item.charms.TopazCharm;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
@@ -29,10 +30,13 @@ public class MysticGemstonesItem {
     public static final Item AQUAMARINE_ITEM = registerItem(Constant.AQUAMARINE_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item RAW_AQUAMARINE = registerItem(Constant.RAW_AQUAMARINE, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item JASPER_ITEM = registerItem(Constant.JASPER_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final Item TOPAZ_ITEM = registerItem(Constant.TOPAZ_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item AQUAMARINE_POWDER = registerItem(Constant.AQUAMARINE_POWDER, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item ALEXANDRITE_POWDER = registerItem(Constant.ALEXANDRITE_POWDER, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item JASPER_POWDER = registerItem(Constant.JASPER_POWDER, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final Item TOPAZ_POWDER = registerItem(Constant.TOPAZ_POWDER, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item RAW_JASPER = registerItem(Constant.RAW_JASPER, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final Item RAW_TOPAZ = registerItem(Constant.RAW_TOPAZ, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item ALEXANDRITE_ITEM = registerItem(Constant.ALEXANDRITE_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item RAW_ALEXANDRITE = registerItem(Constant.RAW_ALEXANDRITE, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item STARSTONE_ITEM = registerItem(Constant.STARSTONE_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
@@ -42,6 +46,7 @@ public class MysticGemstonesItem {
     public static final AquamarineCharm AQUAMARINE_CHARM = registerItem(Constant.AQUAMARINE_CHARM, new AquamarineCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final AlexandriteCharm ALEXANDRITE_CHARM = registerItem(Constant.ALEXANDRITE_CHARM, new AlexandriteCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final JasperCharm JASPER_CHARM = registerItem(Constant.JASPER_CHARM, new JasperCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
+    public static final TopazCharm TOPAZ_CHARM = registerItem(Constant.TOPAZ_CHARM, new TopazCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
 
     // Puts info about item to ITEMS variable.
     public static <T extends Item> T registerItem(String id, T item) {
