@@ -25,5 +25,11 @@
   "block.mysticgemstones.aquamarine_sand": "Aquamarine Sand",
   "block.mysticgemstones.alexandrite_sand": "Alexandrite Sand",
   "block.mysticgemstones.jasper_sand": "Jasper Sand",
+  "block.mysticgemstones.topaz_sand": "Topaz Sand",
+  "item.mysticgemstones.topaz_charm": "Topaz Charm",
+  "block.mysticgemstones.topaz_ore": "Topaz Ore",
+  "item.mysticgemstones.raw_topaz": "Raw Topaz",
+  "item.mysticgemstones.topaz": "Topaz",
+  "item.mysticgemstones.topaz_powder": "Topaz Powder",
   "itemGroup.mysticgemstones.items": "Items"
 }
