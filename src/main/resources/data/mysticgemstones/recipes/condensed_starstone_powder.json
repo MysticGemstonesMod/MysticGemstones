@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mysticgemstones:starstone_powder"
+    },
+    {
+      "item": "mysticgemstones:starstone_powder"
+    },
+    {
+      "item": "mysticgemstones:starstone_powder"
+    },
+    {
+      "item": "mysticgemstones:starstone_powder"
+    }
+  ],
+  "result": {
+    "item": "mysticgemstones:condensed_starstone_powder"
+  }
+}
