@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "mysticgemstones:jasper_sand"
+    }
+  },
+  "result": {
+    "item": "mysticgemstones:jasper_powder",
+    "count": 9
+  }
+}
