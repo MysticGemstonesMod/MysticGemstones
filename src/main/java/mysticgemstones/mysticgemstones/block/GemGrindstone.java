@@ -25,6 +25,8 @@ public class GemGrindstone extends Block {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 
+        // Polish Item chance numbers are reversed, so example. 95 = 5%, 30 = 60% and so on...  Basicaly 100 - number = drop chance.
+
         if (!world.isClient) {
             ItemStack item = player.getStackInHand(hand);
 
@@ -57,7 +59,25 @@ public class GemGrindstone extends Block {
             world.playSound(null, pos, SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.BLOCKS, 1f, 1f);
         } else
         world.playSound(null, pos, SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS, 1f, 1f);
+    }
+
+    private void polishGem(PlayerEntity player, Hand hand, World world, BlockPos pos, Item item_polished, Item item_powder,
+                           int powderDropChance, int itemBrakeChance, int polishItemChance) {
+        // Polish Item chance numbers are reversed, so example. 95 = 5%, 30 = 60% and so on...  Basicaly 100 - number = drop chance.
+        if (rng() <= powderDropChance) {
+            Block.dropStack(world, pos, new ItemStack(item_powder));
         }
+
+        if (rng() <= itemBrakeChance) {
+            player.getStackInHand(hand).setCount(player.getStackInHand(hand).getCount() - 1);
+            world.playSound(null, pos, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 1f, 1f);
+        } else if (rng() >= polishItemChance) {
+            player.getStackInHand(hand).setCount(player.getStackInHand(hand).getCount() - 1);
+            Block.dropStack(world, pos, new ItemStack(item_polished));
+            world.playSound(null, pos, SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.BLOCKS, 1f, 1f);
+        } else
+            world.playSound(null, pos, SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS, 1f, 1f);
+    }
 
     private int rng() {
         int max = 101;
