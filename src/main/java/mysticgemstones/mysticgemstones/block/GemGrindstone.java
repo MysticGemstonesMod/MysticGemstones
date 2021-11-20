@@ -29,7 +29,7 @@ public class GemGrindstone extends Block {
             ItemStack item = player.getStackInHand(hand);
 
             if (item.isOf(MysticGemstonesItem.RAW_AQUAMARINE)) {
-                polishGem(player, hand, world, pos, MysticGemstonesItem.AQUAMARINE_ITEM, MysticGemstonesItem.ALEXANDRITE_POWDER);
+                polishGem(player, hand, world, pos, MysticGemstonesItem.AQUAMARINE_ITEM, MysticGemstonesItem.AQUAMARINE_POWDER);
             }
 
             if (item.isOf(MysticGemstonesItem.RAW_ALEXANDRITE)) {
