@@ -1,4 +1,4 @@
-package mysticgemstones.mysticgemstones.client;
+package xyz.mysticgemstones.client;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;

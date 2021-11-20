@@ -1,10 +1,10 @@
-package mysticgemstones.mysticgemstones.item;
+package xyz.mysticgemstones.item;
 
 import mysticgemstones.mysticgemstones.Constant;
-import mysticgemstones.mysticgemstones.block.MysticGemstonesBlock;
-import mysticgemstones.mysticgemstones.item.charms.AlexandriteCharm;
-import mysticgemstones.mysticgemstones.item.charms.AquamarineCharm;
-import mysticgemstones.mysticgemstones.item.charms.JasperCharm;
+import xyz.mysticgemstones.block.MysticGemstonesBlock;
+import xyz.mysticgemstones.item.charms.AlexandriteCharm;
+import xyz.mysticgemstones.item.charms.AquamarineCharm;
+import xyz.mysticgemstones.item.charms.JasperCharm;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;

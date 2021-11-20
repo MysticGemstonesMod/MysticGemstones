@@ -1,11 +1,11 @@
-package mysticgemstones.mysticgemstones.block;
+package xyz.mysticgemstones.block;
 
 import mysticgemstones.mysticgemstones.Constant;
-import mysticgemstones.mysticgemstones.block.sand.AlexandriteSand;
-import mysticgemstones.mysticgemstones.block.sand.AquamarineSand;
-import mysticgemstones.mysticgemstones.block.sand.JasperSand;
-import mysticgemstones.mysticgemstones.item.MysticGemstonesItem;
-import mysticgemstones.mysticgemstones.item.StarstoneOreBlockItem;
+import xyz.mysticgemstones.block.sand.AlexandriteSand;
+import xyz.mysticgemstones.block.sand.AquamarineSand;
+import xyz.mysticgemstones.block.sand.JasperSand;
+import xyz.mysticgemstones.item.MysticGemstonesItem;
+import xyz.mysticgemstones.item.StarstoneOreBlockItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
@@ -35,7 +35,7 @@ public class MysticGemstonesBlock {
     public static final JasperSand JASPER_SAND = addBlock(Constant.JASPER_SAND, new JasperSand(FabricBlockSettings.copyOf(Blocks.SAND)), false);
     public static final Block AQUAMARINE_ORE = addBlock(Constant.AQUAMARINE_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool()), false);
     public static final Block JASPER_ORE = addBlock(Constant.JASPER_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool()), false);
-    public static final Block ALEXANDRITE_ORE = addBlock(Constant.ALEXANDRITE_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool()), false);
+    public static final Block ALEXANDRITE_ORE = addBlock(Constant.ALEXANDRITE_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES).requiresTool()), false);
 
     // Add Blocks and their BlockItem
     public static <T extends Block> T addBlock(String id, T block, boolean itemHasCustomClass) {

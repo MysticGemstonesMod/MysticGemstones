@@ -1,7 +1,7 @@
-package mysticgemstones.mysticgemstones.block.entity;
+package xyz.mysticgemstones.block.entity;
 
-import mysticgemstones.mysticgemstones.block.MysticGemstonesBlock;
-import mysticgemstones.mysticgemstones.block.StarstoneOre;
+import xyz.mysticgemstones.block.MysticGemstonesBlock;
+import xyz.mysticgemstones.block.StarstoneOre;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;

@@ -1,6 +1,6 @@
-package mysticgemstones.mysticgemstones.block;
+package xyz.mysticgemstones.block;
 
-import mysticgemstones.mysticgemstones.block.entity.StarstoneOreEntity;
+import xyz.mysticgemstones.block.entity.StarstoneOreEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;

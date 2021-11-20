@@ -1,6 +1,6 @@
-package mysticgemstones.mysticgemstones.item;
+package xyz.mysticgemstones.item;
 
-import mysticgemstones.mysticgemstones.block.MysticGemstonesBlock;
+import xyz.mysticgemstones.block.MysticGemstonesBlock;
 import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;

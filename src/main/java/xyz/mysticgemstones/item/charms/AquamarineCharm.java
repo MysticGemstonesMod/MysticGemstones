@@ -1,4 +1,4 @@
-package mysticgemstones.mysticgemstones.item.charms;
+package xyz.mysticgemstones.item.charms;
 
 import net.minecraft.item.Item;
 

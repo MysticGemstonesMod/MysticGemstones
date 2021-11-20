@@ -1,4 +1,4 @@
-package mysticgemstones.mysticgemstones.block.sand;
+package xyz.mysticgemstones.block.sand;
 
 import net.minecraft.block.FallingBlock;
 

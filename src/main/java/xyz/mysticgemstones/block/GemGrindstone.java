@@ -1,6 +1,6 @@
-package mysticgemstones.mysticgemstones.block;
+package xyz.mysticgemstones.block;
 
-import mysticgemstones.mysticgemstones.item.MysticGemstonesItem;
+import xyz.mysticgemstones.item.MysticGemstonesItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
