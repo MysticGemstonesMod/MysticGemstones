@@ -17,5 +17,6 @@ public class MysticGemstones implements ModInitializer {
         MysticGemstonesItem.register();
         OreGeneration.RegisterOreGeneration();
         StarstoneOreEntity.RegisterEntity();
+
     }
 }

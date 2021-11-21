@@ -31,5 +31,7 @@
   "item.mysticgemstones.raw_topaz": "Raw Topaz",
   "item.mysticgemstones.topaz": "Topaz",
   "item.mysticgemstones.topaz_powder": "Topaz Powder",
+  "item.mysticgemstones.music_disc_aquamarine": "Music Disc",
+  "item.mysticgemstones.music_disc_aquamarine.desc": "Hmmmmmm song name",
   "itemGroup.mysticgemstones.items": "Items"
 }

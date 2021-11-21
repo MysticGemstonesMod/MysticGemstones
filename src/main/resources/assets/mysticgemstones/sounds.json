@@ -1,13 +1,13 @@
 {
-  "beach_house_space_song": {
+  "aquamarine_disc_sound": {
+    "subtitle": "subtitles.mysticgemstones.beach_house_space_song",
     "sounds": [
       "mysticgemstones:beach_house_space_song"
     ]
   },
-
-  "mgmt_little_dark_age": {
+  "gemName_disc_sound" : {
     "sounds": [
-      "mysticgamstones:mgtm_little_dark_age"
+      "mysticgemstones:mgmt_little_dark_age"
     ]
   }
 }

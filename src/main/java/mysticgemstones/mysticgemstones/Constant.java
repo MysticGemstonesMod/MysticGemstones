@@ -29,6 +29,7 @@ public interface Constant {
     String JASPER_CHARM = "jasper_charm";
     String ALEXANDRITE_CHARM = "alexandrite_charm";
     String TOPAZ_CHARM = "topaz_charm";
+    String MUSIC_DISC_AQUAMARINE = "music_disc_aquamarine";
 
     // Ores
     String AQUAMARINE_ORE = "aquamarine_ore";

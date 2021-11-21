@@ -1,11 +1,13 @@
 package mysticgemstones.mysticgemstones.item;
 
 import mysticgemstones.mysticgemstones.Constant;
+import mysticgemstones.mysticgemstones.SoundEventMysticGemstones;
 import mysticgemstones.mysticgemstones.block.MysticGemstonesBlock;
 import mysticgemstones.mysticgemstones.item.charms.AlexandriteCharm;
 import mysticgemstones.mysticgemstones.item.charms.AquamarineCharm;
 import mysticgemstones.mysticgemstones.item.charms.JasperCharm;
 import mysticgemstones.mysticgemstones.item.charms.TopazCharm;
+import mysticgemstones.mysticgemstones.item.discs.MusicDiscAquamarine;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
@@ -47,6 +49,7 @@ public class MysticGemstonesItem {
     public static final AlexandriteCharm ALEXANDRITE_CHARM = registerItem(Constant.ALEXANDRITE_CHARM, new AlexandriteCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final JasperCharm JASPER_CHARM = registerItem(Constant.JASPER_CHARM, new JasperCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final TopazCharm TOPAZ_CHARM = registerItem(Constant.TOPAZ_CHARM, new TopazCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
+    public static final MusicDiscAquamarine MUSIC_DISC_AQUAMARINE = registerItem(Constant.MUSIC_DISC_AQUAMARINE, new MusicDiscAquamarine(14, SoundEventMysticGemstones.AQUAMARINE_DISC_SOUND_EVENT, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
 
     // Puts info about item to ITEMS variable.
     public static <T extends Item> T registerItem(String id, T item) {
