@@ -31,8 +31,16 @@
   "item.mysticgemstones.raw_topaz": "Raw Topaz",
   "item.mysticgemstones.topaz": "Topaz",
   "item.mysticgemstones.topaz_powder": "Topaz Powder",
+  "item.mysticgemstones.malachite": "Malachite",
+  "item.mysticgemstones.malachite_powder": "Malachite Powder",
+  "item.mysticgemstones.raw_malachite": "Raw Malachite",
+  "block.mysticgemstones.malachite_ore": "Malachite Ore",
+  "block.mysticgemstones.malachite_sand": "Malachite Sand",
+  "item.mysticgemstones.malachite_charm": "Malachite Charm",
   "item.mysticgemstones.music_disc_aquamarine": "Music Disc",
+  "item.mysticgemstones.music_disc_malachite": "Music Disc",
   "item.mysticgemstones.music_disc_aquamarine.desc": "Beach House - Space Song",
+  "item.mysticgemstones.music_disc_malachite.desc": "MGMT - Little Dark Age (slowed)",
   "itemGroup.mysticgemstones.items": "Items",
   "item.mysticgemstones.alexandrite_charm.tooltip": "50% slower hunger loss when in player inventory"
 }
