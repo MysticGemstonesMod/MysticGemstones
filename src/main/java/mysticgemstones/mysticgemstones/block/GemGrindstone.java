@@ -42,6 +42,10 @@ public class GemGrindstone extends Block {
                 polishGem(player, hand, world, pos, MysticGemstonesItem.TOPAZ_ITEM, MysticGemstonesItem.TOPAZ_POWDER);
             }
 
+            if (item.isOf(MysticGemstonesItem.RAW_MALACHITE)) {
+                polishGem(player, hand, world, pos, MysticGemstonesItem.MALACHITE_ITEM, MysticGemstonesItem.MALACHITE_POWDER);
+            }
+
             if (item.isOf(MysticGemstonesItem.RAW_JASPER)) {
                 polishGem(player, hand, world, pos, MysticGemstonesItem.JASPER_ITEM, MysticGemstonesItem.JASPER_POWDER);
             }

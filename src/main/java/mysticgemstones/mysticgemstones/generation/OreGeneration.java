@@ -47,6 +47,18 @@ public class OreGeneration {
             .spreadHorizontally()
             .repeat(12); // Number of veins per chunk
 
+    // MALACHITE
+    private static ConfiguredFeature<?, ?> ORE_MALACHITE_OVERWORLD = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    MysticGemstonesBlock.MALACHITE_ORE.getDefaultState(),
+                    3)) // Vein size
+            .range(new RangeDecoratorConfig(
+                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(35)))) // Inclusive min and max height
+
+            .spreadHorizontally()
+            .repeat(12); // Number of veins per chunk
+
 
     // AEXANDRITE
     private static ConfiguredFeature<?, ?> ORE_ALEXANDRITE_OVERWORLD = Feature.ORE
