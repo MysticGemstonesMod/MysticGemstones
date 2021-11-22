@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DDD",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "item": "mysticgemstones:malachite_powder"
+    }
+  },
+  "result": {
+    "item": "mysticgemstones:malachite_sand",
+    "count": 1
+  }
+}

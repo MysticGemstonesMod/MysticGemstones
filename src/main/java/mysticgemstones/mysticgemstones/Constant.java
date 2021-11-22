@@ -23,13 +23,18 @@ public interface Constant {
     String STARSTONE_POWDER = "starstone_powder";
     String TOPAZ_POWDER = "topaz_powder";
     String CONDENSED_STARSTONE_POWDER = "condensed_starstone_powder";
+    String MALACHITE_ITEM = "malachite";
+    String RAW_MALACHITE = "raw_malachite";
+    String MALACHITE_POWDER = "malachite_powder";
 
     // Items
     String AQUAMARINE_CHARM = "aquamarine_charm";
     String JASPER_CHARM = "jasper_charm";
     String ALEXANDRITE_CHARM = "alexandrite_charm";
     String TOPAZ_CHARM = "topaz_charm";
+    String MALACHITE_CHARM = "malachite_charm";
     String MUSIC_DISC_AQUAMARINE = "music_disc_aquamarine";
+    String MUSIC_DISC_MALACHITE = "music_disc_malachite";
 
     // Ores
     String AQUAMARINE_ORE = "aquamarine_ore";
@@ -37,6 +42,7 @@ public interface Constant {
     String ALEXANDRITE_ORE = "alexandrite_ore";
     String STARSTONE_ORE = "starstone_ore";
     String TOPAZ_ORE = "topaz_ore";
+    String MALACHITE_ORE = "malachite_ore";
 
     // Blocks
     String ROCK_TUMBLER = "rock_tumbler";
@@ -45,4 +51,5 @@ public interface Constant {
     String ALEXANDRITE_SAND = "alexandrite_sand";
     String JASPER_SAND = "jasper_sand";
     String TOPAZ_SAND = "topaz_sand";
+    String MALACHITE_SAND = "malachite_sand";
 }
