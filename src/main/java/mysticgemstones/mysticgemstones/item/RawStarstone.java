@@ -21,4 +21,8 @@ public class RawStarstone extends Item {
             Block.dropStack(world, pos, new ItemStack(MysticGemstonesItem.STARSTONE_POWDER));
         }
     }
+
+    public boolean hasGlint(ItemStack stack) {
+        return true;
+    }
 }

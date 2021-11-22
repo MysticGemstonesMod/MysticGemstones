@@ -41,7 +41,7 @@ public class MysticGemstonesItem {
     public static final Item RAW_TOPAZ = registerItem(Constant.RAW_TOPAZ, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item ALEXANDRITE_ITEM = registerItem(Constant.ALEXANDRITE_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item RAW_ALEXANDRITE = registerItem(Constant.RAW_ALEXANDRITE, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
-    public static final Item STARSTONE_ITEM = registerItem(Constant.STARSTONE_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final StarstoneItem STARSTONE_ITEM = registerItem(Constant.STARSTONE_ITEM, new StarstoneItem(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final RawStarstone RAW_STARSTONE = registerItem(Constant.RAW_STARSTONE, new RawStarstone(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final StarstonePowder STARSTONE_POWDER = registerItem(Constant.STARSTONE_POWDER, new StarstonePowder(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final CondensedStarstonePowder CONDENSED_STARSTONE_POWDER = registerItem(Constant.CONDENSED_STARSTONE_POWDER, new CondensedStarstonePowder(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));

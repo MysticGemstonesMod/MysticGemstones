@@ -32,6 +32,7 @@
   "item.mysticgemstones.topaz": "Topaz",
   "item.mysticgemstones.topaz_powder": "Topaz Powder",
   "item.mysticgemstones.music_disc_aquamarine": "Music Disc",
-  "item.mysticgemstones.music_disc_aquamarine.desc": "Hmmmmmm song name",
-  "itemGroup.mysticgemstones.items": "Items"
+  "item.mysticgemstones.music_disc_aquamarine.desc": "Beach House - Space Song",
+  "itemGroup.mysticgemstones.items": "Items",
+  "item.mysticgemstones.alexandrite_charm.tooltip": "50% slower hunger loss when in player inventory"
 }
