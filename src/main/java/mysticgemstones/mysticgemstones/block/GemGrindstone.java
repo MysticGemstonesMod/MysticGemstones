@@ -38,6 +38,14 @@ public class GemGrindstone extends Block {
                 polishGem(player, hand, world, pos, MysticGemstonesItem.ALEXANDRITE_ITEM, MysticGemstonesItem.ALEXANDRITE_POWDER);
             }
 
+            if (item.isOf(MysticGemstonesItem.RAW_SAPPHIRE)) {
+                polishGem(player, hand, world, pos, MysticGemstonesItem.SAPPHIRE_ITEM, MysticGemstonesItem.SAPPHIRE_POWDER);
+            }
+
+            if (item.isOf(MysticGemstonesItem.RAW_WHITE_SAPPHIRE)) {
+                polishGem(player, hand, world, pos, MysticGemstonesItem.WHITE_SAPPHIRE_ITEM, MysticGemstonesItem.WHITE_SAPPHIRE_POWDER);
+            }
+
             if (item.isOf(MysticGemstonesItem.RAW_TOPAZ)) {
                 polishGem(player, hand, world, pos, MysticGemstonesItem.TOPAZ_ITEM, MysticGemstonesItem.TOPAZ_POWDER);
             }

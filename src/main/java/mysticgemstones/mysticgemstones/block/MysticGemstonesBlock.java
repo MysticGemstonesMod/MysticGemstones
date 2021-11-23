@@ -38,6 +38,10 @@ public class MysticGemstonesBlock {
     public static final Block TOPAZ_ORE = addBlock(Constant.TOPAZ_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool()), false);
     public static final Block MALACHITE_ORE = addBlock(Constant.MALACHITE_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool()), false);
     public static final MalachiteSand MALACHITE_SAND = addBlock(Constant.MALACHITE_SAND, new MalachiteSand(FabricBlockSettings.copyOf(Blocks.SAND)), false);
+    public static final Block SAPPHIRE_ORE = addBlock(Constant.SAPPHIRE_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool()), false);
+    public static final SapphireSand SAPPHIRE_SAND = addBlock(Constant.SAPPHIRE_SAND, new SapphireSand(FabricBlockSettings.copyOf(Blocks.SAND)), false);
+    public static final Block WHITE_SAPPHIRE_ORE = addBlock(Constant.WHITE_SAPPHIRE_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool()), false);
+    public static final WhiteSapphireSand WHITE_SAPPHIRE_SAND = addBlock(Constant.WHITE_SAPPHIRE_SAND, new WhiteSapphireSand(FabricBlockSettings.copyOf(Blocks.SAND)), false);
 
     // Add Blocks and their BlockItem
     public static <T extends Block> T addBlock(String id, T block, boolean itemHasCustomClass) {

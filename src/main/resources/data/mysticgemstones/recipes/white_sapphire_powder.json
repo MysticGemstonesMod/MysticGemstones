@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "mysticgemstones:white_sapphire_sand"
+    }
+  },
+  "result": {
+    "item": "mysticgemstones:white_sapphire_powder",
+    "count": 9
+  }
+}

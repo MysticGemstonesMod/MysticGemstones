@@ -72,6 +72,18 @@ public class OreGeneration {
             .spreadHorizontally()
             .repeat(12); // Number of veins per chunk
 
+    // SAPPHIRE
+    private static ConfiguredFeature<?, ?> ORE_SAPPHIRE_OVERWORLD = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    MysticGemstonesBlock.SAPPHIRE_ORE.getDefaultState(),
+                    3)) // Vein size
+            .range(new RangeDecoratorConfig(
+                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(35)))) // Inclusive min and max height
+
+            .spreadHorizontally()
+            .repeat(12); // Number of veins per chunk
+
     // TOPAZ
     private static ConfiguredFeature<?, ?> ORE_TOPAZ_OVERWORLD = Feature.ORE
             .configure(new OreFeatureConfig(
