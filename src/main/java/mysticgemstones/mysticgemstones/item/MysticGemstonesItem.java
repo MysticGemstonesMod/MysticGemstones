@@ -53,6 +53,14 @@ public class MysticGemstonesItem {
     public static final Item RAW_MALACHITE = registerItem(Constant.RAW_MALACHITE, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item MALACHITE_POWDER = registerItem(Constant.MALACHITE_POWDER, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final MalachiteCharm MALACHITE_CHARM = registerItem(Constant.MALACHITE_CHARM, new MalachiteCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
+    public static final Item SAPPHIRE_ITEM = registerItem(Constant.SAPPHIRE_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final Item RAW_SAPPHIRE = registerItem(Constant.RAW_SAPPHIRE, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final Item SAPPHIRE_POWDER = registerItem(Constant.SAPPHIRE_POWDER, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final SapphireCharm SAPPHIRE_CHARM = registerItem(Constant.SAPPHIRE_CHARM, new SapphireCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
+    public static final Item WHITE_SAPPHIRE_ITEM = registerItem(Constant.WHITE_SAPPHIRE_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final Item RAW_WHITE_SAPPHIRE = registerItem(Constant.RAW_WHITE_SAPPHIRE, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final Item WHITE_SAPPHIRE_POWDER = registerItem(Constant.WHITE_SAPPHIRE_POWDER, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final WhiteSapphireCharm WHITE_SAPPHIRE_CHARM = registerItem(Constant.WHITE_SAPPHIRE_CHARM, new WhiteSapphireCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
 
     // Puts info about item to ITEMS variable.
     public static <T extends Item> T registerItem(String id, T item) {
