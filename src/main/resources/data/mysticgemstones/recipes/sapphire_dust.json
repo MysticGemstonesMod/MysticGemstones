@@ -5,11 +5,11 @@
   ],
   "key": {
     "#": {
-      "item": "mysticgemstones:jasper_sand"
+      "item": "mysticgemstones:sapphire_sand"
     }
   },
   "result": {
-    "item": "mysticgemstones:jasper_powder",
+    "item": "mysticgemstones:sapphire_dust",
     "count": 9
   }
 }

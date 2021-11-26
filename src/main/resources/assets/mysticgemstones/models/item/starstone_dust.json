@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mysticgemstones:item/starstone_powder"
+    "layer0": "mysticgemstones:item/starstone_dust"
   },
 
   "overrides": [
@@ -9,13 +9,13 @@
       "predicate": {
         "shining": 0
       },
-      "model": "mysticgemstones:item/starstone_powder_no_shiny"
+      "model": "mysticgemstones:item/starstone_dust_no_shiny"
     },
     {
       "predicate": {
         "shining": 1
       },
-      "model": "mysticgemstones:item/starstone_powder_shiny"
+      "model": "mysticgemstones:item/starstone_dust_shiny"
     }
   ]
 }

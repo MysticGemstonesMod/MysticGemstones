@@ -5,11 +5,11 @@
   ],
   "key": {
     "#": {
-      "item": "mysticgemstones:white_sapphire_sand"
+      "item": "mysticgemstones:malachite_sand"
     }
   },
   "result": {
-    "item": "mysticgemstones:white_sapphire_powder",
+    "item": "mysticgemstones:malachite_dust",
     "count": 9
   }
 }
