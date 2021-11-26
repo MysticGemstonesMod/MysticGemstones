@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "GAG",
+    "DDD"
+  ],
+  "key": {
+    "G": {
+      "item": "mysticgemstones:alexandrite"
+    },
+    "D": {
+      "item": "mysticgemstones:alexandrite_dust"
+    },
+    "A": {
+      "item": "minecraft:apple"
+    }
+  },
+  "result": {
+    "item": "mysticgemstones:alexandrite_apple"
+  }
+}

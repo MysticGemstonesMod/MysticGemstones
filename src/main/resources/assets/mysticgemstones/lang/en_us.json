@@ -49,10 +49,18 @@
   "block.mysticgemstones.white_sapphire_ore": "White Sapphire Ore",
   "block.mysticgemstones.white_sapphire_sand": "White Sapphire Sand",
   "item.mysticgemstones.white_sapphire_charm": "White Sapphire Charm",
+  "item.mysticgemstones.alexandrite_ring": "Alexandrite Ring",
+  "item.mysticgemstones.alexandrite_apple": "Alexandrite Apple",
+  "item.mysticgemstones.aquamarine_ring": "Aquamarine Ring",
+  "item.mysticgemstones.jasper_ring": "Jasper Ring",
+  "item.mysticgemstones.malachite_ring": "Malachite Ring",
+  "item.mysticgemstones.topaz_ring": "Topaz Ring",
+  "item.mysticgemstones.sapphire_ring": "Sapphire Ring",
+  "item.mysticgemstones.white_sapphire_ring": "White Sapphire Ring",
   "item.mysticgemstones.music_disc_aquamarine": "Music Disc",
   "item.mysticgemstones.music_disc_malachite": "Music Disc",
   "item.mysticgemstones.music_disc_aquamarine.desc": "Beach House - Space Song",
   "item.mysticgemstones.music_disc_malachite.desc": "MGMT - Little Dark Age (slowed)",
   "itemGroup.mysticgemstones.items": "Items",
-  "item.mysticgemstones.alexandrite_charm.tooltip": "50% slower hunger loss when in player inventory"
+  "item.mysticgemstones.alexandrite_charm.tooltip": "slows down hunger by 50%"
 }
