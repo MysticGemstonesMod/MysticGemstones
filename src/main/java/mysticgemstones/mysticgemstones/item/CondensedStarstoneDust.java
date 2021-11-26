@@ -7,9 +7,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
-public class StarstonePowder extends Item {
+public class CondensedStarstoneDust extends Item {
 
-    public StarstonePowder(Settings settings) {
+    public CondensedStarstoneDust(Settings settings) {
         super(settings);
     }
 
@@ -18,12 +18,12 @@ public class StarstonePowder extends Item {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
 
         if (world.getTimeOfDay() > 22350 || world.getTimeOfDay() < 21980) {
-            FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.STARSTONE_POWDER,
+            FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.CONDENSED_STARSTONE_DUST,
                     new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 0.0F);
             canShine = false;
         }
         else if (world.getTimeOfDay() > 21980 && world.getTimeOfDay() < 22350) {
-            FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.STARSTONE_POWDER,
+            FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.CONDENSED_STARSTONE_DUST,
                     new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 1.0F);
             canShine = true;
         }

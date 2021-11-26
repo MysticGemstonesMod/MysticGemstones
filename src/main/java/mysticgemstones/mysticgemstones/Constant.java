@@ -17,21 +17,21 @@ public interface Constant {
     String RAW_ALEXANDRITE = "raw_alexandrite";
     String STARSTONE_ITEM = "starstone";
     String RAW_STARSTONE = "raw_starstone";
-    String AQUAMARINE_POWDER = "aquamarine_powder";
-    String ALEXANDRITE_POWDER = "alexandrite_powder";
-    String JASPER_POWDER = "jasper_powder";
-    String STARSTONE_POWDER = "starstone_powder";
-    String TOPAZ_POWDER = "topaz_powder";
-    String CONDENSED_STARSTONE_POWDER = "condensed_starstone_powder";
+    String AQUAMARINE_DUST = "aquamarine_dust";
+    String ALEXANDRITE_DUST = "alexandrite_dust";
+    String JASPER_DUST = "jasper_dust";
+    String STARSTONE_DUST = "starstone_dust";
+    String TOPAZ_DUST = "topaz_dust";
+    String CONDENSED_STARSTONE_DUST = "condensed_starstone_dust";
     String MALACHITE_ITEM = "malachite";
     String RAW_MALACHITE = "raw_malachite";
-    String MALACHITE_POWDER = "malachite_powder";
+    String MALACHITE_DUST = "malachite_dust";
     String SAPPHIRE_ITEM = "sapphire";
     String RAW_SAPPHIRE = "raw_sapphire";
-    String SAPPHIRE_POWDER = "sapphire_powder";
+    String SAPPHIRE_DUST = "sapphire_dust";
     String WHITE_SAPPHIRE_ITEM = "white_sapphire";
     String RAW_WHITE_SAPPHIRE = "raw_white_sapphire";
-    String WHITE_SAPPHIRE_POWDER = "white_sapphire_powder";
+    String WHITE_SAPPHIRE_DUST = "white_sapphire_dust";
 
     // Items
     String AQUAMARINE_CHARM = "aquamarine_charm";

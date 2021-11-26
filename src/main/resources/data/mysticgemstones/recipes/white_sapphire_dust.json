@@ -5,11 +5,11 @@
   ],
   "key": {
     "#": {
-      "item": "mysticgemstones:topaz_sand"
+      "item": "mysticgemstones:white_sapphire_sand"
     }
   },
   "result": {
-    "item": "mysticgemstones:topaz_powder",
+    "item": "mysticgemstones:white_sapphire_dust",
     "count": 9
   }
 }

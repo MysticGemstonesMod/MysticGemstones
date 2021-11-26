@@ -5,11 +5,11 @@
   ],
   "key": {
     "#": {
-      "item": "mysticgemstones:aquamarine_sand"
+      "item": "mysticgemstones:alexandrite_sand"
     }
   },
   "result": {
-    "item": "mysticgemstones:aquamarine_powder",
+    "item": "mysticgemstones:alexandrite_dust",
     "count": 9
   }
 }

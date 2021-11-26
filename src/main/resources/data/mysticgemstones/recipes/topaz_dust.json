@@ -5,11 +5,11 @@
   ],
   "key": {
     "#": {
-      "item": "mysticgemstones:malachite_sand"
+      "item": "mysticgemstones:topaz_sand"
     }
   },
   "result": {
-    "item": "mysticgemstones:malachite_powder",
+    "item": "mysticgemstones:topaz_dust",
     "count": 9
   }
 }
