@@ -41,6 +41,14 @@ public interface Constant {
     String MALACHITE_CHARM = "malachite_charm";
     String SAPPHIRE_CHARM = "sapphire_charm";
     String WHITE_SAPPHIRE_CHARM = "white_sapphire_charm";
+    String AQUAMARINE_RING = "aquamarine_ring";
+    String JASPER_RING = "jasper_ring";
+    String ALEXANDRITE_RING = "alexandrite_ring";
+    String TOPAZ_RING = "topaz_ring";
+    String MALACHITE_RING = "malachite_ring";
+    String SAPPHIRE_RING = "sapphire_ring";
+    String WHITE_SAPPHIRE_RING = "white_sapphire_ring";
+    String ALEXANDRITE_APPLE = "alexandrite_apple";
     String MUSIC_DISC_AQUAMARINE = "music_disc_aquamarine";
     String MUSIC_DISC_MALACHITE = "music_disc_malachite";
 
