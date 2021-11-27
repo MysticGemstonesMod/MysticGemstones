@@ -1,4 +1,5 @@
 {
+  "_comment": "regarding color and format manipulation for text: '§(variable)'= \u00A7(variable)TextGoesHere\u00A7r; table of variables: https://minecraft.fandom.com/wiki/Formatting_codes",
   "item.mysticgemstones.aquamarine": "Aquamarine",
   "item.mysticgemstones.raw_aquamarine": "Raw Aquamarine",
   "block.mysticgemstones.aquamarine_ore": "Aquamarine Ore",
@@ -62,5 +63,5 @@
   "item.mysticgemstones.music_disc_aquamarine.desc": "Beach House - Space Song",
   "item.mysticgemstones.music_disc_malachite.desc": "MGMT - Little Dark Age (slowed)",
   "itemGroup.mysticgemstones.items": "Items",
-  "item.mysticgemstones.alexandrite_charm.tooltip": "slows down hunger by 50%"
+  "item.mysticgemstones.alexandrite_charm.tooltip": "\u00A79Slows down hunger by 50%\u00A7r"
 }
