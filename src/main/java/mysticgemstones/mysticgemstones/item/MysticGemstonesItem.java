@@ -8,9 +8,7 @@ import mysticgemstones.mysticgemstones.item.discs.MusicDiscAquamarine;
 import mysticgemstones.mysticgemstones.item.discs.MusicDiscMalachite;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -61,7 +59,7 @@ public class MysticGemstonesItem {
     public static final Item RAW_WHITE_SAPPHIRE = registerItem(Constant.RAW_WHITE_SAPPHIRE, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item WHITE_SAPPHIRE_DUST = registerItem(Constant.WHITE_SAPPHIRE_DUST, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final WhiteSapphireCharm WHITE_SAPPHIRE_CHARM = registerItem(Constant.WHITE_SAPPHIRE_CHARM, new WhiteSapphireCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
-    public static final Item ALEXANDRITE_APPLE = registerItem(Constant.ALEXANDRITE_APPLE, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final Item ALEXANDRITE_APPLE = registerItem(Constant.ALEXANDRITE_APPLE, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(1.6f).alwaysEdible().build())));
     public static final Item ALEXANDRITE_RING = registerItem(Constant.ALEXANDRITE_RING, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final Item AQUAMARINE_RING = registerItem(Constant.AQUAMARINE_RING, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final Item JASPER_RING = registerItem(Constant.JASPER_RING, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
