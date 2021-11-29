@@ -59,8 +59,9 @@ public class GemGrindstone extends Block {
                 if (item.isOf(MysticGemstonesItem.RAW_JASPER)) {
                     polishGem(player, hand, world, pos, MysticGemstonesItem.JASPER_ITEM, MysticGemstonesItem.JASPER_DUST);
                 }
+                return ActionResult.SUCCESS;
             }
-            return ActionResult.SUCCESS;
+            return ActionResult.FAIL;
         }
         return ActionResult.FAIL;
     }
