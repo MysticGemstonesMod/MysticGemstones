@@ -72,4 +72,7 @@ public interface Constant {
     String MALACHITE_SAND = "malachite_sand";
     String SAPPHIRE_SAND = "sapphire_sand";
     String WHITE_SAPPHIRE_SAND = "white_sapphire_sand";
+
+    // Tags
+    String RAW_GEMS = "raw_gems";
 }
