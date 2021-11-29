@@ -17,15 +17,17 @@ public class StarstoneDust extends Item {
 
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
 
-        if (world.getTimeOfDay() > 22350 || world.getTimeOfDay() < 21980) {
-            FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.STARSTONE_DUST,
-                    new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 0.0F);
-            canShine = false;
-        }
-        else if (world.getTimeOfDay() > 21980 && world.getTimeOfDay() < 22350) {
-            FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.STARSTONE_DUST,
-                    new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 1.0F);
-            canShine = true;
+        if (world.isClient) {
+            if (world.getTimeOfDay() > 22350 || world.getTimeOfDay() < 21980) {
+                FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.STARSTONE_DUST,
+                        new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 0.0F);
+                canShine = false;
+            }
+            else {
+                FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.STARSTONE_DUST,
+                        new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 1.0F);
+                canShine = true;
+            }
         }
     }
 
