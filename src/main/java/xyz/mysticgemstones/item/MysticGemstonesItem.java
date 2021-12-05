@@ -1,6 +1,6 @@
 package xyz.mysticgemstones.item;
 
-import mysticgemstones.mysticgemstones.Constant;
+import xyz.mysticgemstones.Constant;
 import xyz.mysticgemstones.block.MysticGemstonesBlock;
 import xyz.mysticgemstones.item.charms.AlexandriteCharm;
 import xyz.mysticgemstones.item.charms.AquamarineCharm;

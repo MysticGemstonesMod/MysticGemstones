@@ -14,7 +14,7 @@
     "sources": "https://github.com/MysticGemstonesMod/MysticGemstones"
   },
 
-  "license": "MIT License",
+  "license": "GPL-3.0 License",
   "icon": "assets/mysticgemstones/icon.png",
 
   "environment": "*",
