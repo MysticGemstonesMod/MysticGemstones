@@ -1,6 +1,6 @@
 package xyz.mysticgemstones.block;
 
-import mysticgemstones.mysticgemstones.Constant;
+import xyz.mysticgemstones.Constant;
 import xyz.mysticgemstones.block.sand.AlexandriteSand;
 import xyz.mysticgemstones.block.sand.AquamarineSand;
 import xyz.mysticgemstones.block.sand.JasperSand;

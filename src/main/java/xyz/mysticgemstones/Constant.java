@@ -1,4 +1,4 @@
-package mysticgemstones.mysticgemstones;
+package xyz.mysticgemstones;
 
 public interface Constant {
 
