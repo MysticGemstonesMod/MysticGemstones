@@ -9,6 +9,8 @@ import net.minecraft.world.World;
 
 public class RawStarstone extends Item {
 
+    public String drops = "stone";
+
     public RawStarstone(Settings settings) {
         super(settings);
     }
@@ -18,7 +20,11 @@ public class RawStarstone extends Item {
         if (world.getTimeOfDay() > 22350 || world.getTimeOfDay() < 21980) {
             stack.setCount(stack.getCount() - 1);
             BlockPos pos = entity.getBlockPos();
-            Block.dropStack(world, pos, new ItemStack(MysticGemstonesItem.STARSTONE_POWDER));
+            Block.dropStack(world, pos, new ItemStack(MysticGemstonesItem.STARSTONE_DUST));
         }
+    }
+
+    public boolean hasGlint(ItemStack stack) {
+        return true;
     }
 }

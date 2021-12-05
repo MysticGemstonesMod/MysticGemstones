@@ -1,6 +1,5 @@
 package xyz.mysticgemstones.block;
 
-import xyz.mysticgemstones.item.MysticGemstonesItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -13,6 +12,8 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import xyz.mysticgemstones.MysticGemstoneTags;
+import xyz.mysticgemstones.item.MysticGemstonesItem;
 
 import java.security.SecureRandom;
 
@@ -28,21 +29,41 @@ public class GemGrindstone extends Block {
         // Polish Item chance numbers are reversed, so example. 95 = 5%, 30 = 60% and so on...  Basicaly 100 - number = drop chance.
 
         if (!world.isClient) {
-            ItemStack item = player.getStackInHand(hand);
+            if (player.getStackInHand(hand).isIn(MysticGemstoneTags.RAW_GEMS)) {
+                ItemStack item = player.getStackInHand(hand);
 
-            if (item.isOf(MysticGemstonesItem.RAW_AQUAMARINE)) {
-                polishGem(player, hand, world, pos, MysticGemstonesItem.AQUAMARINE_ITEM, MysticGemstonesItem.AQUAMARINE_POWDER);
-            }
+                if (item.isOf(MysticGemstonesItem.RAW_AQUAMARINE)) {
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.AQUAMARINE_ITEM, MysticGemstonesItem.AQUAMARINE_DUST);
+                }
 
-            if (item.isOf(MysticGemstonesItem.RAW_ALEXANDRITE)) {
-                polishGem(player, hand, world, pos, MysticGemstonesItem.ALEXANDRITE_ITEM, MysticGemstonesItem.ALEXANDRITE_POWDER);
-            }
+                if (item.isOf(MysticGemstonesItem.RAW_ALEXANDRITE)) {
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.ALEXANDRITE_ITEM, MysticGemstonesItem.ALEXANDRITE_DUST);
+                }
 
-            if (item.isOf(MysticGemstonesItem.RAW_JASPER)) {
-                polishGem(player, hand, world, pos, MysticGemstonesItem.JASPER_ITEM, MysticGemstonesItem.JASPER_POWDER);
+                if (item.isOf(MysticGemstonesItem.RAW_SAPPHIRE)) {
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.SAPPHIRE_ITEM, MysticGemstonesItem.SAPPHIRE_DUST);
+                }
+
+                if (item.isOf(MysticGemstonesItem.RAW_WHITE_SAPPHIRE)) {
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.WHITE_SAPPHIRE_ITEM, MysticGemstonesItem.WHITE_SAPPHIRE_DUST);
+                }
+
+                if (item.isOf(MysticGemstonesItem.RAW_TOPAZ)) {
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.TOPAZ_ITEM, MysticGemstonesItem.TOPAZ_DUST);
+                }
+
+                if (item.isOf(MysticGemstonesItem.RAW_MALACHITE)) {
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.MALACHITE_ITEM, MysticGemstonesItem.MALACHITE_DUST);
+                }
+
+                if (item.isOf(MysticGemstonesItem.RAW_JASPER)) {
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.JASPER_ITEM, MysticGemstonesItem.JASPER_DUST);
+                }
+                return ActionResult.SUCCESS;
             }
+            return ActionResult.FAIL;
         }
-        return ActionResult.SUCCESS;
+        return ActionResult.FAIL;
     }
 
     private void polishGem(PlayerEntity player, Hand hand, World world, BlockPos pos, Item item_polished, Item item_powder) {

@@ -15,6 +15,8 @@ import net.minecraft.world.World;
 
 public class StarstoneOre extends BlockWithEntity {
 
+
+
     public static final BooleanProperty SHINING = BooleanProperty.of("shining");
 
     public StarstoneOre(Settings settings) {
@@ -36,6 +38,7 @@ public class StarstoneOre extends BlockWithEntity {
     public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.MODEL;
     }
+
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         return checkType(type, StarstoneOreEntity.STARSTONE_ORE_ENTITY, (world1, pos, state1, be) -> StarstoneOreEntity.tick(world1, pos, state1, be));

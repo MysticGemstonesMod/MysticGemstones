@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "mysticgemstones:raw_aquamarine",
+    "mysticgemstones:raw_jasper",
+    "mysticgemstones:raw_topaz",
+    "mysticgemstones:raw_alexandrite",
+    "mysticgemstones:raw_white_sapphire",
+    "mysticgemstones:raw_malachite",
+    "mysticgemstones:raw_sapphire",
+    "mysticgemstones:raw_starstone"
+  ]
+}

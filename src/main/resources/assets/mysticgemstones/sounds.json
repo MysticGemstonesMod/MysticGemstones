@@ -1,0 +1,13 @@
+{
+  "aquamarine_disc_sound": {
+    "subtitle": "subtitles.mysticgemstones.beach_house_space_song",
+    "sounds": [
+      "mysticgemstones:beach_house_space_song"
+    ]
+  },
+  "malachite_disc_sound" : {
+    "sounds": [
+      "mysticgemstones:mgmt_little_dark_age"
+    ]
+  }
+}
