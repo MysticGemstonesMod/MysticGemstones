@@ -1,11 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "mysticgemstones.mysticgemstones.mixin",
+  "package": "xyz.mysticgemstones.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
   ],
   "client": [
+    "MysticGemstonesMixin"
   ],
   "injectors": {
     "defaultRequire": 1
