@@ -20,7 +20,7 @@ public class AlexandriteCharm extends Item {
     }
 
     private int isSet = 0;
-    int staticFoodLevel;
+    private int staticFoodLevel;
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {

@@ -22,8 +22,7 @@ public class StarstoneDust extends Item {
                 FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.STARSTONE_DUST,
                         new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 0.0F);
                 canShine = false;
-            }
-            else {
+            } else {
                 FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.STARSTONE_DUST,
                         new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 1.0F);
                 canShine = true;

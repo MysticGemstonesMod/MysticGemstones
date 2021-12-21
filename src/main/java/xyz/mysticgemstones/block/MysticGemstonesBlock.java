@@ -1,19 +1,21 @@
 package xyz.mysticgemstones.block;
 
-import xyz.mysticgemstones.Constant;
-import xyz.mysticgemstones.item.MysticGemstonesItem;
-import xyz.mysticgemstones.item.StarstoneOreBlockItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FallingBlock;
+import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import xyz.mysticgemstones.Constant;
+import xyz.mysticgemstones.item.MysticGemstonesItem;
+import xyz.mysticgemstones.item.StarstoneOreBlockItem;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.ToIntFunction;
 
 public class MysticGemstonesBlock {
 
@@ -23,7 +25,7 @@ public class MysticGemstonesBlock {
     // Add Blocks
 
     // Ore
-    public static final StarstoneOre STARSTONE_ORE = addBlock(Constant.STARSTONE_ORE, new StarstoneOre(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).luminance(lightLevel(10))), true);
+    public static final StarstoneOre STARSTONE_ORE = addBlock(Constant.STARSTONE_ORE, new StarstoneOre(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).luminance(StarstoneOre.getLightLevel())), true);
     public static final Block AQUAMARINE_ORE = addBlock(Constant.AQUAMARINE_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool()), false);
     public static final Block JASPER_ORE = addBlock(Constant.JASPER_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool()), false);
     public static final Block ALEXANDRITE_ORE = addBlock(Constant.ALEXANDRITE_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F).breakByTool(FabricToolTags.PICKAXES, 0).requiresTool()), false);
@@ -68,12 +70,5 @@ public class MysticGemstonesBlock {
     public static void register() {
         BLOCKS.forEach((identifier, block) -> Registry.register(Registry.BLOCK, identifier, block));
         BLOCK_ITEMS.forEach((identifier, blockItem) -> Registry.register(Registry.ITEM, identifier, blockItem));
-    }
-
-    // Change Starstone Ore light level based on blockstate... Should probably move to Starstone Ore class
-    private static ToIntFunction<BlockState> lightLevel(int litLevel) {
-        return (state) -> {
-            return (Boolean)state.get(StarstoneOre.SHINING) ? litLevel : 0;
-        };
     }
 }

@@ -22,8 +22,7 @@ public class CondensedStarstoneDust extends Item {
                 FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.CONDENSED_STARSTONE_DUST,
                         new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 0.0F);
                 canShine = false;
-            }
-            else  {
+            } else  {
                 FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.CONDENSED_STARSTONE_DUST,
                         new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmmm) -> 1.0F);
                 canShine = true;

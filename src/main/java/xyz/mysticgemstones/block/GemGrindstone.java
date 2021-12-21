@@ -15,8 +15,6 @@ import net.minecraft.world.World;
 import xyz.mysticgemstones.MysticGemstoneTags;
 import xyz.mysticgemstones.item.MysticGemstonesItem;
 
-import java.security.SecureRandom;
-
 public class GemGrindstone extends Block {
 
     public GemGrindstone(Settings settings) {
@@ -25,39 +23,31 @@ public class GemGrindstone extends Block {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-
-        // Polish Item chance numbers are reversed, so example. 95 = 5%, 30 = 60% and so on...  Basicaly 100 - number = drop chance.
-
         if (!world.isClient) {
             if (player.getStackInHand(hand).isIn(MysticGemstoneTags.RAW_GEMS)) {
+
                 ItemStack item = player.getStackInHand(hand);
 
                 if (item.isOf(MysticGemstonesItem.RAW_AQUAMARINE)) {
-                    polishGem(player, hand, world, pos, MysticGemstonesItem.AQUAMARINE_ITEM, MysticGemstonesItem.AQUAMARINE_DUST);
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.AQUAMARINE_ITEM, MysticGemstonesItem.AQUAMARINE_DUST, 40, 10, 4);
                 }
-
                 if (item.isOf(MysticGemstonesItem.RAW_ALEXANDRITE)) {
-                    polishGem(player, hand, world, pos, MysticGemstonesItem.ALEXANDRITE_ITEM, MysticGemstonesItem.ALEXANDRITE_DUST);
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.ALEXANDRITE_ITEM, MysticGemstonesItem.ALEXANDRITE_DUST, 40, 10, 4);
                 }
-
-                if (item.isOf(MysticGemstonesItem.RAW_SAPPHIRE)) {
-                    polishGem(player, hand, world, pos, MysticGemstonesItem.SAPPHIRE_ITEM, MysticGemstonesItem.SAPPHIRE_DUST);
-                }
-
-                if (item.isOf(MysticGemstonesItem.RAW_WHITE_SAPPHIRE)) {
-                    polishGem(player, hand, world, pos, MysticGemstonesItem.WHITE_SAPPHIRE_ITEM, MysticGemstonesItem.WHITE_SAPPHIRE_DUST);
-                }
-
-                if (item.isOf(MysticGemstonesItem.RAW_TOPAZ)) {
-                    polishGem(player, hand, world, pos, MysticGemstonesItem.TOPAZ_ITEM, MysticGemstonesItem.TOPAZ_DUST);
-                }
-
-                if (item.isOf(MysticGemstonesItem.RAW_MALACHITE)) {
-                    polishGem(player, hand, world, pos, MysticGemstonesItem.MALACHITE_ITEM, MysticGemstonesItem.MALACHITE_DUST);
-                }
-
                 if (item.isOf(MysticGemstonesItem.RAW_JASPER)) {
-                    polishGem(player, hand, world, pos, MysticGemstonesItem.JASPER_ITEM, MysticGemstonesItem.JASPER_DUST);
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.JASPER_ITEM, MysticGemstonesItem.JASPER_DUST, 40, 10, 4);
+                }
+                if (item.isOf(MysticGemstonesItem.RAW_TOPAZ)) {
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.TOPAZ_ITEM, MysticGemstonesItem.TOPAZ_DUST, 35, 10, 3);
+                }
+                if (item.isOf(MysticGemstonesItem.RAW_MALACHITE)) {
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.MALACHITE_ITEM, MysticGemstonesItem.MALACHITE_DUST, 35, 10, 3);
+                }
+                if (item.isOf(MysticGemstonesItem.RAW_WHITE_SAPPHIRE)) {
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.WHITE_SAPPHIRE_ITEM, MysticGemstonesItem.WHITE_SAPPHIRE_DUST, 25, 14, 3);
+                }
+                if (item.isOf(MysticGemstonesItem.RAW_SAPPHIRE)) {
+                    polishGem(player, hand, world, pos, MysticGemstonesItem.SAPPHIRE_ITEM, MysticGemstonesItem.SAPPHIRE_DUST, 25, 14, 3);
                 }
                 return ActionResult.SUCCESS;
             }
@@ -66,44 +56,19 @@ public class GemGrindstone extends Block {
         return ActionResult.FAIL;
     }
 
-    private void polishGem(PlayerEntity player, Hand hand, World world, BlockPos pos, Item item_polished, Item item_powder) {
-        if (rng() <= 40) { // = 40% chance
+    private void polishGem(PlayerEntity player, Hand hand, World world, BlockPos pos, Item item_polished, Item item_powder, int powderDropChance, int itemBrakeChance, int polishItemChance) {
+        int x = (int) (Math.random() * 100);
+        if (x <= powderDropChance) {
             Block.dropStack(world, pos, new ItemStack(item_powder));
         }
-
-        if (rng() <= 10) {  // 10% chance of item breaking
+        if (x <= itemBrakeChance) {
             player.getStackInHand(hand).setCount(player.getStackInHand(hand).getCount() - 1);
             world.playSound(null, pos, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 1f, 1f);
-        } else if (rng() >= 96) { // 4% chance of getting polished item
-            player.getStackInHand(hand).setCount(player.getStackInHand(hand).getCount() - 1);
-            Block.dropStack(world, pos, new ItemStack(item_polished));
-            world.playSound(null, pos, SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.BLOCKS, 1f, 1f);
-        } else
-        world.playSound(null, pos, SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS, 1f, 1f);
-    }
-
-    private void polishGem(PlayerEntity player, Hand hand, World world, BlockPos pos, Item item_polished, Item item_powder,
-                           int powderDropChance, int itemBrakeChance, int polishItemChance) {
-        // Polish Item chance numbers are reversed, so example. 95 = 5%, 30 = 60% and so on...  Basicaly 100 - number = drop chance.
-        if (rng() <= powderDropChance) {
-            Block.dropStack(world, pos, new ItemStack(item_powder));
-        }
-
-        if (rng() <= itemBrakeChance) {
-            player.getStackInHand(hand).setCount(player.getStackInHand(hand).getCount() - 1);
-            world.playSound(null, pos, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.BLOCKS, 1f, 1f);
-        } else if (rng() >= polishItemChance) {
+        } else if (x <= itemBrakeChance + polishItemChance) {
             player.getStackInHand(hand).setCount(player.getStackInHand(hand).getCount() - 1);
             Block.dropStack(world, pos, new ItemStack(item_polished));
             world.playSound(null, pos, SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.BLOCKS, 1f, 1f);
         } else
             world.playSound(null, pos, SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS, 1f, 1f);
-    }
-
-    private int rng() {
-        int max = 101;
-        int min = 0;
-        int number = new SecureRandom().nextInt(max - min) + min;
-        return number;
     }
 }

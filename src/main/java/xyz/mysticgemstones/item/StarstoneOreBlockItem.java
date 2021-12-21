@@ -23,8 +23,7 @@ public class StarstoneOreBlockItem extends BlockItem {
                 FabricModelPredicateProviderRegistry.register(MysticGemstonesBlock.STARSTONE_ORE.asItem(),
                         new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmm) -> 0.0F);
                 canShine = false;
-            }
-            else {
+            } else {
                 FabricModelPredicateProviderRegistry.register(MysticGemstonesBlock.STARSTONE_ORE.asItem(),
                         new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmm) -> 1.0F);
                 canShine = true;
