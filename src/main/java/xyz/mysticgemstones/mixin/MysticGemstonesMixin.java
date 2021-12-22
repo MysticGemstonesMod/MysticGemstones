@@ -11,6 +11,6 @@ import xyz.mysticgemstones.MysticGemstones;
 public class MysticGemstonesMixin {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		MysticGemstones.LOGGER.info("This line is printed by an hmmmmmm mod mixin!");
+		MysticGemstones.LOGGER.info("Printed by an Mystic Gemstones mod mixin!");
 	}
 }
