@@ -15,7 +15,7 @@ public interface Constant {
     String RAW_TOPAZ = "raw_topaz";
     String ALEXANDRITE_ITEM = "alexandrite";
     String RAW_ALEXANDRITE = "raw_alexandrite";
-    String STARSTONE_ITEM = "starstone";
+    String STARSTONE_ITEM = "starstone_item";
     String RAW_STARSTONE = "raw_starstone";
     String AQUAMARINE_DUST = "aquamarine_dust";
     String ALEXANDRITE_DUST = "alexandrite_dust";
