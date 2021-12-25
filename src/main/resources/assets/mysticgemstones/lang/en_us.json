@@ -64,5 +64,6 @@
   "item.mysticgemstones.music_disc_malachite.desc": "MGMT - Little Dark Age (slowed)",
   "itemGroup.mysticgemstones.items": "Items",
   "item.mysticgemstones.alexandrite_charm.tooltip_1": "\u00A75When In Inventory:\u00A7r",
-  "item.mysticgemstones.alexandrite_charm.tooltip_2": "\u00A79Slows Down Hunger By 50%\u00A7r"
+  "item.mysticgemstones.alexandrite_charm.tooltip_2": "\u00A79Slows Down Hunger By 50%\u00A7r",
+  "effect.mysticgemstones.nohunger": "NoHunger"
 }
