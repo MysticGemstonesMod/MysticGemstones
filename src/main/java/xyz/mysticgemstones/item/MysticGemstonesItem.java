@@ -8,7 +8,6 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import xyz.mysticgemstones.AlexandriteApple;
 import xyz.mysticgemstones.Constant;
 import xyz.mysticgemstones.SoundEventMysticGemstones;
 import xyz.mysticgemstones.block.MysticGemstonesBlock;

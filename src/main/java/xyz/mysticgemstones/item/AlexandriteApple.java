@@ -1,4 +1,4 @@
-package xyz.mysticgemstones;
+package xyz.mysticgemstones.item;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
