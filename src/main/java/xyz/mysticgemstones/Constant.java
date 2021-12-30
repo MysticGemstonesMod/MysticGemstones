@@ -63,6 +63,7 @@ public interface Constant {
     String WHITE_SAPPHIRE_ORE = "white_sapphire_ore";
 
     // Blocks
+    String GEM_INFUSER = "gem_infuser";
     String ROCK_TUMBLER = "rock_tumbler";
     String GEM_GRINDSTONE = "gem_grindstone";
     String AQUAMARINE_SAND = "aquamarine_sand";
@@ -72,7 +73,12 @@ public interface Constant {
     String MALACHITE_SAND = "malachite_sand";
     String SAPPHIRE_SAND = "sapphire_sand";
     String WHITE_SAPPHIRE_SAND = "white_sapphire_sand";
+    String HARDENED_STARSTONE_GLASS = "hardened_starstone_glass";
 
     // Tags
     String RAW_GEMS = "raw_gems";
+
+    // Block Entity
+    String STARSTONE_ORE_ENTITY = "starstone_ore_entity";
+    String GEM_INFUSER_ENTITY = "gem_infuser_entity";
 }
