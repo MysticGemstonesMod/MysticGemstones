@@ -3,10 +3,7 @@ package xyz.mysticgemstones.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FallingBlock;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.sound.BlockSoundGroup;
@@ -53,7 +50,7 @@ public class MysticGemstonesBlock {
     public static final Block WHITE_SAPPHIRE_SAND = addBlock(Constant.WHITE_SAPPHIRE_SAND, new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND)), false);
 
     // Glass
-    public static final Block HARDENED_STARSTONE_GLASS = addBlock(Constant.HARDENED_STARSTONE_GLASS, new HardenedStarstoneGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS)), false);
+    public static final Block HARDENED_STARSTONE_GLASS = addBlock(Constant.HARDENED_STARSTONE_GLASS, new IceBlock(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
 
 
     // Add Blocks and their BlockItem

@@ -49,7 +49,7 @@ public class GemInfuserScreenHandler extends ScreenHandler {
 
     @Override
     public boolean canUse(PlayerEntity player) {
-        return false;
+        return true;
     }
 
     @Override
