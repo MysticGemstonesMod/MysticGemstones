@@ -74,6 +74,7 @@ public interface Constant {
     String SAPPHIRE_SAND = "sapphire_sand";
     String WHITE_SAPPHIRE_SAND = "white_sapphire_sand";
     String HARDENED_STARSTONE_GLASS = "hardened_starstone_glass";
+    String HARDENED_AQUAMARINE_GLASS = "hardened_aquamarine_glass";
 
     // Tags
     String RAW_GEMS = "raw_gems";

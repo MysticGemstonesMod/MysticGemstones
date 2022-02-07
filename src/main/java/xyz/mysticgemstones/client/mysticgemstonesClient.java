@@ -17,5 +17,6 @@ public class mysticgemstonesClient implements ClientModInitializer {
     public void onInitializeClient() {
         ScreenRegistry.register(MysticGemstones.GEM_INFUSER_SCREEN_HANDLER, GemInfuserScreen::new);
         BlockRenderLayerMap.INSTANCE.putBlock(MysticGemstonesBlock.HARDENED_STARSTONE_GLASS, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(MysticGemstonesBlock.HARDENED_AQUAMARINE_GLASS, RenderLayer.getTranslucent());
     }
 }

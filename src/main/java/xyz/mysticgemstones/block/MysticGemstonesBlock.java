@@ -50,8 +50,8 @@ public class MysticGemstonesBlock {
     public static final Block WHITE_SAPPHIRE_SAND = addBlock(Constant.WHITE_SAPPHIRE_SAND, new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND)), false);
 
     // Glass
-    public static final Block HARDENED_STARSTONE_GLASS = addBlock(Constant.HARDENED_STARSTONE_GLASS, new IceBlock(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
-
+    public static final Block HARDENED_STARSTONE_GLASS = addBlock(Constant.HARDENED_STARSTONE_GLASS, new HardenedGemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
+    public static final Block HARDENED_AQUAMARINE_GLASS = addBlock(Constant.HARDENED_AQUAMARINE_GLASS, new HardenedGemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
 
     // Add Blocks and their BlockItem
     public static <T extends Block> T addBlock(String id, T block, boolean blockItemHasCustomClass) {
