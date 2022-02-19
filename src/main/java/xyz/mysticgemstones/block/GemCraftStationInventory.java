@@ -6,15 +6,15 @@ import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.collection.DefaultedList;
 
-public interface GemInfuserInventory extends Inventory {
+public interface GemCraftStationInventory extends Inventory {
 
     DefaultedList<ItemStack> getItems();
 
-    static GemInfuserInventory of(DefaultedList<ItemStack> items) {
+    static GemCraftStationInventory of(DefaultedList<ItemStack> items) {
         return () -> items;
     }
 
-    static GemInfuserInventory ofSize(int size) {
+    static GemCraftStationInventory ofSize(int size) {
         return of(DefaultedList.ofSize(size, ItemStack.EMPTY));
     }
 

@@ -2,8 +2,8 @@ package xyz.mysticgemstones.block;
 
 import net.minecraft.block.TransparentBlock;
 
-public class HardenedGemGlass extends TransparentBlock {
-    protected HardenedGemGlass(Settings settings) {
+public class GemGlass extends TransparentBlock {
+    protected GemGlass(Settings settings) {
         super(settings);
     }
 }

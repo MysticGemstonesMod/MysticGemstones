@@ -1,4 +1,4 @@
-package xyz.mysticgemstones.block;
+package xyz.mysticgemstones.screenhandler;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
@@ -9,11 +9,11 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class GemInfuserScreen extends HandledScreen<ScreenHandler> {
+public class GemCraftStationScreen extends HandledScreen<ScreenHandler> {
 
     private static final Identifier TEXTURE = new Identifier("minecraft", "textures/gui/container/dispenser.png");
 
-    public GemInfuserScreen(ScreenHandler handler, PlayerInventory inventory, Text title) {
+    public GemCraftStationScreen(ScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
     @Override

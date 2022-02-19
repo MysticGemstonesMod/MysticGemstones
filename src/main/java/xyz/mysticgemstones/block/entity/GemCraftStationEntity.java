@@ -13,16 +13,16 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
-import xyz.mysticgemstones.block.GemInfuserInventory;
-import xyz.mysticgemstones.block.GemInfuserScreenHandler;
+import xyz.mysticgemstones.block.GemCraftStationInventory;
+import xyz.mysticgemstones.screenhandler.GemCraftStationScreenHandler;
 import xyz.mysticgemstones.block.MysticGemstonesBlock;
 
-public class GemInfuserEntity extends BlockEntity implements NamedScreenHandlerFactory, GemInfuserInventory {
+public class GemCraftStationEntity extends BlockEntity implements NamedScreenHandlerFactory, GemCraftStationInventory {
 
     private final DefaultedList<ItemStack> items = DefaultedList.ofSize(9, ItemStack.EMPTY);
 
-    public GemInfuserEntity(BlockPos pos, BlockState state) {
-        super(MysticGemstonesBlock.GEM_INFUSER_ENTITY, pos, state);
+    public GemCraftStationEntity(BlockPos pos, BlockState state) {
+        super(MysticGemstonesBlock.GEM_CRAFT_STATION_ENTITY, pos, state);
     }
 
 
@@ -32,7 +32,7 @@ public class GemInfuserEntity extends BlockEntity implements NamedScreenHandlerF
     }
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return new GemInfuserScreenHandler(syncId, playerInventory, this);
+        return new GemCraftStationScreenHandler(syncId, playerInventory, this);
     }
     @Override
     public Text getDisplayName() {

@@ -1,4 +1,4 @@
-package xyz.mysticgemstones.block;
+package xyz.mysticgemstones.screenhandler;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -9,15 +9,15 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import xyz.mysticgemstones.MysticGemstones;
 
-public class GemInfuserScreenHandler extends ScreenHandler {
+public class GemCraftStationScreenHandler extends ScreenHandler {
 
     private final Inventory inventory;
 
-    public GemInfuserScreenHandler(int syncId, PlayerInventory playerInventory) {
+    public GemCraftStationScreenHandler(int syncId, PlayerInventory playerInventory) {
         this(syncId, playerInventory, new SimpleInventory(9));
     }
 
-    public GemInfuserScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
+    public GemCraftStationScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
         super(MysticGemstones.GEM_INFUSER_SCREEN_HANDLER, syncId);
         checkSize(inventory, 9);
         this.inventory = inventory;
