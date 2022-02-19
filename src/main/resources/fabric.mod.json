@@ -21,6 +21,9 @@
   "entrypoints": {
     "main": [
       "xyz.mysticgemstones.MysticGemstones"
+    ],
+    "client": [
+      "xyz.mysticgemstones.client.MysticGemstonesClient"
     ]
   },
   "mixins": [

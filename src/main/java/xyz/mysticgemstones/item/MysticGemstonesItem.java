@@ -39,7 +39,7 @@ public class MysticGemstonesItem {
     public static final Item WHITE_SAPPHIRE_ITEM = registerItem(Constant.WHITE_SAPPHIRE_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item MALACHITE_ITEM = registerItem(Constant.MALACHITE_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item SAPPHIRE_ITEM = registerItem(Constant.SAPPHIRE_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
-    public static final StarstoneItem STARSTONE_ITEM = registerItem(Constant.STARSTONE_ITEM, new StarstoneItem(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final Item STARSTONE_ITEM = registerItem(Constant.STARSTONE_ITEM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
 
     // Gem dust
     public static final Item AQUAMARINE_DUST = registerItem(Constant.AQUAMARINE_DUST, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
@@ -49,7 +49,7 @@ public class MysticGemstonesItem {
     public static final Item WHITE_SAPPHIRE_DUST = registerItem(Constant.WHITE_SAPPHIRE_DUST, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item MALACHITE_DUST = registerItem(Constant.MALACHITE_DUST, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final Item SAPPHIRE_DUST = registerItem(Constant.SAPPHIRE_DUST, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
-    public static final StarstoneDust STARSTONE_DUST = registerItem(Constant.STARSTONE_DUST, new StarstoneDust(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final Item STARSTONE_DUST = registerItem(Constant.STARSTONE_DUST, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
 
     // Raw gems
     public static final RawGemItem RAW_AQUAMARINE = registerItem(Constant.RAW_AQUAMARINE, new RawGemItem(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP), MysticGemstonesItem.AQUAMARINE_ITEM, MysticGemstonesItem.AQUAMARINE_DUST));
@@ -62,7 +62,7 @@ public class MysticGemstonesItem {
     public static final RawStarstone RAW_STARSTONE = registerItem(Constant.RAW_STARSTONE, new RawStarstone(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP), MysticGemstonesItem.STARSTONE_ITEM, MysticGemstonesItem.STARSTONE_DUST, 20, 15, 2));
 
     // Condensed dust
-    public static final CondensedStarstoneDust CONDENSED_STARSTONE_DUST = registerItem(Constant.CONDENSED_STARSTONE_DUST, new CondensedStarstoneDust(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final Item CONDENSED_STARSTONE_DUST = registerItem(Constant.CONDENSED_STARSTONE_DUST, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
 
     // Food
     public static final AlexandriteApple ALEXANDRITE_APPLE = registerItem(Constant.ALEXANDRITE_APPLE, new AlexandriteApple(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(1.6f).alwaysEdible().build())));
@@ -89,6 +89,8 @@ public class MysticGemstonesItem {
     public static final SapphireRing SAPPHIRE_RING = registerItem(Constant.SAPPHIRE_RING, new SapphireRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final WhiteSapphireRing WHITE_SAPPHIRE_RING = registerItem(Constant.WHITE_SAPPHIRE_RING, new WhiteSapphireRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
 
+    // Random
+    public static final GemBag GEM_BAG = registerItem(Constant.GEM_BAG, new GemBag(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
 
     // Puts info about item to ITEMS variable.
     public static <T extends Item> T registerItem(String id, T item) {
