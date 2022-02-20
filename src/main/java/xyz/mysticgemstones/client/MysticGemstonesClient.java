@@ -11,12 +11,12 @@ import xyz.mysticgemstones.block.entity.renderer.GemInfuserEntityRenderer;
 import xyz.mysticgemstones.screenhandler.GemCraftStationScreen;
 
 @Environment(EnvType.CLIENT)
-public class mysticgemstonesClient implements ClientModInitializer {
-
+public class MysticGemstonesClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ScreenRegistry.register(MysticGemstones.GEM_INFUSER_SCREEN_HANDLER, GemCraftStationScreen::new);
         BlockEntityRendererRegistry.register(MysticGemstonesBlock.GEM_INFUSER_ENTITY, GemInfuserEntityRenderer::new);
         BlockTransparency.register();
+        FabricModelPredicateProviders.register();
     }
 }

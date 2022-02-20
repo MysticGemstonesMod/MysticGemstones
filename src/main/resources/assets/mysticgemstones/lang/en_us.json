@@ -66,5 +66,7 @@
   "itemGroup.mysticgemstones.items": "Items",
   "item.mysticgemstones.alexandrite_charm.tooltip_1": "\u00A75When In Inventory:\u00A7r",
   "item.mysticgemstones.alexandrite_charm.tooltip_2": "\u00A79Slows Down Hunger By 50%\u00A7r",
+  "item.mysticgemstones.gem_bag.tooltip_1": "Bag contains: ",
+  "item.mysticgemstones.gem_bag.tooltip_2": "Bag is Empty",
   "effect.mysticgemstones.nohunger": "NoHunger"
 }

@@ -4,6 +4,8 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
+import net.minecraft.recipe.SpecialRecipeSerializer;
+import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import xyz.mysticgemstones.screenhandler.GemCraftStationScreenHandler;
@@ -26,5 +28,6 @@ public class MysticGemstones implements ModInitializer {
 		MysticGemstonesBlock.registerEntity();
 		MysticGemstonesItem.register();
 		MysticGemstonesStatusEffect.register();
+		Registry.register(Registry.RECIPE_SERIALIZER, "crafting_special_gem_bag", new SpecialRecipeSerializer<>(GemBagRecipe::new));
 	}
 }

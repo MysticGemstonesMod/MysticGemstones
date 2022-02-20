@@ -23,7 +23,7 @@
       "xyz.mysticgemstones.MysticGemstones"
     ],
     "client": [
-      "xyz.mysticgemstones.client.mysticgemstonesClient"
+      "xyz.mysticgemstones.client.MysticGemstonesClient"
     ]
   },
   "mixins": [
