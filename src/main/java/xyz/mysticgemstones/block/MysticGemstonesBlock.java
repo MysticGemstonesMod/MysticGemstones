@@ -14,6 +14,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import xyz.mysticgemstones.Constant;
 import xyz.mysticgemstones.block.entity.GemCraftStationEntity;
+import xyz.mysticgemstones.block.entity.GemInfuserEntity;
 import xyz.mysticgemstones.block.entity.StarstoneOreEntity;
 import xyz.mysticgemstones.item.MysticGemstonesItem;
 import xyz.mysticgemstones.item.StarstoneOreBlockItem;
@@ -73,10 +74,10 @@ public class MysticGemstonesBlock {
     public static final Block JASPER_GLASS = addBlock(Constant.JASPER_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
     public static final Block HARDENED_MALACHITE_GLASS = addBlock(Constant.HARDENED_MALACHITE_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
     public static final Block MALACHITE_GLASS = addBlock(Constant.MALACHITE_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
-    public static final Block HARDENED_SAPHIRE_GLASS = addBlock(Constant.HARDENED_SAPPHIRE_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
-    public static final Block SAPHIRE_GLASS = addBlock(Constant.SAPPHIRE_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
-    public static final Block HARDENED_WHITE_SAPHIRE_GLASS = addBlock(Constant.HARDENED_WHITE_SAPPHIRE_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
-    public static final Block WHITE_SAPHIRE_GLASS = addBlock(Constant.WHITE_SAPPHIRE_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
+    public static final Block HARDENED_SAPPHIRE_GLASS = addBlock(Constant.HARDENED_SAPPHIRE_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
+    public static final Block SAPPHIRE_GLASS = addBlock(Constant.SAPPHIRE_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
+    public static final Block HARDENED_WHITE_SAPPHIRE_GLASS = addBlock(Constant.HARDENED_WHITE_SAPPHIRE_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
+    public static final Block WHITE_SAPPHIRE_GLASS = addBlock(Constant.WHITE_SAPPHIRE_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
     public static final Block HARDENED_STARSTONE_GLASS = addBlock(Constant.HARDENED_STARSTONE_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
     public static final Block STARSTONE_GLASS = addBlock(Constant.STARSTONE_GLASS, new GemGlass(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).nonOpaque()), false);
 
@@ -106,11 +107,12 @@ public class MysticGemstonesBlock {
     }
 
     // Register Block Entity
-
     public static BlockEntityType<StarstoneOreEntity> STARSTONE_ORE_ENTITY;
     public static BlockEntityType<GemCraftStationEntity> GEM_CRAFT_STATION_ENTITY;
+    public static BlockEntityType<GemInfuserEntity> GEM_INFUSER_ENTITY;
 
-    public static void registerEntity(){
+    public static void registerEntity() {
+        GEM_INFUSER_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, Constant.GEM_INFUSER_ENTITY, FabricBlockEntityTypeBuilder.create(GemInfuserEntity::new, MysticGemstonesBlock.GEM_INFUSER).build(null));
         STARSTONE_ORE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, Constant.STARSTONE_ORE_ENTITY, FabricBlockEntityTypeBuilder.create(StarstoneOreEntity::new, MysticGemstonesBlock.STARSTONE_ORE).build(null));
         GEM_CRAFT_STATION_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, Constant.GEM_CRAFT_STATION_ENTITY, FabricBlockEntityTypeBuilder.create(GemCraftStationEntity::new, MysticGemstonesBlock.GEM_CRAFT_STATION).build(null));
     }

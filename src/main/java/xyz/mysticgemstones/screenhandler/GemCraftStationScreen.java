@@ -11,7 +11,8 @@ import net.minecraft.util.Identifier;
 
 public class GemCraftStationScreen extends HandledScreen<ScreenHandler> {
 
-    private static final Identifier TEXTURE = new Identifier("minecraft", "textures/gui/container/dispenser.png");
+    protected int backgroundHeight = 202;
+    private static final Identifier TEXTURE = new Identifier("mysticgemstones", "textures/gui/gem_craft_station.png");
 
     public GemCraftStationScreen(ScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
@@ -35,8 +36,8 @@ public class GemCraftStationScreen extends HandledScreen<ScreenHandler> {
 
     @Override
     protected void init() {
-        super.init();
-        // Center the title
+        titleY = -12;
         titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
+        super.init();
     }
 }

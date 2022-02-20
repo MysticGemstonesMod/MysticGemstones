@@ -1,34 +1,58 @@
 package xyz.mysticgemstones.block;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventory;
+import net.minecraft.item.ItemStack;
 import net.minecraft.text.LiteralText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import xyz.mysticgemstones.MysticGemstoneTags;
+import org.jetbrains.annotations.Nullable;
+import xyz.mysticgemstones.block.entity.GemInfuserEntity;
 
-public class GemInfuser extends Block {
+public class GemInfuser extends Block implements BlockEntityProvider {
     public GemInfuser(Settings settings) {
         super(settings);
     }
 
     @Override
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        if (state.getBlock() != newState.getBlock()) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof GemInfuserEntity) {
+                ItemScatterer.spawn(world, pos, (GemInfuserEntity)blockEntity);
+            }
+            super.onStateReplaced(state, world, pos, newState, moved);
+        }
+    }
+
+    @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (structureIsValid(world, pos)) {
-            if (player.getStackInHand(hand).isIn(MysticGemstoneTags.RAW_GEMS)) {
-                player.getStackInHand(hand).decrement(1);
-                // Put it inside of block entity inventory and so on....
+            Inventory blockEntity = (Inventory) world.getBlockEntity(pos);
+            if (!player.getStackInHand(hand).isEmpty() && blockEntity.getStack(0).isEmpty()) {
+                if (structureIsValid(world, pos)) {
+                    ItemStack itemStack = player.getStackInHand(hand).copy();
+                    itemStack.setCount(1);
+                    blockEntity.setStack(0, itemStack);
+                    player.getStackInHand(hand).decrement(1);
+                }
+                else {
+                    if (!world.isClient) {
+                        player.sendMessage(new LiteralText("Failed to identify multi block structure."), false);
+                    }
+                }
             }
-        }
-        else {
-            if (!world.isClient) {
-                player.sendMessage(new LiteralText("Failed to identify multi block structure."), false);
+            else {
+                player.getInventory().offerOrDrop(blockEntity.getStack(0));
+                blockEntity.removeStack(0);
             }
-        }
         return ActionResult.success(true);
     }
 
@@ -57,5 +81,11 @@ public class GemInfuser extends Block {
             if (world.getBlockState(pos.north(2).west(-2).up(i)).getBlock() != block) return false;
         }
         return true;
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return new GemInfuserEntity(pos, state);
     }
 }

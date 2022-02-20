@@ -13,7 +13,7 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
-import xyz.mysticgemstones.block.GemCraftStationInventory;
+import xyz.mysticgemstones.block.inventory.GemCraftStationInventory;
 import xyz.mysticgemstones.screenhandler.GemCraftStationScreenHandler;
 import xyz.mysticgemstones.block.MysticGemstonesBlock;
 
