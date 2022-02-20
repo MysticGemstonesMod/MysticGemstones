@@ -1,39 +1,33 @@
 package xyz.mysticgemstones;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
+import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.util.Identifier;
 import net.minecraft.recipe.SpecialRecipeSerializer;
 import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import xyz.mysticgemstones.screenhandler.GemCraftStationScreenHandler;
 import xyz.mysticgemstones.block.MysticGemstonesBlock;
-import xyz.mysticgemstones.block.entity.StarstoneOreEntity;
 import xyz.mysticgemstones.item.MysticGemstonesItem;
 import xyz.mysticgemstones.statusEffects.MysticGemstonesStatusEffect;
 
+
 public class MysticGemstones implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger("mysticgemstones");
+	public static final ScreenHandlerType<GemCraftStationScreenHandler> GEM_INFUSER_SCREEN_HANDLER;
 
-//	public static final RecipeType<GemBagRecipe> TEST_RECIPE_TYPE;
-//
-//	public static final RecipeSerializer<GemBagRecipe> TEST_RECIPE_SERIALIZER;
-//
-//	TEST_RECIPE_TYPE = Registry.register(Registry.RECIPE_TYPE, new Identifier(Constant.MOD_ID, "test_furnace"), new RecipeType<TestRecipe>() {
-//		@Override
-//		public String toString() {
-//			return "test_furnace";
-//		}
-//	});
-//
-//	TEST_RECIPE_SERIALIZER = Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(MOD_ID, "test_furnace"), new CookingRecipeSerializer(TestRecipe::new, 200));
-
+	static {
+		GEM_INFUSER_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier(Constant.MOD_ID, "gem_infuser_screen"), GemCraftStationScreenHandler::new);
+	}
 
 	@Override
 	public void onInitialize() {
 		MysticGemstonesBlock.register();
+		MysticGemstonesBlock.registerEntity();
 		MysticGemstonesItem.register();
-		StarstoneOreEntity.RegisterEntity();
 		MysticGemstonesStatusEffect.register();
-
 		Registry.register(Registry.RECIPE_SERIALIZER, "crafting_special_gem_bag", new SpecialRecipeSerializer<>(GemBagRecipe::new));
 	}
 }

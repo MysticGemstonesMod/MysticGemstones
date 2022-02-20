@@ -64,16 +64,49 @@ public interface Constant {
     String WHITE_SAPPHIRE_ORE = "white_sapphire_ore";
 
     // Blocks
+    String GEM_CRAFT_STATION = "gem_craft_station";
+    String GEM_INFUSER = "gem_infuser";
     String ROCK_TUMBLER = "rock_tumbler";
     String GEM_GRINDSTONE = "gem_grindstone";
     String AQUAMARINE_SAND = "aquamarine_sand";
     String ALEXANDRITE_SAND = "alexandrite_sand";
+    String STARSTONE_SAND = "starstone_sand";
     String JASPER_SAND = "jasper_sand";
     String TOPAZ_SAND = "topaz_sand";
     String MALACHITE_SAND = "malachite_sand";
     String SAPPHIRE_SAND = "sapphire_sand";
     String WHITE_SAPPHIRE_SAND = "white_sapphire_sand";
+    String AQUAMARINE_SAND_STONE = "aquamarine_sand_stone";
+    String ALEXANDRITE_SAND_STONE = "alexandrite_sand_stone";
+    String STARSTONE_SAND_STONE = "starstone_sand_stone";
+    String JASPER_SAND_STONE = "jasper_sand_stone";
+    String TOPAZ_SAND_STONE = "topaz_sand_stone";
+    String MALACHITE_SAND_STONE = "malachite_sand_stone";
+    String SAPPHIRE_SAND_STONE = "sapphire_sand_stone";
+    String WHITE_SAPPHIRE_SAND_STONE = "white_sapphire_sand_stone";
+    String AQUAMARINE_GLASS = "aquamarine_glass";
+    String ALEXANDRITE_GLASS = "alexandrite_glass";
+    String STARSTONE_GLASS = "starstone_glass";
+    String JASPER_GLASS = "jasper_glass";
+    String TOPAZ_GLASS = "topaz_glass";
+    String MALACHITE_GLASS = "malachite_glass";
+    String SAPPHIRE_GLASS = "sapphire_glass";
+    String WHITE_SAPPHIRE_GLASS = "white_sapphire_glass";
+    String HARDENED_AQUAMARINE_GLASS = "hardened_aquamarine_glass";
+    String HARDENED_ALEXANDRITE_GLASS = "hardened_alexandrite_glass";
+    String HARDENED_STARSTONE_GLASS = "hardened_starstone_glass";
+    String HARDENED_JASPER_GLASS = "hardened_jasper_glass";
+    String HARDENED_TOPAZ_GLASS = "hardened_topaz_glass";
+    String HARDENED_MALACHITE_GLASS = "hardened_malachite_glass";
+    String HARDENED_SAPPHIRE_GLASS = "hardened_sapphire_glass";
+    String HARDENED_WHITE_SAPPHIRE_GLASS = "hardened_white_sapphire_glass";
+
 
     // Tags
     String RAW_GEMS = "raw_gems";
+
+    // Block Entity
+    String STARSTONE_ORE_ENTITY = "starstone_ore_entity";
+    String GEM_CRAFT_STATION_ENTITY = "gem_craft_station_entity";
+    String GEM_INFUSER_ENTITY = "gem_infuser_entity";
 }

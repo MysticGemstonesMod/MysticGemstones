@@ -45,6 +45,6 @@ public class StarstoneOre extends BlockWithEntity {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, StarstoneOreEntity.STARSTONE_ORE_ENTITY, (world1, pos, state1, f) -> StarstoneOreEntity.tick(world1, pos, state1));
+        return checkType(type, MysticGemstonesBlock.STARSTONE_ORE_ENTITY, (world1, pos, state1, f) -> StarstoneOreEntity.tick(world1, pos, state1));
     }
 }

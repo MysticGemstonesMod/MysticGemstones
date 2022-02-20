@@ -22,17 +22,14 @@ public class TopazCharm extends Item {
         if (!world.isClient) {
             boolean cooldown = player.getItemCooldownManager().isCoolingDown(MysticGemstonesItem.TOPAZ_CHARM);
             float cooldownProgres = player.getItemCooldownManager().getCooldownProgress(MysticGemstonesItem.TOPAZ_CHARM, 4f);
-            System.out.println(player.getDamageTracker().hasDamage());
             if (!cooldown) {
                 if (player.getDamageTracker().hasDamage()) {
                     player.getItemCooldownManager().set(MysticGemstonesItem.TOPAZ_CHARM, 500);
                 }
                 player.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 1, 2));
             } else if (cooldownProgres < 0.2f && cooldownProgres > 0.1f) {
-                System.out.println("cooldown progres " + cooldownProgres);
                 player.sendMessage(new LiteralText("Topaz Charm Charging... 3 seconds left... Don't take damage"), true);
             } else if (cooldownProgres < 0.01f && player.getDamageTracker().hasDamage()) {
-                System.out.println("cooldown progres " + cooldownProgres);
                 player.sendMessage(new LiteralText("Unsuccessfull recharge. Coldown has ben reseted"), true);
             }
         }
