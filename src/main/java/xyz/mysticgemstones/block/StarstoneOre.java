@@ -16,7 +16,6 @@ import xyz.mysticgemstones.block.entity.StarstoneOreEntity;
 import java.util.function.ToIntFunction;
 
 public class StarstoneOre extends BlockWithEntity {
-
     public static final BooleanProperty SHINING = BooleanProperty.of("shining");
 
     public StarstoneOre(Settings settings) {

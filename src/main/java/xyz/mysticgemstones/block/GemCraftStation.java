@@ -1,64 +1,39 @@
 package xyz.mysticgemstones.block;
 
-import net.minecraft.block.BlockRenderType;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.BlockWithEntity;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.NamedScreenHandlerFactory;
-import net.minecraft.screen.ScreenHandler;
+import net.minecraft.screen.ScreenHandlerContext;
+import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
+import net.minecraft.stat.Stats;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
-import xyz.mysticgemstones.block.entity.GemCraftStationEntity;
+import xyz.mysticgemstones.screenhandler.GemCraftStationScreenHandler;
 
-public class GemCraftStation extends BlockWithEntity {
+public class GemCraftStation extends Block {
+    private static final Text TITLE = new TranslatableText("container.gem_crafting_station");
+
     public GemCraftStation(Settings settings) {
         super(settings);
     }
 
-    @Nullable
-    @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return new GemCraftStationEntity(pos, state);
-    }
-
-    @Override
-    public BlockRenderType getRenderType(BlockState state) {
-        return BlockRenderType.MODEL;
-    }
-
-    @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient) {
-            NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
-            if (screenHandlerFactory != null) {
-                player.openHandledScreen(screenHandlerFactory);
-            }
+        if (world.isClient) {
+            return ActionResult.SUCCESS;
+        } else {
+            player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
+            player.incrementStat(Stats.INTERACT_WITH_CRAFTING_TABLE);
+            return ActionResult.CONSUME;
         }
-        return ActionResult.SUCCESS;
     }
 
-    @Override
-    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
-        if (state.getBlock() != newState.getBlock()) {
-            BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof GemCraftStationEntity) {
-                ItemScatterer.spawn(world, pos, (GemCraftStationEntity)blockEntity);
-            }
-            super.onStateReplaced(state, world, pos, newState, moved);
-        }
-    }
-    @Override
-    public boolean hasComparatorOutput(BlockState state) {
-        return true;
-    }
-    @Override
-    public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
-        return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
+    public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
+        return new SimpleNamedScreenHandlerFactory((syncId, inventory, player) -> new GemCraftStationScreenHandler(syncId, inventory, ScreenHandlerContext.create(world, pos)), TITLE);
     }
 }

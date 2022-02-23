@@ -25,15 +25,11 @@ public class GemGrindstone extends Block {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
             if (player.getStackInHand(hand).isIn(MysticGemstoneTags.RAW_GEMS)) {
-
                 RawGemItem rawGemItem = (RawGemItem) player.getStackInHand(hand).getItem();
                 polishGem(player, hand, world, pos, rawGemItem.getPolishedVariant(), rawGemItem.getDust(), rawGemItem.getPowderDropChance(), rawGemItem.getItemBreakChance(), rawGemItem.getItemPolishChance());
-
-                return ActionResult.SUCCESS;
             }
-            return ActionResult.FAIL;
         }
-        return ActionResult.FAIL;
+        return ActionResult.SUCCESS;
     }
 
     private void polishGem(PlayerEntity player, Hand hand, World world, BlockPos pos, Item item_polished, Item item_powder, int powderDropChance, int itemBrakeChance, int polishItemChance) {

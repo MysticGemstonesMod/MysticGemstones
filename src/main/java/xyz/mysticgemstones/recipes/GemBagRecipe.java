@@ -1,4 +1,4 @@
-package xyz.mysticgemstones;
+package xyz.mysticgemstones.recipes;
 
 import net.minecraft.inventory.CraftingInventory;
 import net.minecraft.item.ItemStack;

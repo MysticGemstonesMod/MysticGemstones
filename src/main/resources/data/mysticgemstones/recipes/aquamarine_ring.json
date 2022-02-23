@@ -1,18 +1,11 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " A ",
-    "NNN"
-  ],
-  "key": {
-    "A": {
-      "item": "mysticgemstones:aquamarine"
-    },
-    "N": {
-      "item": "minecraft:iron_nugget"
-    }
+  "type": "mysticgemstones:gem_craft_station_recipe",
+  "inputA" : {
+    "item": "mysticgemstones:empty_ring"
   },
-  "result": {
-    "item": "mysticgemstones:aquamarine_ring"
-  }
+  "inputB": {
+    "item": "mysticgemstones:aquamarine"
+  },
+  "outputItem": "mysticgemstones:aquamarine_ring",
+  "outputAmount": "1"
 }

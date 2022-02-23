@@ -91,6 +91,9 @@ public class MysticGemstonesItem {
 
     // Random
     public static final GemBag GEM_BAG = registerItem(Constant.GEM_BAG, new GemBag(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
+    public static final Item DARK_CLOTH = registerItem(Constant.DARK_CLOTH, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final Item EMPTY_RING = registerItem(Constant.EMPTY_RING, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+
 
     // Puts info about item to ITEMS variable.
     public static <T extends Item> T registerItem(String id, T item) {

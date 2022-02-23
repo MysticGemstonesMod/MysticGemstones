@@ -8,6 +8,9 @@ import net.minecraft.recipe.SpecialRecipeSerializer;
 import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import xyz.mysticgemstones.recipes.GemBagRecipe;
+import xyz.mysticgemstones.recipes.GemCraftStationRecipe;
+import xyz.mysticgemstones.recipes.GemCraftStationRecipeSerializer;
 import xyz.mysticgemstones.screenhandler.GemCraftStationScreenHandler;
 import xyz.mysticgemstones.block.MysticGemstonesBlock;
 import xyz.mysticgemstones.item.MysticGemstonesItem;
@@ -29,5 +32,8 @@ public class MysticGemstones implements ModInitializer {
 		MysticGemstonesItem.register();
 		MysticGemstonesStatusEffect.register();
 		Registry.register(Registry.RECIPE_SERIALIZER, "crafting_special_gem_bag", new SpecialRecipeSerializer<>(GemBagRecipe::new));
+
+		Registry.register(Registry.RECIPE_SERIALIZER, GemCraftStationRecipeSerializer.ID, GemCraftStationRecipeSerializer.INSTANCE);
+		Registry.register(Registry.RECIPE_TYPE, new Identifier("mysticgemstones", GemCraftStationRecipe.Type.ID), GemCraftStationRecipe.Type.INSTANCE);
 	}
 }

@@ -52,6 +52,8 @@ public interface Constant {
     String MUSIC_DISC_AQUAMARINE = "music_disc_aquamarine";
     String MUSIC_DISC_MALACHITE = "music_disc_malachite";
     String GEM_BAG = "gem_bag";
+    String DARK_CLOTH = "dark_cloth";
+    String EMPTY_RING = "empty_ring";
 
     // Ores
     String AQUAMARINE_ORE = "aquamarine_ore";
