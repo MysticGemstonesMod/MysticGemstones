@@ -13,20 +13,17 @@ import net.minecraft.util.registry.Registry;
 
 
 public class GemCraftStationRecipeSerializer implements RecipeSerializer<GemCraftStationRecipe> {
-
-    // Define ExampleRecipeSerializer as a singleton by making its constructor private and exposing an instance.
-    private GemCraftStationRecipeSerializer() {
-    }
+    private GemCraftStationRecipeSerializer() {}
 
     public static final GemCraftStationRecipeSerializer INSTANCE = new GemCraftStationRecipeSerializer();
 
-    // This will be the "type" field in the json
-    public static final Identifier ID = new Identifier("mysticgemstones:gem_craft_station_recipe"); // Could be wrong and cause errors!!! Identifier string that is..
+    // Type field in json
+    public static final Identifier ID = new Identifier("mysticgemstones:gem_craft_station_recipe");
 
     @Override
     // Turns json into Recipe
     public GemCraftStationRecipe read(Identifier id, JsonObject json) {
-        GemCraftStationRecipeJsonFormat recipeJson = new Gson().fromJson(json, GemCraftStationRecipeJsonFormat.class); // Gson has 2 imports if some errors happen maybe I imported the wrong class
+        GemCraftStationRecipeJsonFormat recipeJson = new Gson().fromJson(json, GemCraftStationRecipeJsonFormat.class);
 
         // Validate all fields are there
         if (recipeJson.inputA == null || recipeJson.inputB == null || recipeJson.outputItem == null) {

@@ -8,7 +8,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class RawStarstone extends RawGemItem {
-
     public RawStarstone(Settings settings, Item polishedVariant, Item dust, int powderDropChance, int itemBreakChance,  int itemPolishChance) {
         super(settings, polishedVariant, dust, powderDropChance, itemBreakChance, itemPolishChance);
     }

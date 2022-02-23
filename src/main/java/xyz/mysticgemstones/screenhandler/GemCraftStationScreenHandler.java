@@ -17,7 +17,6 @@ import net.minecraft.screen.slot.CraftingResultSlot;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
-import xyz.mysticgemstones.MysticGemstones;
 import xyz.mysticgemstones.recipes.GemCraftStationRecipe;
 
 import java.util.Optional;
@@ -34,7 +33,7 @@ public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<Cr
     }
 
     public GemCraftStationScreenHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
-        super(MysticGemstones.GEM_INFUSER_SCREEN_HANDLER, syncId);
+        super(MysticGemstonesScreen.GEM_CRAFT_STATION_SCREEN_HANDLER, syncId);
         this.input = new CraftingInventory(this, 2, 2);
         this.result = new CraftingResultInventory();
         this.context = context;

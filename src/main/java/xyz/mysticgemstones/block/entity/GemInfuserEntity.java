@@ -12,7 +12,7 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
 import xyz.mysticgemstones.block.MysticGemstonesBlock;
-import xyz.mysticgemstones.block.inventory.GemInfuserInventory;
+import xyz.mysticgemstones.inventory.GemInfuserInventory;
 
 public class GemInfuserEntity extends BlockEntity implements GemInfuserInventory {
     private final DefaultedList<ItemStack> items = DefaultedList.ofSize(1, ItemStack.EMPTY);

@@ -3,17 +3,13 @@ package xyz.mysticgemstones.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FallingBlock;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import xyz.mysticgemstones.Constant;
-//import xyz.mysticgemstones.block.entity.GemCraftStationEntity;
 import xyz.mysticgemstones.block.entity.GemInfuserEntity;
 import xyz.mysticgemstones.block.entity.StarstoneOreEntity;
 import xyz.mysticgemstones.item.MysticGemstonesItem;
@@ -23,7 +19,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MysticGemstonesBlock {
-
     public static final Map<Identifier, Block> BLOCKS = new HashMap<>();
     public static final Map<Identifier, BlockItem> BLOCK_ITEMS = new HashMap<>();
 
@@ -108,12 +103,10 @@ public class MysticGemstonesBlock {
 
     // Register Block Entity
     public static BlockEntityType<StarstoneOreEntity> STARSTONE_ORE_ENTITY;
-//    public static BlockEntityType<GemCraftStationEntity> GEM_CRAFT_STATION_ENTITY;
     public static BlockEntityType<GemInfuserEntity> GEM_INFUSER_ENTITY;
 
     public static void registerEntity() {
         GEM_INFUSER_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, Constant.GEM_INFUSER_ENTITY, FabricBlockEntityTypeBuilder.create(GemInfuserEntity::new, MysticGemstonesBlock.GEM_INFUSER).build(null));
         STARSTONE_ORE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, Constant.STARSTONE_ORE_ENTITY, FabricBlockEntityTypeBuilder.create(StarstoneOreEntity::new, MysticGemstonesBlock.STARSTONE_ORE).build(null));
-//        GEM_CRAFT_STATION_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, Constant.GEM_CRAFT_STATION_ENTITY, FabricBlockEntityTypeBuilder.create(GemCraftStationEntity::new, MysticGemstonesBlock.GEM_CRAFT_STATION).build(null));
     }
 }

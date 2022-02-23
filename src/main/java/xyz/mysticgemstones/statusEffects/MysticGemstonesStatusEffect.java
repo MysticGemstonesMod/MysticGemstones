@@ -6,7 +6,6 @@ import net.minecraft.util.registry.Registry;
 import xyz.mysticgemstones.Constant;
 
 public class MysticGemstonesStatusEffect {
-
     public static final StatusEffect NO_HUNGER = new NoHungerStatusEffect();
 
     public static void register() {

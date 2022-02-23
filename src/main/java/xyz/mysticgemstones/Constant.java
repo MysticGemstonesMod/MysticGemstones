@@ -2,7 +2,6 @@ package xyz.mysticgemstones;
 
 public interface Constant {
 
-
     // Mod Id
     String MOD_ID = "mysticgemstones";
 
@@ -109,6 +108,5 @@ public interface Constant {
 
     // Block Entity
     String STARSTONE_ORE_ENTITY = "starstone_ore_entity";
-    String GEM_CRAFT_STATION_ENTITY = "gem_craft_station_entity";
     String GEM_INFUSER_ENTITY = "gem_infuser_entity";
 }

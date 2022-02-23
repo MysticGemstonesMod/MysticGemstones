@@ -11,14 +11,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class RockTumbler extends Block {
-
     public RockTumbler(Settings settings) {
         super(settings);
     }
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-
         if (!world.isClient) {
             player.sendMessage(new LiteralText("Not yet in game!"), true);
         }

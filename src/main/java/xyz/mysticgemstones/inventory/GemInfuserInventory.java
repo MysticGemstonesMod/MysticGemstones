@@ -1,4 +1,4 @@
-package xyz.mysticgemstones.block.inventory;
+package xyz.mysticgemstones.inventory;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
