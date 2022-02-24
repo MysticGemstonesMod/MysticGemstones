@@ -39,6 +39,7 @@ public interface Constant {
     String TOPAZ_CHARM = "topaz_charm";
     String MALACHITE_CHARM = "malachite_charm";
     String SAPPHIRE_CHARM = "sapphire_charm";
+    String STARSTONE_CHARM = "starstone_charm";
     String WHITE_SAPPHIRE_CHARM = "white_sapphire_charm";
     String AQUAMARINE_RING = "aquamarine_ring";
     String JASPER_RING = "jasper_ring";
@@ -46,6 +47,7 @@ public interface Constant {
     String TOPAZ_RING = "topaz_ring";
     String MALACHITE_RING = "malachite_ring";
     String SAPPHIRE_RING = "sapphire_ring";
+    String STARSTONE_RING = "starstone_ring";
     String WHITE_SAPPHIRE_RING = "white_sapphire_ring";
     String ALEXANDRITE_APPLE = "alexandrite_apple";
     String MUSIC_DISC_AQUAMARINE = "music_disc_aquamarine";
@@ -109,4 +111,5 @@ public interface Constant {
     // Block Entity
     String STARSTONE_ORE_ENTITY = "starstone_ore_entity";
     String GEM_INFUSER_ENTITY = "gem_infuser_entity";
+    String STARSTONE_SAND_ENTITY = "starstone_sand_entity";
 }

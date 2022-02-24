@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "mysticgemstones:item/malachite_charm"
+    "layer0": "mysticgemstones:item/starstone_charm"
   },
   "display": {
     "thirdperson_righthand": {

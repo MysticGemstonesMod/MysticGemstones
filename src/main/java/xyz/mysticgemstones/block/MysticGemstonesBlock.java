@@ -3,7 +3,10 @@ package xyz.mysticgemstones.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FallingBlock;
+import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.sound.BlockSoundGroup;
@@ -12,8 +15,10 @@ import net.minecraft.util.registry.Registry;
 import xyz.mysticgemstones.Constant;
 import xyz.mysticgemstones.block.entity.GemInfuserEntity;
 import xyz.mysticgemstones.block.entity.StarstoneOreEntity;
+import xyz.mysticgemstones.block.entity.StarstoneSandEntity;
 import xyz.mysticgemstones.item.MysticGemstonesItem;
 import xyz.mysticgemstones.item.StarstoneOreBlockItem;
+import xyz.mysticgemstones.item.StarstoneSandBlockItem;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -48,7 +53,7 @@ public class MysticGemstonesBlock {
     public static final Block MALACHITE_SAND = addBlock(Constant.MALACHITE_SAND, new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND)), false);
     public static final Block SAPPHIRE_SAND = addBlock(Constant.SAPPHIRE_SAND, new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND)), false);
     public static final Block WHITE_SAPPHIRE_SAND = addBlock(Constant.WHITE_SAPPHIRE_SAND, new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND)), false);
-    public static final Block STARSTONE_SAND = addBlock(Constant.STARSTONE_SAND, new FallingBlock(FabricBlockSettings.copyOf(Blocks.SAND)), false);
+    public static final Block STARSTONE_SAND = addBlock(Constant.STARSTONE_SAND, new StarstoneSand(FabricBlockSettings.copyOf(Blocks.SAND).luminance(StarstoneSand.getLightLevel())), true);
     public static final Block AQUAMARINE_SAND_STONE = addBlock(Constant.AQUAMARINE_SAND_STONE, new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)), false);
     public static final Block ALEXANDRITE_SAND_STONE = addBlock(Constant.ALEXANDRITE_SAND_STONE, new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)), false);
     public static final Block TOPAZ_SAND_STONE = addBlock(Constant.TOPAZ_SAND_STONE, new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)), false);
@@ -89,6 +94,8 @@ public class MysticGemstonesBlock {
 
     // Add Block Item for Starstone Ore
     public static final StarstoneOreBlockItem STARSTONE_ORE_ITEM = addBlockItem(new Identifier(Constant.MOD_ID, Constant.STARSTONE_ORE), new StarstoneOreBlockItem(STARSTONE_ORE, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+    public static final StarstoneSandBlockItem STARSTONE_SAND_ITEM = addBlockItem(new Identifier(Constant.MOD_ID, Constant.STARSTONE_SAND), new StarstoneSandBlockItem(STARSTONE_SAND, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+
 
     public static <T extends BlockItem> T addBlockItem(Identifier id, T blockitem) {
         BLOCK_ITEMS.put(id, blockitem);
@@ -103,10 +110,12 @@ public class MysticGemstonesBlock {
 
     // Register Block Entity
     public static BlockEntityType<StarstoneOreEntity> STARSTONE_ORE_ENTITY;
+    public static BlockEntityType<StarstoneSandEntity> STARSTONE_SAND_ENTITY;
     public static BlockEntityType<GemInfuserEntity> GEM_INFUSER_ENTITY;
 
     public static void registerEntity() {
         GEM_INFUSER_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, Constant.GEM_INFUSER_ENTITY, FabricBlockEntityTypeBuilder.create(GemInfuserEntity::new, MysticGemstonesBlock.GEM_INFUSER).build(null));
         STARSTONE_ORE_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, Constant.STARSTONE_ORE_ENTITY, FabricBlockEntityTypeBuilder.create(StarstoneOreEntity::new, MysticGemstonesBlock.STARSTONE_ORE).build(null));
+        STARSTONE_SAND_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, Constant.STARSTONE_SAND_ENTITY, FabricBlockEntityTypeBuilder.create(StarstoneSandEntity::new, MysticGemstonesBlock.STARSTONE_SAND).build(null));
     }
 }

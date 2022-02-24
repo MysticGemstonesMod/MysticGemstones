@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.LiteralText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -27,6 +28,9 @@ public class GemGrindstone extends Block {
             if (player.getStackInHand(hand).isIn(MysticGemstoneTags.RAW_GEMS)) {
                 RawGemItem rawGemItem = (RawGemItem) player.getStackInHand(hand).getItem();
                 polishGem(player, hand, world, pos, rawGemItem.getPolishedVariant(), rawGemItem.getDust(), rawGemItem.getPowderDropChance(), rawGemItem.getItemBreakChance(), rawGemItem.getItemPolishChance());
+            }
+            else {
+                player.sendMessage(new LiteralText("Not Raw Gem!"), false);
             }
         }
         return ActionResult.SUCCESS;
