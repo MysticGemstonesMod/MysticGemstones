@@ -13,7 +13,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import xyz.mysticgemstones.MysticGemstoneTags;
+import xyz.mysticgemstones.tags.MysticGemstonesTags;
 import xyz.mysticgemstones.item.RawGemItem;
 
 public class GemGrindstone extends Block {
@@ -25,12 +25,12 @@ public class GemGrindstone extends Block {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
-            if (player.getStackInHand(hand).isIn(MysticGemstoneTags.RAW_GEMS)) {
+            if (player.getStackInHand(hand).isIn(MysticGemstonesTags.RAW_GEMS)) {
                 RawGemItem rawGemItem = (RawGemItem) player.getStackInHand(hand).getItem();
                 polishGem(player, hand, world, pos, rawGemItem.getPolishedVariant(), rawGemItem.getDust(), rawGemItem.getPowderDropChance(), rawGemItem.getItemBreakChance(), rawGemItem.getItemPolishChance());
             }
             else {
-                player.sendMessage(new LiteralText("Not Raw Gem!"), false);
+                player.sendMessage(new LiteralText("Not Raw Gem!"), true);
             }
         }
         return ActionResult.SUCCESS;

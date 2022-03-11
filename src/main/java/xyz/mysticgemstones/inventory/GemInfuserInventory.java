@@ -8,7 +8,7 @@ import net.minecraft.util.collection.DefaultedList;
 
 public interface GemInfuserInventory extends Inventory {
 
-    DefaultedList<ItemStack> getItems();
+    DefaultedList<ItemStack> getInventory();
 
     static GemInfuserInventory of(DefaultedList<ItemStack> items) {
         return () -> items;
@@ -20,7 +20,7 @@ public interface GemInfuserInventory extends Inventory {
 
     @Override
     default int size() {
-        return getItems().size();
+        return getInventory().size();
     }
 
     @Override
@@ -36,12 +36,12 @@ public interface GemInfuserInventory extends Inventory {
 
     @Override
     default ItemStack getStack(int slot) {
-        return getItems().get(slot);
+        return getInventory().get(slot);
     }
 
     @Override
     default ItemStack removeStack(int slot, int count) {
-        ItemStack result = Inventories.splitStack(getItems(), slot, count);
+        ItemStack result = Inventories.splitStack(getInventory(), slot, count);
         if (!result.isEmpty()) {
             markDirty();
         }
@@ -50,12 +50,12 @@ public interface GemInfuserInventory extends Inventory {
 
     @Override
     default ItemStack removeStack(int slot) {
-        return Inventories.removeStack(getItems(), slot);
+        return Inventories.removeStack(getInventory(), slot);
     }
 
     @Override
     default void setStack(int slot, ItemStack stack) {
-        getItems().set(slot, stack);
+        getInventory().set(slot, stack);
         if (stack.getCount() > getMaxCountPerStack()) {
             stack.setCount(getMaxCountPerStack());
         }
@@ -63,7 +63,7 @@ public interface GemInfuserInventory extends Inventory {
 
     @Override
     default void clear() {
-        getItems().clear();
+        getInventory().clear();
     }
 
     @Override

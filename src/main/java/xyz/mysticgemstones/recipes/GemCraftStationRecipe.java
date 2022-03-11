@@ -10,36 +10,33 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
 public class GemCraftStationRecipe implements Recipe<CraftingInventory> {
-    private final Ingredient inputA;
-    private final Ingredient inputB;
+    private final Ingredient frameInput;
+    private final Ingredient gemInput;
     private final ItemStack result;
     private final Identifier id;
 
-    public GemCraftStationRecipe(Identifier id, ItemStack result, Ingredient inputA, Ingredient inputB) {
+    public GemCraftStationRecipe(Identifier id, ItemStack result, Ingredient frameInput, Ingredient gemInput) {
         this.id = id;
-        this.inputA = inputA;
-        this.inputB = inputB;
+        this.frameInput = frameInput;
+        this.gemInput = gemInput;
         this.result = result;
     }
 
-    public Ingredient getInputA() {
-        return this.inputA;
+    public Ingredient getFrameInput() {
+        return this.frameInput;
     }
 
-    public Ingredient getInputB() {
-        return this.inputB;
+    public Ingredient getGemInput() {
+        return this.gemInput;
     }
 
     @Override
     public boolean matches(CraftingInventory inventory, World world) {
-        if(inventory.size() < 2) return false;
-        boolean inputA = false;
-        boolean inputB = false;
-        for (int i = 0; i <= inventory.size(); i++) {
-            if (this.inputA.test(inventory.getStack(i))) inputA = true;
-            if (this.inputB.test(inventory.getStack(i))) inputB = true;
-        }
-        return inputA && inputB;
+        boolean frameInput = false;
+        boolean gemInput = false;
+        if (this.frameInput.test(inventory.getStack(1))) frameInput = true;
+        if (this.gemInput.test(inventory.getStack(2))) gemInput = true;
+        return frameInput && gemInput;
     }
 
     @Override

@@ -5,8 +5,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import xyz.mysticgemstones.block.MysticGemstonesBlock;
 import xyz.mysticgemstones.item.MysticGemstonesItem;
+import xyz.mysticgemstones.particles.MysticGemstonesParticleTypes;
 import xyz.mysticgemstones.recipes.MysticGemstonesRecipes;
-import xyz.mysticgemstones.statusEffects.MysticGemstonesStatusEffect;
+import xyz.mysticgemstones.statuseffects.MysticGemstonesStatusEffect;
 
 
 public class MysticGemstones implements ModInitializer {
@@ -19,5 +20,6 @@ public class MysticGemstones implements ModInitializer {
 		MysticGemstonesItem.register();
 		MysticGemstonesStatusEffect.register();
 		MysticGemstonesRecipes.register();
+		MysticGemstonesParticleTypes.register();
 	}
 }

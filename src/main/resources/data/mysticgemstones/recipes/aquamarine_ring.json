@@ -1,11 +1,10 @@
 {
   "type": "mysticgemstones:gem_craft_station_recipe",
-  "inputA" : {
+  "frameInput" : {
     "item": "mysticgemstones:empty_ring"
   },
-  "inputB": {
+  "gemInput": {
     "item": "mysticgemstones:aquamarine"
   },
-  "outputItem": "mysticgemstones:aquamarine_ring",
-  "outputAmount": "1"
+  "outputItem": "mysticgemstones:aquamarine_ring"
 }

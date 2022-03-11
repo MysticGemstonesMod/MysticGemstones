@@ -3,24 +3,19 @@ package xyz.mysticgemstones.recipes;
 import com.google.gson.JsonObject;
 
 public class GemCraftStationRecipeJsonFormat {
-    JsonObject inputA;
-    JsonObject inputB;
+    JsonObject frameInput;
+    JsonObject gemInput;
     String outputItem;
-    int outputAmount;
 
-    public JsonObject getInputA() {
-        return inputA;
+    public JsonObject getFrameInput() {
+        return frameInput;
     }
 
-    public JsonObject getInputB() {
-        return inputB;
+    public JsonObject getGemInput() {
+        return gemInput;
     }
 
     public String getOutputItem() {
         return outputItem;
-    }
-
-    public int getOutputAmount() {
-        return outputAmount;
     }
 }

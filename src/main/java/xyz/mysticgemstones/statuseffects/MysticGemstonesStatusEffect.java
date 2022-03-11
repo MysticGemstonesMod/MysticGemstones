@@ -1,4 +1,4 @@
-package xyz.mysticgemstones.statusEffects;
+package xyz.mysticgemstones.statuseffects;
 
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.util.Identifier;

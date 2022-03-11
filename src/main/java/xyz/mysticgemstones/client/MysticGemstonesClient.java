@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import xyz.mysticgemstones.block.MysticGemstonesBlock;
 import xyz.mysticgemstones.block.entity.renderer.GemInfuserEntityRenderer;
+import xyz.mysticgemstones.particles.MysticGemstonesParticleTypes;
 import xyz.mysticgemstones.screenhandler.GemCraftStationScreen;
 import xyz.mysticgemstones.screenhandler.MysticGemstonesScreen;
 
@@ -18,5 +19,6 @@ public class MysticGemstonesClient implements ClientModInitializer {
         BlockEntityRendererRegistry.register(MysticGemstonesBlock.GEM_INFUSER_ENTITY, GemInfuserEntityRenderer::new);
         BlockTransparency.register();
         FabricModelPredicateProviders.register();
+        MysticGemstonesParticleTypes.registerClient();
     }
 }

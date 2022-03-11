@@ -6,7 +6,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import xyz.mysticgemstones.statusEffects.MysticGemstonesStatusEffect;
+import xyz.mysticgemstones.statuseffects.MysticGemstonesStatusEffect;
 
 public class AlexandriteApple extends Item {
     public AlexandriteApple(Settings settings) {

@@ -34,16 +34,16 @@ public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<Cr
 
     public GemCraftStationScreenHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
         super(MysticGemstonesScreen.GEM_CRAFT_STATION_SCREEN_HANDLER, syncId);
+        // ToDo
+        // Height should be 1 but if it is 1 array errors something I need to fix this
         this.input = new CraftingInventory(this, 2, 2);
         this.result = new CraftingResultInventory();
         this.context = context;
         this.player = playerInventory.player;
 
         this.addSlot(new CraftingResultSlot(playerInventory.player, this.input, this.result, 0, 120, 24));
-        this.addSlot(new Slot(input, 0, 54, 3)); // Up
-        this.addSlot(new Slot(input, 1, 76, 24)); // Right
-        this.addSlot(new Slot(input, 2, 55, 47)); // Down
-        this.addSlot(new Slot(input, 3, 33, 26)); // Left
+        this.addSlot(new Slot(input, 1, 33, 24)); // Left
+        this.addSlot(new Slot(input, 2, 76, 24)); // Right
 
         int i;
         int j;
@@ -59,6 +59,51 @@ public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<Cr
         }
     }
 
+    public ItemStack transferSlot(PlayerEntity player, int index) {
+        ItemStack itemStack = ItemStack.EMPTY;
+        Slot slot = this.slots.get(index);
+        if (slot.hasStack()) {
+            ItemStack itemStack2 = slot.getStack();
+            itemStack = itemStack2.copy();
+            if (index == 0) {
+                this.context.run((world, pos) -> itemStack2.getItem().onCraft(itemStack2, world, player));
+                if (!this.insertItem(itemStack2, 3, 39, true)) {
+                    return ItemStack.EMPTY;
+                }
+
+                slot.onQuickTransfer(itemStack2, itemStack);
+            } else if (index >= 3 && index < 39) {
+                if (!this.insertItem(itemStack2, 1, 3, false)) {
+                    if (index < 30) {
+                        if (!this.insertItem(itemStack2, 30, 39, false)) {
+                            return ItemStack.EMPTY;
+                        }
+                    } else if (!this.insertItem(itemStack2, 3, 30, false)) {
+                        return ItemStack.EMPTY;
+                    }
+                }
+            } else if (!this.insertItem(itemStack2, 3, 39, false)) {
+                return ItemStack.EMPTY;
+            }
+
+            if (itemStack2.isEmpty()) {
+                slot.setStack(ItemStack.EMPTY);
+            } else {
+                slot.markDirty();
+            }
+
+            if (itemStack2.getCount() == itemStack.getCount()) {
+                return ItemStack.EMPTY;
+            }
+
+            slot.onTakeItem(player, itemStack2);
+            if (index == 0) {
+                player.dropItem(itemStack2, false);
+            }
+        }
+        return itemStack;
+    }
+
     protected static void updateResult(ScreenHandler handler, World world, PlayerEntity player, CraftingInventory craftingInventory, CraftingResultInventory resultInventory) {
         if (!world.isClient) {
             ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity)player;
@@ -70,7 +115,6 @@ public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<Cr
                     itemStack = gemCraftStationRecipe.craft(craftingInventory);
                 }
             }
-
             resultInventory.setStack(0, itemStack);
             handler.setPreviousTrackedSlot(0, itemStack);
             serverPlayerEntity.networkHandler.sendPacket(new ScreenHandlerSlotUpdateS2CPacket(handler.syncId, handler.nextRevision(), 0, itemStack));
@@ -103,52 +147,6 @@ public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<Cr
         return true;
     }
 
-    public ItemStack transferSlot(PlayerEntity player, int index) {
-        ItemStack itemStack = ItemStack.EMPTY;
-        Slot slot = this.slots.get(index);
-        if (slot.hasStack()) {
-            ItemStack itemStack2 = slot.getStack();
-            itemStack = itemStack2.copy();
-            if (index == 0) {
-                this.context.run((world, pos) -> itemStack2.getItem().onCraft(itemStack2, world, player));
-                if (!this.insertItem(itemStack2, 10, 46, true)) {
-                    return ItemStack.EMPTY;
-                }
-
-                slot.onQuickTransfer(itemStack2, itemStack);
-            } else if (index >= 10 && index < 46) {
-                if (!this.insertItem(itemStack2, 1, 10, false)) {
-                    if (index < 37) {
-                        if (!this.insertItem(itemStack2, 37, 46, false)) {
-                            return ItemStack.EMPTY;
-                        }
-                    } else if (!this.insertItem(itemStack2, 10, 37, false)) {
-                        return ItemStack.EMPTY;
-                    }
-                }
-            } else if (!this.insertItem(itemStack2, 10, 46, false)) {
-                return ItemStack.EMPTY;
-            }
-
-            if (itemStack2.isEmpty()) {
-                slot.setStack(ItemStack.EMPTY);
-            } else {
-                slot.markDirty();
-            }
-
-            if (itemStack2.getCount() == itemStack.getCount()) {
-                return ItemStack.EMPTY;
-            }
-
-            slot.onTakeItem(player, itemStack2);
-            if (index == 0) {
-                player.dropItem(itemStack2, false);
-            }
-        }
-
-        return itemStack;
-    }
-
     @Override
     public int getCraftingResultSlotIndex() {
         return 0;
@@ -166,7 +164,7 @@ public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<Cr
 
     @Override
     public int getCraftingSlotCount() {
-        return 5;
+        return 3;
     }
 
     @Override

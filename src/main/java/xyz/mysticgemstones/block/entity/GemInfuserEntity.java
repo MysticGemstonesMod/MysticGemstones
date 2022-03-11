@@ -15,26 +15,24 @@ import xyz.mysticgemstones.block.MysticGemstonesBlock;
 import xyz.mysticgemstones.inventory.GemInfuserInventory;
 
 public class GemInfuserEntity extends BlockEntity implements GemInfuserInventory {
-    private final DefaultedList<ItemStack> items = DefaultedList.ofSize(1, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(1, ItemStack.EMPTY);
 
     public GemInfuserEntity(BlockPos pos, BlockState state) {
         super(MysticGemstonesBlock.GEM_INFUSER_ENTITY, pos, state);
     }
 
     @Override
-    public DefaultedList<ItemStack> getItems() {
-        return items;
+    public DefaultedList<ItemStack> getInventory() {
+        return inventory;
     }
 
     @Override
     public void readNbt(NbtCompound nbt) {
-        super.readNbt(nbt);
-        Inventories.readNbt(nbt, this.items);
+        Inventories.readNbt(nbt, this.inventory);
     }
     @Override
     public void writeNbt(NbtCompound nbt) {
-        super.writeNbt(nbt);
-        Inventories.writeNbt(nbt, this.items);
+        Inventories.writeNbt(nbt, this.inventory);
     }
 
     // Sync server and client??
@@ -48,5 +46,9 @@ public class GemInfuserEntity extends BlockEntity implements GemInfuserInventory
     public NbtCompound toInitialChunkDataNbt() {
         return this.createNbt();
     }
+
+    // ToDo
+    // Recipe for gem infuser
+
     // ---------------------------------
 }

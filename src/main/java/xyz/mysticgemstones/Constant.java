@@ -55,6 +55,7 @@ public interface Constant {
     String GEM_BAG = "gem_bag";
     String DARK_CLOTH = "dark_cloth";
     String EMPTY_RING = "empty_ring";
+    String EMPTY_CHARM = "empty_charm";
 
     // Ores
     String AQUAMARINE_ORE = "aquamarine_ore";

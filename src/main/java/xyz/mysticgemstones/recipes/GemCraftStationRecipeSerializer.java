@@ -26,38 +26,35 @@ public class GemCraftStationRecipeSerializer implements RecipeSerializer<GemCraf
         GemCraftStationRecipeJsonFormat recipeJson = new Gson().fromJson(json, GemCraftStationRecipeJsonFormat.class);
 
         // Validate all fields are there
-        if (recipeJson.inputA == null || recipeJson.inputB == null || recipeJson.outputItem == null) {
+        if (recipeJson.frameInput == null || recipeJson.gemInput == null || recipeJson.outputItem == null) {
             throw new JsonSyntaxException("A required attribute is missing!"); // 2 import if error try another import
         }
-        // We'll allow to not specify the output, and default it to 1.
-        if (recipeJson.outputAmount == 0) recipeJson.outputAmount = 1;
-
         // Ingredient easily turns JsonObjects of the correct format into Ingredients
-        Ingredient inputA = Ingredient.fromJson(recipeJson.inputA);
-        Ingredient inputB = Ingredient.fromJson(recipeJson.inputB);
+        Ingredient frameInput = Ingredient.fromJson(recipeJson.frameInput);
+        Ingredient gemInput = Ingredient.fromJson(recipeJson.gemInput);
         // The json will specify the item ID. We can get the Item instance based off of that from the Item registry.
         Item outputItem = Registry.ITEM.getOrEmpty(new Identifier(recipeJson.outputItem))
                 // Validate the inputted item actually exists
                 .orElseThrow(() -> new JsonSyntaxException("No such item " + recipeJson.outputItem));
-        ItemStack output = new ItemStack(outputItem, recipeJson.outputAmount);
+        ItemStack output = new ItemStack(outputItem, 1);
 
-        return new GemCraftStationRecipe(id, output, inputA, inputB);
+        return new GemCraftStationRecipe(id, output, frameInput, gemInput);
     }
 
     @Override
     // Turns Recipe into PacketByteBuf
     public void write(PacketByteBuf packetData, GemCraftStationRecipe recipe) {
-        recipe.getInputA().write(packetData);
-        recipe.getInputB().write(packetData);
+        recipe.getFrameInput().write(packetData);
+        recipe.getGemInput().write(packetData);
         packetData.writeItemStack(recipe.getOutput());
     }
 
     @Override
     // Turns PacketByteBuf into Recipe
     public GemCraftStationRecipe read(Identifier id, PacketByteBuf packetData) {
-        Ingredient inputA = Ingredient.fromPacket(packetData);
-        Ingredient inputB = Ingredient.fromPacket(packetData);
+        Ingredient frameInput = Ingredient.fromPacket(packetData);
+        Ingredient gemInput = Ingredient.fromPacket(packetData);
         ItemStack output = packetData.readItemStack();
-        return new GemCraftStationRecipe(id, output, inputA, inputB);
+        return new GemCraftStationRecipe(id, output, frameInput, gemInput);
     }
 }
