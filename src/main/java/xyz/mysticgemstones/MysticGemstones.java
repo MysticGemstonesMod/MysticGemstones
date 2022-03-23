@@ -8,10 +8,11 @@ import xyz.mysticgemstones.item.MysticGemstonesItem;
 import xyz.mysticgemstones.particles.MysticGemstonesParticleTypes;
 import xyz.mysticgemstones.recipes.MysticGemstonesRecipes;
 import xyz.mysticgemstones.statuseffects.MysticGemstonesStatusEffect;
+import xyz.mysticgemstones.worldgen.MysticGemstonesOreGen;
 
 
 public class MysticGemstones implements ModInitializer {
-	public static final Logger LOGGER = LogManager.getLogger("mysticgemstones");
+	public static final Logger LOGGER = LogManager.getLogger(Constant.MOD_ID);
 
 	@Override
 	public void onInitialize() {
@@ -21,5 +22,6 @@ public class MysticGemstones implements ModInitializer {
 		MysticGemstonesStatusEffect.register();
 		MysticGemstonesRecipes.register();
 		MysticGemstonesParticleTypes.register();
+		MysticGemstonesOreGen.register();
 	}
 }

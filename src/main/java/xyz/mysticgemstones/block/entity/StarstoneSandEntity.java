@@ -9,8 +9,6 @@ import xyz.mysticgemstones.block.StarstoneOre;
 
 
 public class StarstoneSandEntity extends BlockEntity {
-
-
     public StarstoneSandEntity(BlockPos pos, BlockState state) {
         super(MysticGemstonesBlock.STARSTONE_SAND_ENTITY, pos, state);
     }
