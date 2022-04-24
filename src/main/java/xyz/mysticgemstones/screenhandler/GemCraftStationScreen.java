@@ -8,15 +8,16 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import xyz.mysticgemstones.Constant;
 
 public class GemCraftStationScreen extends HandledScreen<ScreenHandler> {
-
+    private static final Identifier TEXTURE = new Identifier(Constant.MOD_ID, "textures/gui/gem_craft_station.png");
     protected int backgroundHeight = 202;
-    private static final Identifier TEXTURE = new Identifier("mysticgemstones", "textures/gui/gem_craft_station.png");
 
     public GemCraftStationScreen(ScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
+
     @Override
     protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);

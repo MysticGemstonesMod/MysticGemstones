@@ -23,9 +23,6 @@ public class GemBag extends Item {
         super(settings);
     }
 
-    // NbtData put int array | first int = number of items in bag, second number represents raw gem, example.. 1 - raw starstone
-    //                                                                                                         2 - raw aqumarine....
-
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (user.getStackInHand(hand).hasNbt()) {

@@ -1,0 +1,31 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mysticgemstones:item/empty_charm"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [0, 0, -50],
+      "translation": [-1.5, 0, 0],
+      "scale": [0.7, 0.7, 0.7]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [-180, 0, -140],
+      "translation": [-0.75, 0.25, 0],
+      "scale": [0.7, 0.7, 0.7]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, -90, 5],
+      "translation": [1.13, 4.45, 1.63],
+      "scale": [0.43, 0.57, 0.62]
+    },
+    "firstperson_lefthand": {
+      "rotation": [0, 90, 5],
+      "translation": [1.13, 4.2, 1.88],
+      "scale": [0.43, 0.57, 0.62]
+    },
+    "ground": {
+      "scale": [0.7, 0.7, 0.7]
+    }
+  }
+}

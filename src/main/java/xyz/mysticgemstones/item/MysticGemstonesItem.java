@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import xyz.mysticgemstones.Constant;
-import xyz.mysticgemstones.SoundEventMysticGemstones;
+import xyz.mysticgemstones.sound.MysticGemstonesSoundEvents;
 import xyz.mysticgemstones.block.MysticGemstonesBlock;
 import xyz.mysticgemstones.item.charms.*;
 import xyz.mysticgemstones.item.discs.MusicDiscAquamarine;
@@ -68,6 +68,7 @@ public class MysticGemstonesItem {
     public static final AlexandriteApple ALEXANDRITE_APPLE = registerItem(Constant.ALEXANDRITE_APPLE, new AlexandriteApple(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(1.6f).alwaysEdible().build())));
 
     // Charms
+    public static final Item EMPTY_CHARM = registerItem(Constant.EMPTY_CHARM, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final AquamarineCharm AQUAMARINE_CHARM = registerItem(Constant.AQUAMARINE_CHARM, new AquamarineCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final AlexandriteCharm ALEXANDRITE_CHARM = registerItem(Constant.ALEXANDRITE_CHARM, new AlexandriteCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final JasperCharm JASPER_CHARM = registerItem(Constant.JASPER_CHARM, new JasperCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
@@ -75,12 +76,14 @@ public class MysticGemstonesItem {
     public static final MalachiteCharm MALACHITE_CHARM = registerItem(Constant.MALACHITE_CHARM, new MalachiteCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final SapphireCharm SAPPHIRE_CHARM = registerItem(Constant.SAPPHIRE_CHARM, new SapphireCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final WhiteSapphireCharm WHITE_SAPPHIRE_CHARM = registerItem(Constant.WHITE_SAPPHIRE_CHARM, new WhiteSapphireCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
+    public static final StarstoneCharm STARSTONE_CHARM = registerItem(Constant.STARSTONE_CHARM, new StarstoneCharm(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
 
     // Music discs
-    public static final MusicDiscAquamarine MUSIC_DISC_AQUAMARINE = registerItem(Constant.MUSIC_DISC_AQUAMARINE, new MusicDiscAquamarine(14, SoundEventMysticGemstones.AQUAMARINE_DISC_SOUND_EVENT, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
-    public static final MusicDiscMalachite MUSIC_DISC_MALACHITE = registerItem(Constant.MUSIC_DISC_MALACHITE, new MusicDiscMalachite(15, SoundEventMysticGemstones.MALACHITE_DISC_SOUND_EVENT, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
+    public static final MusicDiscAquamarine MUSIC_DISC_AQUAMARINE = registerItem(Constant.MUSIC_DISC_AQUAMARINE, new MusicDiscAquamarine(14, MysticGemstonesSoundEvents.AQUAMARINE_DISC_SOUND_EVENT, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
+    public static final MusicDiscMalachite MUSIC_DISC_MALACHITE = registerItem(Constant.MUSIC_DISC_MALACHITE, new MusicDiscMalachite(15, MysticGemstonesSoundEvents.MALACHITE_DISC_SOUND_EVENT, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
 
     // Rings
+    public static final Item EMPTY_RING = registerItem(Constant.EMPTY_RING, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
     public static final AlexandriteRing ALEXANDRITE_RING = registerItem(Constant.ALEXANDRITE_RING, new AlexandriteRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final AquamarineRing AQUAMARINE_RING = registerItem(Constant.AQUAMARINE_RING, new AquamarineRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final JasperRing JASPER_RING = registerItem(Constant.JASPER_RING, new JasperRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
@@ -88,9 +91,13 @@ public class MysticGemstonesItem {
     public static final TopazRing TOPAZ_RING = registerItem(Constant.TOPAZ_RING, new TopazRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final SapphireRing SAPPHIRE_RING = registerItem(Constant.SAPPHIRE_RING, new SapphireRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
     public static final WhiteSapphireRing WHITE_SAPPHIRE_RING = registerItem(Constant.WHITE_SAPPHIRE_RING, new WhiteSapphireRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
+    public static final StarstoneRing STARSTONE_RING = registerItem(Constant.STARSTONE_RING, new StarstoneRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
 
     // Random
     public static final GemBag GEM_BAG = registerItem(Constant.GEM_BAG, new GemBag(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP).maxCount(1)));
+    public static final Item DARK_CLOTH = registerItem(Constant.DARK_CLOTH, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP)));
+
+
 
     // Puts info about item to ITEMS variable.
     public static <T extends Item> T registerItem(String id, T item) {

@@ -1,26 +1,18 @@
 package xyz.mysticgemstones;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
-import net.minecraft.screen.ScreenHandlerType;
-import net.minecraft.util.Identifier;
-import net.minecraft.recipe.SpecialRecipeSerializer;
-import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import xyz.mysticgemstones.screenhandler.GemCraftStationScreenHandler;
 import xyz.mysticgemstones.block.MysticGemstonesBlock;
 import xyz.mysticgemstones.item.MysticGemstonesItem;
-import xyz.mysticgemstones.statusEffects.MysticGemstonesStatusEffect;
+import xyz.mysticgemstones.particles.MysticGemstonesParticleTypes;
+import xyz.mysticgemstones.recipes.MysticGemstonesRecipes;
+import xyz.mysticgemstones.statuseffects.MysticGemstonesStatusEffect;
+import xyz.mysticgemstones.worldgen.MysticGemstonesOreGen;
 
 
 public class MysticGemstones implements ModInitializer {
-	public static final Logger LOGGER = LogManager.getLogger("mysticgemstones");
-	public static final ScreenHandlerType<GemCraftStationScreenHandler> GEM_INFUSER_SCREEN_HANDLER;
-
-	static {
-		GEM_INFUSER_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(new Identifier(Constant.MOD_ID, "gem_infuser_screen"), GemCraftStationScreenHandler::new);
-	}
+	public static final Logger LOGGER = LogManager.getLogger(Constant.MOD_ID);
 
 	@Override
 	public void onInitialize() {
@@ -28,6 +20,8 @@ public class MysticGemstones implements ModInitializer {
 		MysticGemstonesBlock.registerEntity();
 		MysticGemstonesItem.register();
 		MysticGemstonesStatusEffect.register();
-		Registry.register(Registry.RECIPE_SERIALIZER, "crafting_special_gem_bag", new SpecialRecipeSerializer<>(GemBagRecipe::new));
+		MysticGemstonesRecipes.register();
+		MysticGemstonesParticleTypes.register();
+		MysticGemstonesOreGen.register();
 	}
 }

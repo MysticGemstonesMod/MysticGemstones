@@ -14,24 +14,15 @@ public class StarstoneOreBlockItem extends BlockItem {
         super(block, settings);
     }
 
-    private boolean canShine;
-
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if (world.isClient) {
             if (world.getTimeOfDay() > 22350 || world.getTimeOfDay() < 21980) {
-                FabricModelPredicateProviderRegistry.register(MysticGemstonesBlock.STARSTONE_ORE.asItem(),
-                        new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmm) -> 0.0F);
-                canShine = false;
-            } else {
-                FabricModelPredicateProviderRegistry.register(MysticGemstonesBlock.STARSTONE_ORE.asItem(),
-                        new Identifier("shining"), (itemStack, clientWorld, livingEntity, hmmm) -> 1.0F);
-                canShine = true;
+                FabricModelPredicateProviderRegistry.register(MysticGemstonesBlock.STARSTONE_ORE.asItem(), new Identifier("shining"), (itemStack, clientWorld, livingEntity, x) -> 0.0F);
+            }
+            else {
+                FabricModelPredicateProviderRegistry.register(MysticGemstonesBlock.STARSTONE_ORE.asItem(), new Identifier("shining"), (itemStack, clientWorld, livingEntity, x) -> 1.0F);
             }
         }
-    }
-
-    public boolean hasGlint(ItemStack stack) {
-        return canShine;
     }
 }
