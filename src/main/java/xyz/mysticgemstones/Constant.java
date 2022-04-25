@@ -56,6 +56,14 @@ public interface Constant {
     String DARK_CLOTH = "dark_cloth";
     String EMPTY_RING = "empty_ring";
     String EMPTY_CHARM = "empty_charm";
+    String AQUAMARINE_GLASS_SHARD = "aquamarine_glass_shard";
+    String JASPER_GLASS_SHARD = "jasper_glass_shard";
+    String ALEXANDRITE_GLASS_SHARD = "alexandrite_glass_shard";
+    String TOPAZ_GLASS_SHARD = "topaz_glass_shard";
+    String MALACHITE_GLASS_SHARD = "malachite_glass_shard";
+    String SAPPHIRE_GLASS_SHARD = "sapphire_glass_shard";
+    String STARSTONE_GLASS_SHARD = "starstone_glass_shard";
+    String WHITE_SAPPHIRE_GLASS_SHARD = "white_sapphire_glass_shard";
 
     // Ores
     String AQUAMARINE_ORE = "aquamarine_ore";

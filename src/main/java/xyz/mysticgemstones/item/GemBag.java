@@ -52,7 +52,6 @@ public class GemBag extends Item {
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (stack.hasNbt()) {
             int nbtData = stack.getNbt().getInt("amount");
-
             if (nbtData < 1) {
                 tooltip.add(new TranslatableText("item.mysticgemstones.gem_bag.tooltip_2").formatted(Formatting.RED));
             }
