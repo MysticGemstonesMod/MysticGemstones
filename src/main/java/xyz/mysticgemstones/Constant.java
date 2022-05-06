@@ -122,4 +122,10 @@ public interface Constant {
     String STARSTONE_ORE_ENTITY = "starstone_ore_entity";
     String GEM_INFUSER_ENTITY = "gem_infuser_entity";
     String STARSTONE_SAND_ENTITY = "starstone_sand_entity";
+
+    // Configured features
+    String OVERWORLD_AQUAMARINE_ORE = "overworld_aquamarine_ore";
+    String OVERWORLD_JASPER_ORE = "overworld_jasper_ore";
+    String OVERWORLD_ALEXANDRITE_ORE = "overworld_alexandrite_ore";
+    String OVERWORLD_STARSTONE_ORE = "overworld_starstone_ore";
 }
