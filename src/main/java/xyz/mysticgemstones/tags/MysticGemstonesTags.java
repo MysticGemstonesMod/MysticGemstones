@@ -8,4 +8,5 @@ import xyz.mysticgemstones.Constant;
 
 public class MysticGemstonesTags {
     public static final TagKey<Item> RAW_GEMS = TagKey.of(Registry.ITEM_KEY, new Identifier(Constant.MOD_ID, Constant.RAW_GEMS));
+    public static final TagKey<Item> GEM_RINGS = TagKey.of(Registry.ITEM_KEY, new Identifier(Constant.MOD_ID, Constant.GEM_RINGS));
 }

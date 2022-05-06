@@ -1,9 +1,30 @@
 package xyz.mysticgemstones.item.rings;
 
-import net.minecraft.item.Item;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Hand;
+import net.minecraft.world.World;
+import xyz.mysticgemstones.Utils;
+import xyz.mysticgemstones.item.MysticGemstonesItem;
 
-public class JasperRing extends Item {
+public class JasperRing extends GemRing {
     public JasperRing(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    public void doMagic(World world, PlayerEntity player, Hand hand) {
+        if (Utils.hasItemInInventory(player, MysticGemstonesItem.JASPER_CHARM)) {
+            world.playSoundFromEntity(null, player, SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.BLOCKS, 1f, 1f);
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 25, 4));
+        }
+        else {
+            world.playSoundFromEntity(null, player, SoundEvents.ENTITY_EVOKER_CAST_SPELL, SoundCategory.BLOCKS, 1f, 1f);
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 10, 4));
+        }
+        player.getItemCooldownManager().set(player.getStackInHand(hand).getItem(), 500);
     }
 }

@@ -116,6 +116,7 @@ public interface Constant {
 
     // Tags
     String RAW_GEMS = "raw_gems";
+    String GEM_RINGS = "gem_rings";
 
     // Block Entity
     String STARSTONE_ORE_ENTITY = "starstone_ore_entity";
