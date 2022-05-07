@@ -19,6 +19,14 @@ import xyz.mysticgemstones.block.MysticGemstonesBlock;
 import java.util.Arrays;
 
 public class MysticGemstonesOreGen {
+
+    // ------------------------------------------------------------------------------
+    // !!!!! DISCLAIMER !!!!!
+    // Worst way to do this, This is just TEMPORARY but MUST be fixed in the future.
+    // !!!!! DISCLAIMER !!!!!
+    // ------------------------------------------------------------------------------
+
+
     // Aquamarine
     private static ConfiguredFeature<?, ?> OVERWORLD_AQUAMARINE_ORE_CONFIGURED_FEATURE = new ConfiguredFeature
             (Feature.ORE, new OreFeatureConfig(
