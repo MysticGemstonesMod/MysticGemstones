@@ -9,6 +9,6 @@ public class MysticGemstonesStatusEffect {
     public static final StatusEffect NO_HUNGER = new NoHungerStatusEffect();
 
     public static void register() {
-        Registry.register(Registry.STATUS_EFFECT, new Identifier(Constant.MOD_ID, "nohunger"), NO_HUNGER);
+        Registry.register(Registry.STATUS_EFFECT, new Identifier(Constant.MOD_ID, Constant.NO_HUNGER_STATUS_EFFECT), NO_HUNGER);
     }
 }

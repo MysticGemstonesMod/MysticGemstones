@@ -128,4 +128,7 @@ public interface Constant {
     String OVERWORLD_JASPER_ORE = "overworld_jasper_ore";
     String OVERWORLD_ALEXANDRITE_ORE = "overworld_alexandrite_ore";
     String OVERWORLD_STARSTONE_ORE = "overworld_starstone_ore";
+
+    // Status effects
+    String NO_HUNGER_STATUS_EFFECT = "no_hunger_status_effect";
 }

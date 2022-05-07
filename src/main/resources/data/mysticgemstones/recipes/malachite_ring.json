@@ -1,18 +1,10 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " A ",
-    "NNN"
-  ],
-  "key": {
-    "A": {
-      "item": "mysticgemstones:malachite"
-    },
-    "N": {
-      "item": "minecraft:iron_nugget"
-    }
+  "type": "mysticgemstones:gem_craft_station_recipe",
+  "frameInput" : {
+    "item": "mysticgemstones:empty_ring"
   },
-  "result": {
-    "item": "mysticgemstones:malachite_ring"
-  }
+  "gemInput": {
+    "item": "mysticgemstones:malachite"
+  },
+  "outputItem": "mysticgemstones:malachite_ring"
 }

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "  I",
+    " II"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "mysticgemstones:empty_ring",
+    "count": 1
+  }
+}
