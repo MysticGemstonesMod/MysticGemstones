@@ -20,7 +20,7 @@ import java.util.List;
 
 public class JasperRing extends GemRing {
     public JasperRing(Settings settings) {
-        super(settings);
+        super(settings, 100);
     }
 
     @Override

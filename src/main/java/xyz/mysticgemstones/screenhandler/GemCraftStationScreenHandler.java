@@ -13,10 +13,10 @@ import net.minecraft.recipe.book.RecipeBookCategory;
 import net.minecraft.screen.AbstractRecipeScreenHandler;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
-import net.minecraft.screen.slot.CraftingResultSlot;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
+import xyz.mysticgemstones.recipes.GemCraftStationOutputSlot;
 import xyz.mysticgemstones.recipes.GemCraftStationRecipe;
 
 import java.util.Optional;
@@ -24,7 +24,7 @@ import java.util.Optional;
 
 public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<CraftingInventory> {
     private final CraftingInventory input = new CraftingInventory(this, 2, 2);
-    private final CraftingResultInventory result = new CraftingResultInventory();;
+    private final CraftingResultInventory result = new CraftingResultInventory();
     private final ScreenHandlerContext context;
     private final PlayerEntity player;
 
@@ -37,7 +37,7 @@ public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<Cr
         this.player = playerInventory.player;
         this.context = context;
 
-        this.addSlot(new CraftingResultSlot(playerInventory.player, this.input, this.result, 0, 120, 24));
+        this.addSlot(new GemCraftStationOutputSlot(playerInventory.player, this.input, this.result, 0, 120, 24));
         this.addSlot(new Slot(input, 1, 33, 24)); // Left
         this.addSlot(new Slot(input, 2, 76, 24)); // Right
 

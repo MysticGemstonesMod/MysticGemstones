@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 
 public class StarstoneRing extends GemRing {
     public StarstoneRing(Settings settings) {
-        super(settings);
+        super(settings, 300);
     }
 
     @Override

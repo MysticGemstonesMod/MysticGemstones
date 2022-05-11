@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 
 public class MalachiteRing extends GemRing {
     public MalachiteRing(Settings settings) {
-        super(settings);
+        super(settings, 200);
     }
 
     @Override

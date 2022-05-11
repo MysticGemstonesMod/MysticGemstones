@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 
 public class WhiteSapphireRing extends GemRing {
     public WhiteSapphireRing(Settings settings) {
-        super(settings);
+        super(settings, 100);
     }
 
     @Override
