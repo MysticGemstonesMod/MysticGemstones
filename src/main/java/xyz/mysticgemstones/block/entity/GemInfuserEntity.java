@@ -46,9 +46,4 @@ public class GemInfuserEntity extends BlockEntity implements GemInfuserInventory
     public NbtCompound toInitialChunkDataNbt() {
         return this.createNbt();
     }
-
-    // ToDo
-    // Recipe for gem infuser
-
-    // ---------------------------------
 }

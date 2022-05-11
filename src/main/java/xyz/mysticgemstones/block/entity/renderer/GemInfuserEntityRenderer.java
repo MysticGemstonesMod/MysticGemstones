@@ -23,7 +23,7 @@ public class GemInfuserEntityRenderer<T extends BlockEntity> implements BlockEnt
             ItemStack stack = ((Inventory) entity).getStack(0);
             matrices.push();
             // Move the item
-            matrices.translate(0.5, 0.9, 0.5);
+            matrices.translate(0.5, 1.0, 0.5);
             matrices.scale(0.7F, 0.7F, 0.7F);
             // Rotate the item
             matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion((entity.getWorld().getTime() + tickDelta) * 4));

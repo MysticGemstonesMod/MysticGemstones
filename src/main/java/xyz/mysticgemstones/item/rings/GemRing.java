@@ -18,10 +18,6 @@ public abstract class GemRing extends Item {
         this.cooldown = cooldown;
     }
 
-    public GemRing(Settings settings) {
-        this(settings, 400);
-    }
-
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (!world.isClient) {

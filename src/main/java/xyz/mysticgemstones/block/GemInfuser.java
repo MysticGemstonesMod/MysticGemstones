@@ -44,6 +44,7 @@ public class GemInfuser extends Block implements BlockEntityProvider {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (!world.isClient) player.sendMessage(new LiteralText("Not yet in game!"), true);
         Inventory inventory = (Inventory) world.getBlockEntity(pos);
         if (!player.getStackInHand(hand).isEmpty() && inventory.getStack(0).isEmpty()) {
             if (structureIsValid(world, pos)) {
@@ -64,24 +65,16 @@ public class GemInfuser extends Block implements BlockEntityProvider {
     }
 
     private boolean structureIsValid(World world, BlockPos pos) {
-        for (int i = -1; i <= 1; i++) {
+        for (int i = -2; i <= 2; i++) {
             for (int j = -1; j <= 1; j++) {
-                if (world.getBlockState(pos.down(1).north(i).west(j)).getBlock() != MysticGemstonesBlock.WHITE_SAPPHIRE_SAND) {
+                if (world.getBlockState(pos.down(1).north(i).west(j)).getBlock() != Blocks.CALCITE) {
                     return false;
                 }
             }
         }
-        for (int i = -2; i <= 2; i++) {
-            for (int j = -2; j <= 2; j++) {
-                if ((i > 1 || i < -1) && (j > 1 || j < -1))
-                    if (world.getBlockState(pos.down(1).north(i).west(j)).getBlock() != MysticGemstonesBlock.WHITE_SAPPHIRE_SAND_STONE) {
-                        return false;
-                    }
-            }
-        }
         for (int i = 0; i < 3; i++) {
-            Block block = MysticGemstonesBlock.ALEXANDRITE_SAND_STONE;
-            if (i == 2) block = MysticGemstonesBlock.HARDENED_STARSTONE_GLASS;
+            Block block = Blocks.BASALT;
+            if (i == 2) block = Blocks.GLASS;
             if (world.getBlockState(pos.north(2).west(2).up(i)).getBlock() != block) return false;
             if (world.getBlockState(pos.north(-2).west(-2).up(i)).getBlock() != block) return false;
             if (world.getBlockState(pos.north(-2).west(2).up(i)).getBlock() != block) return false;
