@@ -1,6 +1,12 @@
 {
-  "parent": "block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "mysticgemstones:block/gem_craft_station"
+    "particle": "minecraft:block/crafting_table_front",
+    "north": "minecraft:block/crafting_table_front",
+    "south": "minecraft:block/crafting_table_side",
+    "east": "minecraft:block/crafting_table_side",
+    "west": "minecraft:block/crafting_table_front",
+    "up": "mysticgemstones:block/gem_craft_station_top",
+    "down": "minecraft:block/oak_planks"
   }
 }

@@ -16,7 +16,6 @@ import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.slot.CraftingResultSlot;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.LiteralText;
 import net.minecraft.world.World;
 import xyz.mysticgemstones.recipes.GemCraftStationRecipe;
 
@@ -24,8 +23,8 @@ import java.util.Optional;
 
 
 public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<CraftingInventory> {
-    private final CraftingInventory input;
-    private final CraftingResultInventory result;
+    private final CraftingInventory input = new CraftingInventory(this, 2, 2);
+    private final CraftingResultInventory result = new CraftingResultInventory();;
     private final ScreenHandlerContext context;
     private final PlayerEntity player;
 
@@ -35,12 +34,8 @@ public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<Cr
 
     public GemCraftStationScreenHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
         super(MysticGemstonesScreen.GEM_CRAFT_STATION_SCREEN_HANDLER, syncId);
-        // ToDo
-        // Height should be 1 but if it is 1 array errors something I need to fix this
-        this.input = new CraftingInventory(this, 2, 2);
-        this.result = new CraftingResultInventory();
-        this.context = context;
         this.player = playerInventory.player;
+        this.context = context;
 
         this.addSlot(new CraftingResultSlot(playerInventory.player, this.input, this.result, 0, 120, 24));
         this.addSlot(new Slot(input, 1, 33, 24)); // Left
@@ -68,11 +63,9 @@ public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<Cr
             itemStack = itemStack2.copy();
             if (index == 0) {
                 this.context.run((world, pos) -> itemStack2.getItem().onCraft(itemStack2, world, player));
-                player.sendMessage(new LiteralText("Crafted item yooooo"), false);
                 if (!this.insertItem(itemStack2, 3, 39, true)) {
                     return ItemStack.EMPTY;
                 }
-
                 slot.onQuickTransfer(itemStack2, itemStack);
             } else if (index >= 3 && index < 39) {
                 if (!this.insertItem(itemStack2, 1, 3, false)) {
@@ -107,20 +100,19 @@ public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<Cr
     }
 
     protected static void updateResult(ScreenHandler handler, World world, PlayerEntity player, CraftingInventory craftingInventory, CraftingResultInventory resultInventory) {
-        if (!world.isClient) {
-            ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity)player;
-            ItemStack itemStack = ItemStack.EMPTY;
-            Optional<GemCraftStationRecipe> optional = world.getServer().getRecipeManager().getFirstMatch(GemCraftStationRecipe.Type.INSTANCE, craftingInventory, world);
-            if (optional.isPresent()) {
-                GemCraftStationRecipe gemCraftStationRecipe = optional.get();
-                if (resultInventory.shouldCraftRecipe(world, serverPlayerEntity, gemCraftStationRecipe)) {
-                    itemStack = gemCraftStationRecipe.craft(craftingInventory);
-                }
-            }
-            resultInventory.setStack(0, itemStack);
-            handler.setPreviousTrackedSlot(0, itemStack);
-            serverPlayerEntity.networkHandler.sendPacket(new ScreenHandlerSlotUpdateS2CPacket(handler.syncId, handler.nextRevision(), 0, itemStack));
+        GemCraftStationRecipe craftingRecipe;
+        if (world.isClient) {
+            return;
         }
+        ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity)player;
+        ItemStack itemStack = ItemStack.EMPTY;
+        Optional<GemCraftStationRecipe> optional = world.getServer().getRecipeManager().getFirstMatch(GemCraftStationRecipe.Type.INSTANCE, craftingInventory, world);
+        if (optional.isPresent() && resultInventory.shouldCraftRecipe(world, serverPlayerEntity, craftingRecipe = optional.get())) {
+            itemStack = craftingRecipe.craft(craftingInventory);
+        }
+        resultInventory.setStack(0, itemStack);
+        handler.setPreviousTrackedSlot(0, itemStack);
+        serverPlayerEntity.networkHandler.sendPacket(new ScreenHandlerSlotUpdateS2CPacket(handler.syncId, handler.nextRevision(), 0, itemStack));
     }
 
     public void onContentChanged(Inventory inventory) {

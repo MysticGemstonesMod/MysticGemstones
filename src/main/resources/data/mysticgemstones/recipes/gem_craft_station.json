@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ALJ",
+    "WWW",
+    "WWW"
+  ],
+  "key": {
+    "A": {
+      "item": "mysticgemstones:aquamarine"
+    },
+    "L": {
+      "item": "mysticgemstones:alexandrite"
+    },
+    "J": {
+      "item": "mysticgemstones:jasper"
+    },
+    "W": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "mysticgemstones:gem_craft_station"
+  }
+}

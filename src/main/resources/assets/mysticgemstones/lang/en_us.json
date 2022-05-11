@@ -120,5 +120,6 @@
   "block.mysticgemstones.malachite_glass": "Malachite Glass",
   "block.mysticgemstones.sapphire_glass": "Sapphire Glass",
   "block.mysticgemstones.white_sapphire_glass": "White Sapphire Glass",
-  "block.mysticgemstones.starstone_glass": "Starstone Glass"
+  "block.mysticgemstones.starstone_glass": "Starstone Glass",
+  "container.gem_crafting_station": "Gem Craft Station"
 }

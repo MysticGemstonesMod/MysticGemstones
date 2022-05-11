@@ -17,7 +17,6 @@ public class GemCraftStationRecipeSerializer implements RecipeSerializer<GemCraf
 
     public static final GemCraftStationRecipeSerializer INSTANCE = new GemCraftStationRecipeSerializer();
 
-    // Type field in json
     public static final Identifier ID = new Identifier("mysticgemstones:gem_craft_station_recipe");
 
     @Override
@@ -25,14 +24,12 @@ public class GemCraftStationRecipeSerializer implements RecipeSerializer<GemCraf
     public GemCraftStationRecipe read(Identifier id, JsonObject json) {
         GemCraftStationRecipeJsonFormat recipeJson = new Gson().fromJson(json, GemCraftStationRecipeJsonFormat.class);
 
-        // Validate all fields are there
         if (recipeJson.frameInput == null || recipeJson.gemInput == null || recipeJson.outputItem == null) {
-            throw new JsonSyntaxException("A required attribute is missing!"); // 2 import if error try another import
+            throw new JsonSyntaxException("A required attribute is missing!");
         }
-        // Ingredient easily turns JsonObjects of the correct format into Ingredients
+
         Ingredient frameInput = Ingredient.fromJson(recipeJson.frameInput);
         Ingredient gemInput = Ingredient.fromJson(recipeJson.gemInput);
-        // The json will specify the item ID. We can get the Item instance based off of that from the Item registry.
         Item outputItem = Registry.ITEM.getOrEmpty(new Identifier(recipeJson.outputItem))
                 // Validate the inputted item actually exists
                 .orElseThrow(() -> new JsonSyntaxException("No such item " + recipeJson.outputItem));

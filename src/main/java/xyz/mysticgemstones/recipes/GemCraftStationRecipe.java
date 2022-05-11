@@ -32,21 +32,18 @@ public class GemCraftStationRecipe implements Recipe<CraftingInventory> {
 
     @Override
     public boolean matches(CraftingInventory inventory, World world) {
-        boolean frameInput = false;
-        boolean gemInput = false;
-        if (this.frameInput.test(inventory.getStack(1))) frameInput = true;
-        if (this.gemInput.test(inventory.getStack(2))) gemInput = true;
-        return frameInput && gemInput;
+        if(inventory.size() < 2) return false;
+        return frameInput.test(inventory.getStack(1)) && gemInput.test(inventory.getStack(2));
     }
 
     @Override
     public ItemStack craft(CraftingInventory inventory) {
-        return this.getOutput().copy();
+        return new ItemStack(result.getItem());
     }
 
     @Override
     public boolean fits(int width, int height) {
-        return true;
+        return width * height >= 2;
     }
 
     @Override
@@ -64,14 +61,14 @@ public class GemCraftStationRecipe implements Recipe<CraftingInventory> {
         return GemCraftStationRecipeSerializer.INSTANCE;
     }
 
-    @Override
-    public RecipeType<?> getType() {
-        return Type.INSTANCE;
-    }
-
     public static class Type implements RecipeType<GemCraftStationRecipe> {
         private Type() {}
         public static final Type INSTANCE = new Type();
         public static final String ID = "gem_craft_station_recipe";
+    }
+
+    @Override
+    public RecipeType<?> getType() {
+        return Type.INSTANCE;
     }
 }

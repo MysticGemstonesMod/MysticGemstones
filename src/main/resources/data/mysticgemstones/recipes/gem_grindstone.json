@@ -1,16 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "I I",
-    "SIS",
-    "S S"
+    "SII",
+    "WWW",
+    "WWW"
   ],
   "key": {
     "I": {
       "item": "minecraft:iron_ingot"
     },
     "S": {
-      "item": "minecraft:stick"
+      "item": "minecraft:stone"
+    },
+    "W": {
+      "tag": "minecraft:planks"
     }
   },
   "result": {
