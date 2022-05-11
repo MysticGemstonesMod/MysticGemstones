@@ -4,7 +4,7 @@
     "item": "mysticgemstones:empty_ring"
   },
   "gemInput": {
-    "item": "mysticgemstones:alexandrite"
+    "item": "mysticgemstones:starstone_item"
   },
-  "outputItem": "mysticgemstones:alexandrite_ring"
+  "outputItem": "mysticgemstones:starstone_ring"
 }

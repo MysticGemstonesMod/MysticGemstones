@@ -4,7 +4,7 @@
     "item": "mysticgemstones:empty_charm"
   },
   "gemInput": {
-    "item": "mysticgemstones:aquamarine"
+    "item": "mysticgemstones:starstone_item"
   },
-  "outputItem": "mysticgemstones:aquamarine_charm"
+  "outputItem": "mysticgemstones:starstone_charm"
 }

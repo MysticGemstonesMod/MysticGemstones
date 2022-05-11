@@ -1,22 +1,10 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " N ",
-    "NAN",
-    " I "
-  ],
-  "key": {
-    "A": {
-      "item": "mysticgemstones:topaz"
-    },
-    "I": {
-      "item": "minecraft:gold_ingot"
-    },
-    "N": {
-      "item": "minecraft:gold_nugget"
-    }
+  "type": "mysticgemstones:gem_craft_station_recipe",
+  "frameInput" : {
+    "item": "mysticgemstones:empty_charm"
   },
-  "result": {
-    "item": "mysticgemstones:topaz_charm"
-  }
+  "gemInput": {
+    "item": "mysticgemstones:topaz"
+  },
+  "outputItem": "mysticgemstones:topaz_charm"
 }
