@@ -38,7 +38,7 @@ public class MysticGemstonesBlock {
     // Special
     public static final Block GEM_GRINDSTONE = addBlock(Constant.GEM_GRINDSTONE, new GemGrindstone(FabricBlockSettings.of(Material.STONE).strength(3.0F, 6.0F)), false);
     public static final Block ROCK_TUMBLER = addBlock(Constant.ROCK_TUMBLER, new RockTumbler(FabricBlockSettings.of(Material.STONE).strength(3.0F, 6.0F)), false);
-    public static final Block GEM_CRAFT_STATION = addBlock(Constant.GEM_CRAFT_STATION, new GemCraftStation(FabricBlockSettings.of(Material.STONE).strength(3.0F, 6.0F)), false);
+    public static final Block JEWELRY_WORKBENCH = addBlock(Constant.JEWELRY_WORKBENCH, new JewelryWorkbench(FabricBlockSettings.of(Material.STONE).strength(3.0F, 6.0F)), false);
     public static final Block GEM_INFUSER = addBlock(Constant.GEM_INFUSER, new GemInfuser(FabricBlockSettings.of(Material.STONE).strength(3.0F, 6.0F)), false);
 
     // Sand
@@ -103,7 +103,7 @@ public class MysticGemstonesBlock {
     public static final StarstoneOreBlockItem STARSTONE_ORE_ITEM = addBlockItem(new Identifier(Constant.MOD_ID, Constant.STARSTONE_ORE), new StarstoneOreBlockItem(STARSTONE_ORE, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_GEMS)));
 //    public static final StarstoneSandBlockItem STARSTONE_SAND_ITEM = addBlockItem(new Identifier(Constant.MOD_ID, Constant.STARSTONE_SAND), new StarstoneSandBlockItem(STARSTONE_SAND, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_BLOCKS)));
     public static final BlockItem GEM_GRINDSTONE_ITEM = addBlockItem(new Identifier(Constant.MOD_ID, Constant.GEM_GRINDSTONE), new BlockItem(GEM_GRINDSTONE, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS)));
-    public static final BlockItem GEM_CRAFT_STATION_ITEM = addBlockItem(new Identifier(Constant.MOD_ID, Constant.GEM_CRAFT_STATION), new BlockItem(GEM_CRAFT_STATION, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS)));
+    public static final BlockItem JEWELRY_WORKBENCH_ITEM = addBlockItem(new Identifier(Constant.MOD_ID, Constant.JEWELRY_WORKBENCH), new BlockItem(JEWELRY_WORKBENCH, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS)));
     public static final BlockItem ROCK_TUMBLER_ITEM = addBlockItem(new Identifier(Constant.MOD_ID, Constant.ROCK_TUMBLER), new BlockItem(ROCK_TUMBLER, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS)));
     public static final BlockItem GEM_INFUSER_ITEM = addBlockItem(new Identifier(Constant.MOD_ID, Constant.GEM_INFUSER), new BlockItem(GEM_INFUSER, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS)));
 

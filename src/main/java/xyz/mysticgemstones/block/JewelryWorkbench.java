@@ -16,10 +16,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import xyz.mysticgemstones.screenhandler.GemCraftStationScreenHandler;
 
-public class GemCraftStation extends Block {
-    private static final Text TITLE = new TranslatableText("container.gem_crafting_station");
+public class JewelryWorkbench extends Block {
+    private static final Text TITLE = new TranslatableText("container.jewelry_workbench");
 
-    public GemCraftStation(Settings settings) {
+    public JewelryWorkbench(Settings settings) {
         super(settings);
     }
 

@@ -1,14 +1,21 @@
 package xyz.mysticgemstones.item.rings;
 
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 import xyz.mysticgemstones.tags.MysticGemstonesTags;
+
+import java.util.List;
 
 public abstract class GemRing extends Item {
     private final int cooldown;
@@ -48,4 +55,9 @@ public abstract class GemRing extends Item {
     }
 
     public abstract void doMagic(World world, PlayerEntity player, Hand hand);
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(new TranslatableText("item.mysticgemstones.not_implemented.tooltip_1").formatted(Formatting.RED));
+    }
 }

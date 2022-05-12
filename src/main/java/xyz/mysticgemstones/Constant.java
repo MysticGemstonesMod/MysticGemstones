@@ -76,7 +76,7 @@ public interface Constant {
     String WHITE_SAPPHIRE_ORE = "white_sapphire_ore";
 
     // Blocks
-    String GEM_CRAFT_STATION = "gem_craft_station";
+    String JEWELRY_WORKBENCH = "jewelry_workbench";
     String GEM_INFUSER = "gem_infuser";
     String ROCK_TUMBLER = "rock_tumbler";
     String GEM_GRINDSTONE = "gem_grindstone";
@@ -127,7 +127,11 @@ public interface Constant {
     String OVERWORLD_AQUAMARINE_ORE = "overworld_aquamarine_ore";
     String OVERWORLD_JASPER_ORE = "overworld_jasper_ore";
     String OVERWORLD_ALEXANDRITE_ORE = "overworld_alexandrite_ore";
+    String OVERWORLD_TOPAZ_ORE = "overworld_topaz_ore";
+    String OVERWORLD_SAPPHIRE_ORE = "overworld_sapphire_ore";
     String OVERWORLD_STARSTONE_ORE = "overworld_starstone_ore";
+    String NETHER_MALACHITE_ORE = "nether_malachite_ore";
+    String NETHER_WHITE_SAPPHIRE_ORE = "nether_white_sapphire_ore";
 
     // Status effects
     String NO_HUNGER_STATUS_EFFECT = "no_hunger_status_effect";

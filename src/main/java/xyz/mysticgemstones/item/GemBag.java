@@ -59,5 +59,8 @@ public class GemBag extends Item {
                 tooltip.add(new LiteralText(nbtData + " - Raw Starstone").formatted(Formatting.DARK_PURPLE));
             }
         }
+        else {
+            tooltip.add(new TranslatableText("item.mysticgemstones.gem_bag.tooltip_2").formatted(Formatting.RED));
+        }
     }
 }

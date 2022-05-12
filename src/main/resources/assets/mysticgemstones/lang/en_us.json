@@ -44,7 +44,7 @@
   "item.mysticgemstones.raw_sapphire": "Raw Sapphire",
   "block.mysticgemstones.sapphire_ore": "Sapphire Ore",
   "block.mysticgemstones.sapphire_sand": "Sapphire Sand",
-  "block.mysticgemstones.gem_craft_station": "Gem Crafting Station",
+  "block.mysticgemstones.jewelry_workbench": "Jewelry Workbench",
   "item.mysticgemstones.sapphire_charm": "Sapphire Charm",
   "item.mysticgemstones.white_sapphire": "White Sapphire",
   "item.mysticgemstones.white_sapphire_dust": "White Sapphire Dust",
@@ -87,6 +87,9 @@
   "item.mysticgemstones.alexandrite_ring.tooltip_2": "\u00A79It has even stronger effect with its charm\u00A7r",
   "item.mysticgemstones.jasper_ring.tooltip_1": "\u00A79Gives regeneration\u00A7r",
   "item.mysticgemstones.jasper_ring.tooltip_2": "\u00A79It has even stronger effect with its charm\u00A7r",
+  "item.mysticgemstones.topaz_ring.tooltip_1": "\u00A79Gives resistance\u00A7r",
+  "item.mysticgemstones.topaz_ring.tooltip_2": "\u00A79It has even stronger effect with its charm\u00A7r",
+  "item.mysticgemstones.not_implemented.tooltip_1": "This item currently doesn't do anything.",
   "item.mysticgemstones.gem_bag.tooltip_1": "Bag contains: ",
   "item.mysticgemstones.gem_bag.tooltip_2": "Bag is Empty",
   "effect.mysticgemstones.no_hunger_status_effect": "No Hunger",
@@ -122,5 +125,5 @@
   "block.mysticgemstones.sapphire_glass": "Sapphire Glass",
   "block.mysticgemstones.white_sapphire_glass": "White Sapphire Glass",
   "block.mysticgemstones.starstone_glass": "Starstone Glass",
-  "container.gem_crafting_station": "Gem Craft Station"
+  "container.jewelry_workbench": "Jewelry Workbench"
 }

@@ -11,7 +11,7 @@ import net.minecraft.util.Identifier;
 import xyz.mysticgemstones.Constant;
 
 public class GemCraftStationScreen extends HandledScreen<ScreenHandler> {
-    private static final Identifier TEXTURE = new Identifier(Constant.MOD_ID, "textures/gui/gem_craft_station.png");
+    private static final Identifier TEXTURE = new Identifier(Constant.MOD_ID, "textures/gui/jewelry_workbench.png");
     protected int backgroundHeight = 202;
 
     public GemCraftStationScreen(ScreenHandler handler, PlayerInventory inventory, Text title) {
