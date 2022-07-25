@@ -1,4 +1,4 @@
-package xyz.mysticgemstones.screenhandler;
+package xyz.mysticgemstones.screen;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -33,7 +33,7 @@ public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<Cr
     }
 
     public GemCraftStationScreenHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
-        super(MysticGemstonesScreen.GEM_CRAFT_STATION_SCREEN_HANDLER, syncId);
+        super(MysticGemstonesScreenType.GEM_CRAFT_STATION_SCREEN_HANDLER, syncId);
         this.player = playerInventory.player;
         this.context = context;
 

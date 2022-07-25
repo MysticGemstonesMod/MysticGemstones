@@ -14,7 +14,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import xyz.mysticgemstones.screenhandler.GemCraftStationScreenHandler;
+import xyz.mysticgemstones.screen.GemCraftStationScreenHandler;
 
 public class JewelryWorkbench extends Block {
     private static final Text TITLE = new TranslatableText("container.jewelry_workbench");

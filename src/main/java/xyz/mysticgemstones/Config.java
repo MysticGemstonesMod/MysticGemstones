@@ -5,14 +5,21 @@ import net.minecraft.world.gen.YOffset;
 public interface Config {
 
     // AQUAMARINE
-    // Amount of air added on Aquamarine Ring use
-    int aquamarineRingWithCharm = 300;
-    int aquamarineRing = 100;
-    int aquamarineRingCooldown = 400;
+    class Aquamarine {
+        public static int ringWithCharm = 225;
+        public static int ringPower = 100;
+        public static int ringCooldown = 400;
+    }
 
     // ALEXANDRITE
+    class Alexandrite {
+        public static int ringWithCharm;
+        public static int ringPower;
+        public static int ringCooldown;
+        public static float charmPower = 2;
+        public static int appleDuration = 1600;
+    }
 
-    // JASPER
 
     // ORE GENERATION
     class TierOneOre {
@@ -39,6 +46,4 @@ public interface Config {
         public static int veinsPerChunk = 28;
         public static int veinSize = 4;
     }
-
-    // Add everything else
 }

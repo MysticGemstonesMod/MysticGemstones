@@ -83,14 +83,14 @@ public class MysticGemstonesItem {
 
     // Rings
     public static final Item EMPTY_RING = registerItem(Constant.EMPTY_RING, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS)));
-    public static final AlexandriteRing ALEXANDRITE_RING = registerItem(Constant.ALEXANDRITE_RING, new AlexandriteRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxDamage(10)));
-    public static final AquamarineRing AQUAMARINE_RING = registerItem(Constant.AQUAMARINE_RING, new AquamarineRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxDamage(5)));
-    public static final JasperRing JASPER_RING = registerItem(Constant.JASPER_RING, new JasperRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxDamage(10)));
+    public static final AlexandriteRing ALEXANDRITE_RING = registerItem(Constant.ALEXANDRITE_RING, new AlexandriteRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxDamage(6)));
+    public static final AquamarineRing AQUAMARINE_RING = registerItem(Constant.AQUAMARINE_RING, new AquamarineRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxDamage(6)));
+    public static final JasperRing JASPER_RING = registerItem(Constant.JASPER_RING, new JasperRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxDamage(6)));
     public static final MalachiteRing MALACHITE_RING = registerItem(Constant.MALACHITE_RING, new MalachiteRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxDamage(10)));
     public static final TopazRing TOPAZ_RING = registerItem(Constant.TOPAZ_RING, new TopazRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxDamage(10)));
     public static final SapphireRing SAPPHIRE_RING = registerItem(Constant.SAPPHIRE_RING, new SapphireRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxDamage(10)));
     public static final WhiteSapphireRing WHITE_SAPPHIRE_RING = registerItem(Constant.WHITE_SAPPHIRE_RING, new WhiteSapphireRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxDamage(10)));
-    public static final StarstoneRing STARSTONE_RING = registerItem(Constant.STARSTONE_RING, new StarstoneRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxDamage(10)));
+    public static final StarstoneRing STARSTONE_RING = registerItem(Constant.STARSTONE_RING, new StarstoneRing(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxDamage(16)));
 
     // Glass shards
 //    public static final Item AQUAMARINE_GLASS_SHARD = registerItem(Constant.AQUAMARINE_GLASS_SHARD, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_MISC)));
@@ -103,8 +103,9 @@ public class MysticGemstonesItem {
 //    public static final Item STARSTONE_GLASS_SHARD = registerItem(Constant.STARSTONE_GLASS_SHARD, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_MISC)));
 
     // Random
-    public static final GemBag GEM_BAG = registerItem(Constant.GEM_BAG, new GemBag(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxCount(1)));
+    public static final Item GEM_BAG = registerItem(Constant.GEM_BAG, new GemBag(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS).maxCount(1)));
     public static final Item DARK_CLOTH = registerItem(Constant.DARK_CLOTH, new Item(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS)));
+    public static final Item GEM_BOOK = registerItem(Constant.GEM_BOOK, new GemBook(new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS)));
 
 
 

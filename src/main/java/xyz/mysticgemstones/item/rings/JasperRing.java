@@ -27,11 +27,11 @@ public class JasperRing extends GemRing {
     public void doMagic(World world, PlayerEntity player, Hand hand) {
         if (Utils.hasItemInInventory(player, MysticGemstonesItem.JASPER_CHARM)) {
             world.playSoundFromEntity(null, player, SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.BLOCKS, 1f, 1f);
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 25, 4));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 50, 4));
         }
         else {
             world.playSoundFromEntity(null, player, SoundEvents.ENTITY_EVOKER_CAST_SPELL, SoundCategory.BLOCKS, 1f, 1f);
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 10, 4));
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 25, 4));
         }
         player.getItemCooldownManager().set(player.getStackInHand(hand).getItem(), 500);
     }
@@ -39,6 +39,9 @@ public class JasperRing extends GemRing {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(new TranslatableText("item.mysticgemstones.jasper_ring.tooltip_1").formatted(Formatting.GRAY));
-        tooltip.add(new TranslatableText("item.mysticgemstones.jasper_ring.tooltip_2").formatted(Formatting.GRAY));
+        tooltip.add(new TranslatableText("item.mysticgemstones.jasper_ring.tooltip_2").formatted(Formatting.BLUE));
+        tooltip.add(new TranslatableText("item.mysticgemstones.jasper_ring.tooltip_3").formatted(Formatting.GRAY));
+        tooltip.add(new TranslatableText("item.mysticgemstones.jasper_ring.tooltip_4").formatted(Formatting.BLUE));
+
     }
 }

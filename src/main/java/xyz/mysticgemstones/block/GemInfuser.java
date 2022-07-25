@@ -23,9 +23,6 @@ public class GemInfuser extends Block implements BlockEntityProvider {
         super(settings);
     }
 
-    // ToDo
-    // Fix recipe crafting n stuff
-
     @Override
     public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.MODEL;
@@ -66,7 +63,7 @@ public class GemInfuser extends Block implements BlockEntityProvider {
 
     private boolean structureIsValid(World world, BlockPos pos) {
         for (int i = -2; i <= 2; i++) {
-            for (int j = -1; j <= 1; j++) {
+            for (int j = -2; j <= 2; j++) {
                 if (world.getBlockState(pos.down(1).north(i).west(j)).getBlock() != Blocks.CALCITE) {
                     return false;
                 }

@@ -8,7 +8,7 @@ import xyz.mysticgemstones.Utils;
 public class MysticGemstonesEvents {
     public static void registerEvents() {
         ServerEntityEvents.ENTITY_LOAD.register((Entity entity, ServerWorld world) -> {
-            Utils.sendMessageOnSpawn(world, entity);
+            Utils.onSpawn(world, entity);
         });
     }
 }

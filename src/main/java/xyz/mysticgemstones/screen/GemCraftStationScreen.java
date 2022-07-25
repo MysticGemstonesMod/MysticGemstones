@@ -1,4 +1,4 @@
-package xyz.mysticgemstones.screenhandler;
+package xyz.mysticgemstones.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;

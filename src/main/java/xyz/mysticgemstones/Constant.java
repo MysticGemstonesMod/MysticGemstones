@@ -64,6 +64,7 @@ public interface Constant {
     String SAPPHIRE_GLASS_SHARD = "sapphire_glass_shard";
     String STARSTONE_GLASS_SHARD = "starstone_glass_shard";
     String WHITE_SAPPHIRE_GLASS_SHARD = "white_sapphire_glass_shard";
+    String GEM_BOOK = "gem_book";
 
     // Ores
     String AQUAMARINE_ORE = "aquamarine_ore";
