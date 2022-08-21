@@ -15,7 +15,7 @@ import xyz.mysticgemstones.block.MysticGemstonesBlock;
 import xyz.mysticgemstones.inventory.GemInfuserInventory;
 
 public class GemInfuserEntity extends BlockEntity implements GemInfuserInventory {
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(1, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
 
     public GemInfuserEntity(BlockPos pos, BlockState state) {
         super(MysticGemstonesBlock.GEM_INFUSER_ENTITY, pos, state);

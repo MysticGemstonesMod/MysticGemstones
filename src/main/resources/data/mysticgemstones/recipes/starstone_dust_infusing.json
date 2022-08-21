@@ -1,0 +1,9 @@
+{
+  "type": "mysticgemstones:infusing_recipe",
+  "ingredient": {
+    "item": "mysticgemstones:starstone_dust"
+  },
+  "result": "mysticgemstones:starstone_item",
+  "experience": 0.2
+}
+

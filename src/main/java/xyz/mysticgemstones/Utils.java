@@ -48,27 +48,5 @@ public class Utils {
         }
         player.addScoreboardTag(firstjointag);
         return true;
-//
-//        Inventory inv = player.getInventory();
-//        boolean isempty = true;
-//        for (int i = 0; i < 36; i++) {
-//            if (!inv.getItem(i).isEmpty()) {
-//                isempty = false;
-//                break;
-//            }
-//        }
-//
-//        if (!isempty) {
-//            return false;
-//        }
-//
-//
-//        World world = player.getCommandSenderWorld();
-//        ServerLevel ServerLevel = (ServerLevel) world;
-//        BlockPos wspos = ServerLevel.getSharedSpawnPos();
-//        BlockPos ppos = player.blockPosition();
-//        BlockPos cpos = new BlockPos(ppos.getX(), wspos.getY(), ppos.getZ());
-//
-//        return cpos.closerThan(wspos, 50);
     }
 }

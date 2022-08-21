@@ -1,0 +1,9 @@
+{
+  "type": "mysticgemstones:infusing_recipe",
+  "ingredient": {
+    "item": "mysticgemstones:aquamarine"
+  },
+  "result": "mysticgemstones:jasper",
+  "experience": 0.2
+}
+

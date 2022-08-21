@@ -13,6 +13,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import xyz.mysticgemstones.MysticGemstones;
 import xyz.mysticgemstones.block.entity.GemInfuserEntity;
 import xyz.mysticgemstones.particles.MysticGemstonesParticleTypes;
 
@@ -41,24 +42,40 @@ public class GemInfuser extends Block implements BlockEntityProvider {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient) player.sendMessage(new LiteralText("Not yet in game!"), true);
         Inventory inventory = (Inventory) world.getBlockEntity(pos);
         if (!player.getStackInHand(hand).isEmpty() && inventory.getStack(0).isEmpty()) {
-            if (structureIsValid(world, pos)) {
-                ItemStack itemStack = player.getStackInHand(hand).copy();
-                itemStack.setCount(1);
-                inventory.setStack(0, itemStack);
-                player.getStackInHand(hand).decrement(1);
-            } else {
-                if (!world.isClient) {
-                    player.sendMessage(new LiteralText("Failed to identify multi block structure."), false);
-                }
+            ItemStack itemStack = player.getStackInHand(hand).copy();
+            itemStack.setCount(1);
+            inventory.setStack(0, itemStack);
+            player.getStackInHand(hand).decrement(1);
+            if (!structureIsValid(world, pos) && world.isClient) {
+                player.sendMessage(new LiteralText("Failed to identify multi block structure."), false);
             }
         } else {
-            player.getInventory().offerOrDrop(inventory.getStack(0));
-            inventory.removeStack(0);
+            if (inventory.getStack(0).isEmpty()) {
+                player.getInventory().offerOrDrop(inventory.getStack(1));
+                inventory.removeStack(1);
+            }
+            else {
+                player.getInventory().offerOrDrop(inventory.getStack(0));
+                inventory.removeStack(0);
+            }
+
         }
+        updateResult(world, player, inventory);
         return ActionResult.success(true);
+    }
+
+    private void updateResult(World world, PlayerEntity player, Inventory craftingInventory) {
+        if (world.getRecipeManager().getFirstMatch(MysticGemstones.INFUSING_RECIPE_TYPE, craftingInventory, world).isPresent()) {
+            ItemStack itemStack = world.getRecipeManager().getFirstMatch(MysticGemstones.INFUSING_RECIPE_TYPE, craftingInventory, world).get().getOutput();
+            craftingInventory.setStack(1, itemStack);
+            craftingInventory.removeStack(0);
+            if (world.isClient) {
+                player.sendMessage(new LiteralText("Yoyoyoyoyoyoyoyoyoyoo"), false);
+            }
+        }
+        // TODO - Make this use recipe for infusing
     }
 
     private boolean structureIsValid(World world, BlockPos pos) {

@@ -17,10 +17,17 @@ public class GemInfuserEntityRenderer<T extends BlockEntity> implements BlockEnt
 
     public GemInfuserEntityRenderer(BlockEntityRendererFactory.Context ctx) {}
 
+
+    // TODO - Display number of items in inventory above displayed item
     @Override
     public void render(T entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
-        if (!((Inventory) entity).getStack(0).isEmpty()) {
-            ItemStack stack = ((Inventory) entity).getStack(0);
+        ItemStack stack = null;
+        if (!((Inventory) entity).getStack(1).isEmpty()) {
+            stack = ((Inventory) entity).getStack(1);
+        } else if (!((Inventory) entity).getStack(0).isEmpty()) {
+            stack = ((Inventory) entity).getStack(0);
+        }
+        if (stack != null) {
             matrices.push();
             // Move the item
             matrices.translate(0.5, 1.0, 0.5);
