@@ -22,5 +22,7 @@ public class MysticGemstonesClient implements ClientModInitializer {
         BlockTransparency.register();
         FabricModelPredicateProviders.register();
         MysticGemstonesParticleTypes.registerClient();
+
+        // TODO - update read.md
     }
 }
