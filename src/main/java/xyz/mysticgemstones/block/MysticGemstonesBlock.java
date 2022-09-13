@@ -3,8 +3,7 @@ package xyz.mysticgemstones.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
@@ -28,6 +27,7 @@ public class MysticGemstonesBlock {
     // Ore
     public static final Block STARSTONE_ORE = addBlock(Constant.STARSTONE_ORE, new StarstoneOre(FabricBlockSettings.of(Material.STONE).strength(1.5F, 6.0F).luminance(StarstoneOre.getLightLevel())), false);
     public static final Block AQUAMARINE_ORE = addBlock(Constant.AQUAMARINE_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F)), true);
+    public static final Block RICH_AQUAMARINE_ORE = addBlock(Constant.RICH_AQUAMARINE_ORE, new RichAquamarineOre(FabricBlockSettings.of(Material.STONE).strength(1.0F, 2.0F)), true);
     public static final Block JASPER_ORE = addBlock(Constant.JASPER_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F)), true);
     public static final Block ALEXANDRITE_ORE = addBlock(Constant.ALEXANDRITE_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F)), true);
     public static final Block TOPAZ_ORE = addBlock(Constant.TOPAZ_ORE, new Block(FabricBlockSettings.of(Material.STONE).strength(1.3F, 6.0F)), true);
@@ -99,7 +99,7 @@ public class MysticGemstonesBlock {
         BLOCK_ITEMS.forEach((identifier, blockItem) -> Registry.register(Registry.ITEM, identifier, blockItem));
     }
 
-    // Add block items for spetial blocks
+    // Add block items for special blocks
     public static final StarstoneOreBlockItem STARSTONE_ORE_ITEM = addBlockItem(new Identifier(Constant.MOD_ID, Constant.STARSTONE_ORE), new StarstoneOreBlockItem(STARSTONE_ORE, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_GEMS)));
 //    public static final StarstoneSandBlockItem STARSTONE_SAND_ITEM = addBlockItem(new Identifier(Constant.MOD_ID, Constant.STARSTONE_SAND), new StarstoneSandBlockItem(STARSTONE_SAND, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_BLOCKS)));
     public static final BlockItem GEM_GRINDSTONE_ITEM = addBlockItem(new Identifier(Constant.MOD_ID, Constant.GEM_GRINDSTONE), new BlockItem(GEM_GRINDSTONE, new FabricItemSettings().group(MysticGemstonesItem.ITEM_GROUP_ITEMS)));

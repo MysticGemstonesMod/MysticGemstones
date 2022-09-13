@@ -16,4 +16,4 @@ If you have any ideas or want to help with development in any way feel free to s
 
 ### Links
 - [Website](https://mysticgemstones.xyz/)
-- [FAQs](https://mysticgemstones.xyz/index.html#FAQs)
+- [FAQs](https://mysticgemstones.xyz/index.html#FAQs)D

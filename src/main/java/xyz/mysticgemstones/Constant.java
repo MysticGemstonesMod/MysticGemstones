@@ -68,6 +68,7 @@ public interface Constant {
 
     // Ores
     String AQUAMARINE_ORE = "aquamarine_ore";
+    String RICH_AQUAMARINE_ORE = "rich_aquamarine_ore";
     String JASPER_ORE = "jasper_ore";
     String ALEXANDRITE_ORE = "alexandrite_ore";
     String STARSTONE_ORE = "starstone_ore";

@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "MysticGemstonesMixin"
+    "PlayerInventoryScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
