@@ -6,10 +6,11 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.SpecialCraftingRecipe;
+import net.minecraft.recipe.book.CraftingRecipeCategory;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
-import xyz.mysticgemstones.item.MysticGemstonesItem;
+import xyz.mysticgemstones.item.MysticGemstonesItems;
 
 public class GemBagRecipe extends SpecialCraftingRecipe {
     private static final Ingredient GEM_BAG;
@@ -24,7 +25,7 @@ public class GemBagRecipe extends SpecialCraftingRecipe {
     */
 
     public GemBagRecipe(Identifier id) {
-        super(id);
+        super(id, CraftingRecipeCategory.EQUIPMENT);
     }
 
     @Override
@@ -32,10 +33,10 @@ public class GemBagRecipe extends SpecialCraftingRecipe {
         int foundBag = 0;
         int foundGem = 0;
         for (int i = 0; i < craftingInventory.size(); i++) {
-            if (craftingInventory.getStack(i).getItem() == MysticGemstonesItem.GEM_BAG) {
+            if (craftingInventory.getStack(i).getItem() == MysticGemstonesItems.GEM_BAG) {
                 foundBag++;
             }
-            else if (craftingInventory.getStack(i).getItem() == MysticGemstonesItem.RAW_STARSTONE) {
+            else if (craftingInventory.getStack(i).getItem() == MysticGemstonesItems.RAW_STARSTONE) {
                 foundGem++;
             }
         }
@@ -50,7 +51,7 @@ public class GemBagRecipe extends SpecialCraftingRecipe {
 
     @Override
     public ItemStack craft(CraftingInventory craftingInventory) {
-        ItemStack itemStack = new ItemStack(MysticGemstonesItem.GEM_BAG);
+        ItemStack itemStack = new ItemStack(MysticGemstonesItems.GEM_BAG);
         rawStarstoneSlot = -1;
 
         int amount = 0;
@@ -99,7 +100,7 @@ public class GemBagRecipe extends SpecialCraftingRecipe {
     }
 
     static {
-        GEM_BAG = Ingredient.ofItems(MysticGemstonesItem.GEM_BAG);
-        RAW_STARSTONE = Ingredient.ofItems(MysticGemstonesItem.RAW_STARSTONE);
+        GEM_BAG = Ingredient.ofItems(MysticGemstonesItems.GEM_BAG);
+        RAW_STARSTONE = Ingredient.ofItems(MysticGemstonesItems.RAW_STARSTONE);
     }
 }

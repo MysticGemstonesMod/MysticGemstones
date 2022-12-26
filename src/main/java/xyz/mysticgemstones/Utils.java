@@ -5,9 +5,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.text.LiteralText;
-import net.minecraft.util.Formatting;
-import xyz.mysticgemstones.item.MysticGemstonesItem;
+import xyz.mysticgemstones.item.MysticGemstonesItems;
 
 import java.util.Set;
 
@@ -24,17 +22,14 @@ public class Utils {
     }
 
     public static void onSpawn(ServerWorld world, Entity entity) {
-        if (world.isClient()) {
-            return;
-        }
-        if (entity instanceof PlayerEntity player) {
+        if (entity instanceof PlayerEntity player && !world.isClient) {
             if (isJoiningWorldForTheFirstTime(player, Constant.MOD_ID)) {
-                // Give Gem Book
-                player.getInventory().offerOrDrop(new ItemStack(MysticGemstonesItem.GEM_BOOK));
+                player.getInventory().offerOrDrop(new ItemStack(MysticGemstonesItems.GEM_BOOK));
             }
-            player.sendMessage(new LiteralText("MysticGemstones mod is in very early ALPHA!").formatted(Formatting.RED), false);
-            player.sendMessage(new LiteralText("Version: 0.1-Alpha").formatted(Formatting.RED), false);
-            player.sendMessage(new LiteralText("It is not finished and is missing a lot of important features and probably has some bugs. Check for new version or report bugs here: https://github.com/MysticGemstonesMod/MysticGemstones").formatted(Formatting.AQUA), false);
+            // TODO
+//            player.sendMessage(new TranslatableText("MysticGemstones mod is in very early ALPHA!").formatted(Formatting.RED), false);
+//            player.sendMessage(new TranslatableText("Version: 0.1-Alpha").formatted(Formatting.RED), false);
+//            player.sendMessage(new TranslatableText("It is not finished and is missing a lot of important features and probably has some bugs. Check for new version or report bugs here: https://github.com/MysticGemstonesMod/MysticGemstones").formatted(Formatting.AQUA), false);
         }
     }
 

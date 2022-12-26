@@ -3,16 +3,16 @@ package xyz.mysticgemstones.client;
 import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import xyz.mysticgemstones.item.MysticGemstonesItem;
+import xyz.mysticgemstones.item.MysticGemstonesItems;
 
 public class FabricModelPredicateProviders {
 
     public static void register() {
         // Gem bag
-        FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.GEM_BAG,
+        FabricModelPredicateProviderRegistry.register(MysticGemstonesItems.GEM_BAG,
                 new Identifier("open_closed_state"), (itemStack, clientWorld, livingEntity, a) -> isEmpty(itemStack) ? 1.0F : 0.0F);
         // Starstone Dust
-        FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.STARSTONE_DUST, new Identifier("shining"), (itemStack, clientWorld, livingEntity, a) -> {
+        FabricModelPredicateProviderRegistry.register(MysticGemstonesItems.STARSTONE_DUST, new Identifier("shining"), (itemStack, clientWorld, livingEntity, a) -> {
             if (clientWorld != null) {
                 long timeOfDay = clientWorld.getTimeOfDay();
                 return timeOfDay > 22350 || timeOfDay < 21980 ? 0.0F : 1.0F;
@@ -24,7 +24,7 @@ public class FabricModelPredicateProviders {
             return 1.0F;
         });
         // Condensed Starstone Dust
-        FabricModelPredicateProviderRegistry.register(MysticGemstonesItem.CONDENSED_STARSTONE_DUST, new Identifier("shining"), (itemStack, clientWorld, livingEntity, a) -> {
+        FabricModelPredicateProviderRegistry.register(MysticGemstonesItems.CONDENSED_STARSTONE_DUST, new Identifier("shining"), (itemStack, clientWorld, livingEntity, a) -> {
             if (clientWorld != null) {
                 long timeOfDay = clientWorld.getTimeOfDay();
                 return timeOfDay > 22350 || timeOfDay < 21980 ? 0.0F : 1.0F;

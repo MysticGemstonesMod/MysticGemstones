@@ -1,11 +1,8 @@
 package xyz.mysticgemstones.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.minecraft.client.gui.screen.ScreenTexts;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
-import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.PageTurnWidget;
-import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandler;
@@ -26,7 +23,8 @@ public class GemBookScreen extends HandledScreen<ScreenHandler> {
 
     @Override
     protected void drawBackground(MatrixStack matrices, float delta, int mouseX, int mouseY) {
-        RenderSystem.setShader(GameRenderer::getPositionTexShader);
+        // TODO
+//        RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, TEXTURE);
         int x = (width - 200) / 2;
@@ -36,7 +34,8 @@ public class GemBookScreen extends HandledScreen<ScreenHandler> {
     }
 
     private void addButtons() {
-        this.addDrawableChild(new ButtonWidget(this.width / 2 - 100, 300, 200, 20, ScreenTexts.DONE, button -> this.client.setScreen(null)));
+        // TODO
+//        this.addDrawableChild(new ButtonWidget(this.width / 2 - 100, 300, 200, 20, ScreenTexts.DONE, button -> this.client.setScreen(null)));
 
         int i = (this.width - 192) / 2;
         this.nextPageButton = this.addDrawableChild(new PageTurnWidget(i + 16-0, 270, true, button -> this.goToNextPage(), this.pageTurnSound));

@@ -5,7 +5,6 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.LiteralText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemScatterer;
@@ -13,7 +12,6 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import xyz.mysticgemstones.MysticGemstones;
 import xyz.mysticgemstones.block.entity.GemInfuserEntity;
 import xyz.mysticgemstones.particles.MysticGemstonesParticleTypes;
 
@@ -49,7 +47,8 @@ public class GemInfuser extends Block implements BlockEntityProvider {
             inventory.setStack(0, itemStack);
             player.getStackInHand(hand).decrement(1);
             if (!structureIsValid(world, pos) && world.isClient) {
-                player.sendMessage(new LiteralText("Failed to identify multi block structure."), false);
+                // TODO
+//                player.sendMessage(new LiteralText("Failed to identify multi block structure."), false);
             }
         } else {
             if (inventory.getStack(0).isEmpty()) {
@@ -62,21 +61,23 @@ public class GemInfuser extends Block implements BlockEntityProvider {
             }
 
         }
-        updateResult(world, player, inventory);
+        // TODO
+//        updateResult(world, player, inventory);
         return ActionResult.success(true);
     }
 
-    private void updateResult(World world, PlayerEntity player, Inventory craftingInventory) {
-        if (world.getRecipeManager().getFirstMatch(MysticGemstones.INFUSING_RECIPE_TYPE, craftingInventory, world).isPresent()) {
-            ItemStack itemStack = world.getRecipeManager().getFirstMatch(MysticGemstones.INFUSING_RECIPE_TYPE, craftingInventory, world).get().getOutput();
-            craftingInventory.setStack(1, itemStack);
-            craftingInventory.removeStack(0);
-            if (world.isClient) {
-                player.sendMessage(new LiteralText("Yoyoyoyoyoyoyoyoyoyoo"), false);
-            }
-        }
-        // TODO - Make this use recipe for infusing
-    }
+//    private void updateResult(World world, PlayerEntity player, Inventory craftingInventory) {
+//        if (world.getRecipeManager().getFirstMatch(MysticGemstones.INFUSING_RECIPE_TYPE, craftingInventory, world).isPresent()) {
+//            ItemStack itemStack = world.getRecipeManager().getFirstMatch(MysticGemstones.INFUSING_RECIPE_TYPE, craftingInventory, world).get().getOutput();
+//            craftingInventory.setStack(1, itemStack);
+//            craftingInventory.removeStack(0);
+//            if (world.isClient) {
+//                // TODO
+////                player.sendMessage(new LiteralText("Yoyoyoyoyoyoyoyoyoyoo"), false);
+//            }
+//        }
+//        // TODO - Make this use recipe for infusing
+//    }
 
     private boolean structureIsValid(World world, BlockPos pos) {
         for (int i = -2; i <= 2; i++) {
@@ -103,7 +104,7 @@ public class GemInfuser extends Block implements BlockEntityProvider {
         return new GemInfuserEntity(pos, state);
     }
 
-    @Override
+//    @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         Inventory inventory = (Inventory) world.getBlockEntity(pos);
         if (!inventory.isEmpty() && structureIsValid(world, pos)) {

@@ -33,7 +33,7 @@ public class GemCraftStationOutputSlot extends CraftingResultSlot {
                 this.input.setStack(i, itemStack2);
                 continue;
             }
-            if (ItemStack.areItemsEqualIgnoreDamage(itemStack, itemStack2) && ItemStack.areNbtEqual(itemStack, itemStack2)) {
+            if (ItemStack.areItemsEqual(itemStack, itemStack2)) {
                 itemStack2.increment(itemStack.getCount());
                 this.input.setStack(i, itemStack2);
                 continue;

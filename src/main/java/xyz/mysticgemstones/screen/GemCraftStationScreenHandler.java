@@ -172,6 +172,12 @@ public class GemCraftStationScreenHandler extends AbstractRecipeScreenHandler<Cr
     }
 
     @Override
+    public ItemStack quickMove(PlayerEntity player, int slot) {
+        // TODO - This is new must see what it does
+        return null;
+    }
+
+    @Override
     public boolean canInsertIntoSlot(ItemStack stack, Slot slot) {
         return false;
     }

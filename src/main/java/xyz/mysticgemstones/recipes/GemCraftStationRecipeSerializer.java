@@ -8,8 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 
 public class GemCraftStationRecipeSerializer implements RecipeSerializer<GemCraftStationRecipe> {
@@ -30,7 +30,7 @@ public class GemCraftStationRecipeSerializer implements RecipeSerializer<GemCraf
 
         Ingredient frameInput = Ingredient.fromJson(recipeJson.frameInput);
         Ingredient gemInput = Ingredient.fromJson(recipeJson.gemInput);
-        Item outputItem = Registry.ITEM.getOrEmpty(new Identifier(recipeJson.outputItem))
+        Item outputItem = Registries.ITEM.getOrEmpty(new Identifier(recipeJson.outputItem))
                 // Validate the inputted item actually exists
                 .orElseThrow(() -> new JsonSyntaxException("No such item " + recipeJson.outputItem));
         ItemStack output = new ItemStack(outputItem, 1);
