@@ -1,43 +1,44 @@
 {
-  "schemaVersion": 1,
-  "id": "mysticgemstones",
-  "version": "${version}",
-
-  "name": "Mystic Gemstones",
-  "description": "Best Mod description ever... !!MOD IS IN VERY EARLY ALPHA!!\n(Made from fabric example mod for 1.18, https://github.com/FabricMC/fabric-example-mod/tree/1.18)",
-  "authors": [
-    "Domza64",
-    "Jeryux"
-  ],
-  "contact": {
-    "homepage": "https://mysticgemstones.xyz/",
-    "sources": "https://github.com/MysticGemstonesMod/MysticGemstones"
-  },
-
-  "license": "GPL-3.0 License",
-  "icon": "assets/mysticgemstones/icon.png",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "xyz.mysticgemstones.MysticGemstones"
-    ],
-    "client": [
-      "xyz.mysticgemstones.client.MysticGemstonesClient"
-    ]
-  },
-  "mixins": [
-    "mysticgemstones.mixins.json"
-  ],
-
-  "depends": {
-    "fabricloader": ">=0.14.11",
-    "fabric-api": "*",
-    "minecraft": "~1.19.3",
-    "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
-  },
-  "accessWidener": "mysticgemstones.accesswidener"
+	"schemaVersion": 1,
+	"id": "mystic_gemstones",
+	"version": "${version}",
+	"name": "Mystic Gemstones",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Domza64"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mystic-gemstones/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"fabric-datagen": [
+			"xyz.domza.mysticgemstones.dataGen.MysticGemstonesDataGenerator"
+		],
+		"main": [
+			"xyz.domza.mysticgemstones.MysticGemstones"
+		],
+		"client": [
+			"xyz.domza.mysticgemstones.MysticGemstonesClient"
+		]
+	},
+	"mixins": [
+		"mystic-gemstones.mixins.json",
+		{
+			"config": "mystic-gemstones.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
 }

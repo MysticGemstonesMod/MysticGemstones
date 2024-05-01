@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "mysticgemstones:block/hardened_alexandrite_glass"
-  }
-}
-

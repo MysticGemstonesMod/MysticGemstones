@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "shining=false": {"model": "mysticgemstones:block/starstone_sand"},
-    "shining=true": {"model": "mysticgemstones:block/starstone_sand_shiny"}
-  }
-}

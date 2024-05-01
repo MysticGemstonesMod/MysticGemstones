@@ -1,9 +1,0 @@
-{
-  "variants": {
-    "state=1": {"model": "mysticgemstones:block/rich_aquamarine_ore_1"},
-    "state=2": {"model": "mysticgemstones:block/rich_aquamarine_ore_2"},
-    "state=3": {"model": "mysticgemstones:block/rich_aquamarine_ore_3"},
-    "state=4": {"model": "mysticgemstones:block/rich_aquamarine_ore_4"},
-    "state=5": {"model": "mysticgemstones:block/rich_aquamarine_ore_5"}
-  }
-}
