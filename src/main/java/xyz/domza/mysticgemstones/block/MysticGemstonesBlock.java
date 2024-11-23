@@ -4,6 +4,9 @@ import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.recipe.CraftingRecipe;
+import net.minecraft.recipe.RecipeType;
+import net.minecraft.recipe.SmokingRecipe;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -24,22 +27,9 @@ public class MysticGemstonesBlock {
                             .instrument(Instrument.BASEDRUM)
                             .requiresTool()
                             .strength(3.0f, 3.0f)));
-//    public static final Block ALEXANDRITE_ORE =
-//            register(Constant.ALEXANDRITE_ORE, new ExperienceDroppingBlock(
-//                    UniformIntProvider.create(2, 5),
-//                    AbstractBlock.Settings.create()
-//                            .mapColor(MapColor.STONE_GRAY)
-//                            .instrument(Instrument.BASEDRUM)
-//                            .requiresTool()
-//                            .strength(3.0f, 3.0f)));
-//    public static final Block JASPER_ORE =
-//            register(Constant.JASPER_ORE, new ExperienceDroppingBlock(
-//                    UniformIntProvider.create(2, 5),
-//                    AbstractBlock.Settings.create()
-//                            .mapColor(MapColor.STONE_GRAY)
-//                            .instrument(Instrument.BASEDRUM)
-//                            .requiresTool()
-//                            .strength(3.0f, 3.0f)));
+
+    public static final Block GEM_GRINDSTONE = register(Constant.GEM_GRINDSTONE, new GemGrindstone(AbstractBlock.Settings.create()));
+    public static final Block GEM_COMPRESSOR = register(Constant.GEM_COMPRESSOR, new Block(AbstractBlock.Settings.create()));
 
     private static <T extends Block> T register(String id, T block) {
         BLOCKS.put(new Identifier(Constant.MOD_ID, id), block);
@@ -55,5 +45,5 @@ public class MysticGemstonesBlock {
 
             ItemGroupEvents.modifyEntriesEvent(MysticGemstonesItemGroup.MYSTIC_ITEM_GROUP).register(entries -> entries.add(blockItem));
         });
-    }
+     }
 }

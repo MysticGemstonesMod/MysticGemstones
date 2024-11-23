@@ -1,0 +1,15 @@
+{
+  "type": "mystic_gemstones:grinding_recipe",
+  "ingredient": {
+    "item": "mystic_gemstones:aquamarine"
+  },
+  "successOutput": {
+    "id": "mystic_gemstones:polished_aquamarine",
+    "count": 1
+  },
+  "failedOutput": {
+    "id": "mystic_gemstones:aquamarine_dust",
+    "count": 1
+  },
+  "successChance": 0.25
+}

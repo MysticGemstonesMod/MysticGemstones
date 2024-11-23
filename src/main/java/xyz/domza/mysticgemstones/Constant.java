@@ -20,4 +20,8 @@ public interface Constant {
     String AQUAMARINE_ORE = "aquamarine_ore";
     String ALEXANDRITE_ORE = "aquamarine_ore";
     String JASPER_ORE = "aquamarine_ore";
+
+    // Blocks
+    String GEM_COMPRESSOR = "gem_compressor";
+    String GEM_GRINDSTONE = "gem_grindstone";
 }
