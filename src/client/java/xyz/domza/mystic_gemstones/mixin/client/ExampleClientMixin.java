@@ -1,4 +1,4 @@
-package xyz.domza.mysticgemstones.mixin.client;
+package xyz.domza.mystic_gemstones.mixin.client;
 
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;

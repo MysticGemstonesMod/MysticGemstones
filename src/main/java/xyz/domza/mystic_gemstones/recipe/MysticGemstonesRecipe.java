@@ -1,9 +1,9 @@
-package xyz.domza.mysticgemstones.recipe;
+package xyz.domza.mystic_gemstones.recipe;
 
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import xyz.domza.mysticgemstones.Constant;
+import xyz.domza.mystic_gemstones.Constant;
 
 public class MysticGemstonesRecipe {
     public static void registerRecipes() {

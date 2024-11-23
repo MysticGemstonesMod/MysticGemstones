@@ -12,17 +12,14 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/mystic-gemstones/icon.png",
+	"icon": "assets/mystic_gemstones/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"fabric-datagen": [
-			"xyz.domza.mysticgemstones.dataGen.MysticGemstonesDataGenerator"
-		],
 		"main": [
-			"xyz.domza.mysticgemstones.MysticGemstones"
+			"xyz.domza.mystic_gemstones.MysticGemstones"
 		],
 		"client": [
-			"xyz.domza.mysticgemstones.MysticGemstonesClient"
+			"xyz.domza.mystic_gemstones.MysticGemstonesClient"
 		]
 	},
 	"mixins": [
@@ -33,9 +30,9 @@
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.15.7",
-		"minecraft": "~1.20.4",
-		"java": ">=17",
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.20.6",
+		"java": ">=21",
 		"fabric-api": "*"
 	},
 	"suggests": {

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "mystic_gemstones:ring"
+    },
+    {
+      "item": "mystic_gemstones:polished_aquamarine"
+    }
+  ],
+  "result": {
+    "item": "mystic_gemstones:aquamarine_ring",
+    "count": 1
+  },
+  "group": "mystic"
+}

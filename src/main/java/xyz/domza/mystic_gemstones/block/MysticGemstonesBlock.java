@@ -1,18 +1,15 @@
-package xyz.domza.mysticgemstones.block;
+package xyz.domza.mystic_gemstones.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.recipe.CraftingRecipe;
-import net.minecraft.recipe.RecipeType;
-import net.minecraft.recipe.SmokingRecipe;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-import xyz.domza.mysticgemstones.Constant;
-import xyz.domza.mysticgemstones.item.MysticGemstonesItemGroup;
+import xyz.domza.mystic_gemstones.Constant;
+import xyz.domza.mystic_gemstones.item.MysticGemstonesItemGroup;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,7 +26,7 @@ public class MysticGemstonesBlock {
                             .strength(3.0f, 3.0f)));
 
     public static final Block GEM_GRINDSTONE = register(Constant.GEM_GRINDSTONE, new GemGrindstone(AbstractBlock.Settings.create()));
-    public static final Block GEM_COMPRESSOR = register(Constant.GEM_COMPRESSOR, new Block(AbstractBlock.Settings.create()));
+    //public static final Block GEM_COMPRESSOR = register(Constant.GEM_COMPRESSOR, new Block(AbstractBlock.Settings.create()));
 
     private static <T extends Block> T register(String id, T block) {
         BLOCKS.put(new Identifier(Constant.MOD_ID, id), block);

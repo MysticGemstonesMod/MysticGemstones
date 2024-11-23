@@ -1,4 +1,4 @@
-package xyz.domza.mysticgemstones;
+package xyz.domza.mystic_gemstones;
 
 import net.fabricmc.api.ClientModInitializer;
 

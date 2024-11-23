@@ -1,4 +1,4 @@
-package xyz.domza.mysticgemstones.recipe;
+package xyz.domza.mystic_gemstones.recipe;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.PrimitiveCodec;

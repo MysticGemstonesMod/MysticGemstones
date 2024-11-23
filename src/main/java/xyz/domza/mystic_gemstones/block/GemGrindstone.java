@@ -1,4 +1,4 @@
-package xyz.domza.mysticgemstones.block;
+package xyz.domza.mystic_gemstones.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -13,7 +13,7 @@ import net.minecraft.util.ItemActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import xyz.domza.mysticgemstones.recipe.GrindingRecipe;
+import xyz.domza.mystic_gemstones.recipe.GrindingRecipe;
 
 import java.util.Optional;
 

@@ -1,9 +1,14 @@
 {
-  "item.mysticgemstones.aquamarine": "Raw Aquamarine",
-  "item.mysticgemstones.polished_aquamarine": "Aquamarine",
-  "item.mysticgemstones.dust_aquamarine": "Aquamarine Dust",
-  "block.mysticgemstones.aquamarine_ore": "Aquamarine Ore",
-  "itemGroup.mysticgemstones.gems": "Gems",
-  "item.mysticgemstones.aquamarine_ring.tooltip_1": "When in Inventory:",
-  "item.mysticgemstones.aquamarine_ring.tooltip_2": "Slows down oxygen consumption",
+  "item.mystic_gemstones.aquamarine": "Raw Aquamarine",
+  "item.mystic_gemstones.polished_aquamarine": "Aquamarine",
+  "item.mystic_gemstones.aquamarine_dust": "Aquamarine Dust",
+  "item.mystic_gemstones.aquamarine_ring": "Aquamarine Ring",
+  "item.mystic_gemstones.ring": "Empty Ring",
+
+  "block.mystic_gemstones.aquamarine_ore": "Aquamarine Ore",
+  "block.mystic_gemstones.gem_grindstone": "Gem Grindstone",
+
+  "itemGroup.mystic_gemstones.mystic_group": "Mystic Items",
+
+  "item.mystic_gemstones.aquamarine_ring.tooltip": "\u00A79Refiles some of your oxygen\u00A7r"
 }

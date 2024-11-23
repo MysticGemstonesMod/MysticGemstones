@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "xyz.domza.mysticgemstones.mixin.client",
+	"package": "xyz.domza.mystic_gemstones.mixin.client",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
 		"ExampleClientMixin"

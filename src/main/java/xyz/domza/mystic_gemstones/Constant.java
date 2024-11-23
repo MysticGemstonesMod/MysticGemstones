@@ -1,4 +1,4 @@
-package xyz.domza.mysticgemstones;
+package xyz.domza.mystic_gemstones;
 
 public interface Constant {
     // Mod Id
@@ -14,6 +14,7 @@ public interface Constant {
     String AQUAMARINE_DUST = "aquamarine_dust";
 
     // Rings
+    String RING = "ring";
     String AQUAMARINE_RING = "aquamarine_ring";
 
     // Ores
