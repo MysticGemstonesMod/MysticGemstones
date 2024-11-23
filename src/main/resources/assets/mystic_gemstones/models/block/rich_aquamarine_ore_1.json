@@ -1,0 +1,102 @@
+{
+	"textures": {
+		"1": "mysticgemstones:block/rich_aquamarine_ore",
+		"2": "mysticgemstones:block/rich_aquamarine_ore_block",
+		"particle": "mysticgemstones:block/rich_aquamarine_ore_block"
+	},
+	"elements": [
+		{
+			"name": "mainBlock",
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#2"}
+			}
+		},
+		{
+			"name": "1",
+			"from": [10, 5, 14],
+			"to": [13, 15, 17],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [2, -4, 1]},
+			"faces": {
+				"north": {"uv": [3, 0, 6, 10], "texture": "#1"},
+				"east": {"uv": [0, 0, 3, 10], "texture": "#1"},
+				"south": {"uv": [3, 0, 6, 10], "texture": "#1"},
+				"west": {"uv": [0, 0, 3, 10], "texture": "#1"},
+				"up": {"uv": [0, 11, 3, 14], "texture": "#1"},
+				"down": {"uv": [0, 11, 3, 14], "texture": "#1"}
+			}
+		},
+		{
+			"name": "2",
+			"from": [10, 15, 4],
+			"to": [13, 25, 7],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [2, -4, 1]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 10], "texture": "#1"},
+				"east": {"uv": [3, 0, 6, 10], "texture": "#1"},
+				"south": {"uv": [0, 0, 3, 10], "texture": "#1"},
+				"west": {"uv": [3, 0, 6, 10], "texture": "#1"},
+				"up": {"uv": [0, 11, 3, 14], "texture": "#1"},
+				"down": {"uv": [0, 11, 3, 14], "texture": "#1"}
+			}
+		},
+		{
+			"name": "3",
+			"from": [20, 0, 9],
+			"to": [23, 10, 12],
+			"rotation": {"angle": 45, "axis": "z", "origin": [2, -4, 1]},
+			"faces": {
+				"north": {"uv": [3, 0, 6, 10], "texture": "#1"},
+				"east": {"uv": [0, 0, 3, 10], "texture": "#1"},
+				"south": {"uv": [3, 0, 6, 10], "texture": "#1"},
+				"west": {"uv": [0, 0, 3, 10], "texture": "#1"},
+				"up": {"uv": [0, 11, 3, 14], "texture": "#1"},
+				"down": {"uv": [0, 11, 3, 14], "texture": "#1"}
+			}
+		},
+		{
+			"name": "4",
+			"from": [-5, 13, 11],
+			"to": [-2, 23, 14],
+			"rotation": {"angle": -45, "axis": "z", "origin": [2, -4, 1]},
+			"faces": {
+				"north": {"uv": [3, 0, 6, 10], "texture": "#1"},
+				"east": {"uv": [0, 0, 3, 10], "texture": "#1"},
+				"south": {"uv": [3, 0, 6, 10], "texture": "#1"},
+				"west": {"uv": [0, 0, 3, 10], "texture": "#1"},
+				"up": {"uv": [0, 11, 3, 14], "texture": "#1"},
+				"down": {"uv": [0, 11, 3, 14], "texture": "#1"}
+			}
+		},
+		{
+			"name": "5",
+			"from": [0, 16, 13],
+			"to": [3, 26, 16],
+			"rotation": {"angle": 45, "axis": "y", "origin": [2, -4, 1]},
+			"faces": {
+				"north": {"uv": [3, 0, 6, 10], "texture": "#1"},
+				"east": {"uv": [0, 0, 3, 10], "texture": "#1"},
+				"south": {"uv": [3, 0, 6, 10], "texture": "#1"},
+				"west": {"uv": [0, 0, 3, 10], "texture": "#1"},
+				"up": {"uv": [0, 11, 3, 14], "texture": "#1"},
+				"down": {"uv": [0, 11, 3, 14], "texture": "#1"}
+			}
+		}
+	],
+	"display": {},
+	"groups": [
+		0,
+		{
+			"name": "gem",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [1, 2, 3, 4, 5]
+		}
+	]
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mystic_gemstones:block/gem_grindstone"
+    }
+  }
+}

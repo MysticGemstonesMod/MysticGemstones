@@ -1,0 +1,9 @@
+{
+  "item.mysticgemstones.aquamarine": "Raw Aquamarine",
+  "item.mysticgemstones.polished_aquamarine": "Aquamarine",
+  "item.mysticgemstones.dust_aquamarine": "Aquamarine Dust",
+  "block.mysticgemstones.aquamarine_ore": "Aquamarine Ore",
+  "itemGroup.mysticgemstones.gems": "Gems",
+  "item.mysticgemstones.aquamarine_ring.tooltip_1": "When in Inventory:",
+  "item.mysticgemstones.aquamarine_ring.tooltip_2": "Slows down oxygen consumption",
+}
