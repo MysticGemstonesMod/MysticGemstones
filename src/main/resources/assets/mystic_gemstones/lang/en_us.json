@@ -9,6 +9,7 @@
   "block.mystic_gemstones.gem_grindstone": "Gem Grindstone",
 
   "itemGroup.mystic_gemstones.mystic_group": "Mystic Items",
+  "itemGroup.buildingBlocks": "Building Blocks",
 
-  "item.mystic_gemstones.aquamarine_ring.tooltip": "\u00A79Refiles some of your oxygen\u00A7r"
+  "item.mystic_gemstones.aquamarine_ring.tooltip": "\u00A79On use: Refiles some of your oxygen\u00A7r"
 }

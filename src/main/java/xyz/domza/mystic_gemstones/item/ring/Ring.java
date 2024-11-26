@@ -30,6 +30,7 @@ public abstract class Ring extends Item {
         return stack.getDamage() < stack.getMaxDamage();
     }
 
+    // TODO: By default add "On Use:" text for first tooltip, and then anything that extends Ring must implement appendTooltip to add second tooltip which explains what specific Ring does.
     @Override
     public abstract void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type);
 

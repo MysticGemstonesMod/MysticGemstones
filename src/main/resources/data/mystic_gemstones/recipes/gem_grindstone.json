@@ -16,12 +16,15 @@
       "item": "minecraft:stick"
     },
     "O": {
-      "item": "minecraft:oak_planks"
+      "tag": "minecraft:planks"
     },
     "C": {
-      "item": "minecraft:oak_log"
+      "tag": "minecraft:logs"
     }
   },
-  "result": {},
+  "result": {
+    "id": "mystic_gemstones:gem_grindstone",
+    "count": 1
+  },
   "group": "mystic"
 }

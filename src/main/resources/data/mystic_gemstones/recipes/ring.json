@@ -11,7 +11,7 @@
     }
   },
   "result": {
-    "item": "mystic_gemstones:ring",
+    "id": "mystic_gemstones:ring",
     "count": 1
   },
   "group": "mystic"

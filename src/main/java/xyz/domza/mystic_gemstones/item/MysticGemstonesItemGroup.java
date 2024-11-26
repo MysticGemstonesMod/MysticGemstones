@@ -16,7 +16,7 @@ public class MysticGemstonesItemGroup {
 
     public static void registerItemGroups() {
         Registry.register(Registries.ITEM_GROUP, MYSTIC_ITEM_GROUP, FabricItemGroup.builder()
-                .displayName(Text.translatable(String.format("%s.mystic_group", Constant.MOD_ID)))
+                .displayName(Text.translatable(String.format("itemGroup.%s.mystic_group", Constant.MOD_ID)))
                 .icon(() -> new ItemStack(MysticGemstonesItem.POLISHED_AQUAMARINE))
                 .build()
         );
