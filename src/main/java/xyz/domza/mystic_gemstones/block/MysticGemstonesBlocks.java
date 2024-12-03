@@ -1,5 +1,4 @@
 package xyz.domza.mystic_gemstones.block;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.item.BlockItem;
@@ -9,11 +8,11 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import xyz.domza.mystic_gemstones.Constant;
-import xyz.domza.mystic_gemstones.item.MysticGemstonesItemGroup;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class MysticGemstonesBlock {
+public class MysticGemstonesBlocks {
     public static final Map<Identifier, Block> BLOCKS = new HashMap<>();
 
     public static final Block AQUAMARINE_ORE =
@@ -39,8 +38,6 @@ public class MysticGemstonesBlock {
 
             Registry.register(Registries.BLOCK, identifier, block);
             Registry.register(Registries.ITEM, identifier, blockItem);
-
-            ItemGroupEvents.modifyEntriesEvent(MysticGemstonesItemGroup.MYSTIC_ITEM_GROUP).register(entries -> entries.add(blockItem));
         });
      }
 }

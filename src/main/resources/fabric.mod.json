@@ -15,6 +15,9 @@
 	"icon": "assets/mystic_gemstones/icon.png",
 	"environment": "*",
 	"entrypoints": {
+		"fabric-datagen": [
+			"xyz.domza.mystic_gemstones.MysticGemstonesDataGenerator"
+		],
 		"main": [
 			"xyz.domza.mystic_gemstones.MysticGemstones"
 		],
